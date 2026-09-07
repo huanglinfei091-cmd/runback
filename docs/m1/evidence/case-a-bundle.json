@@ -1,0 +1,1552 @@
+{
+  "jobs": [
+    {
+      "id": 99504166020,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukUhA",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166020",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166020",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:15Z",
+      "name": "typing",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:00Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:05Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:05Z",
+          "completed_at": "2026-08-31T13:28:05Z"
+        },
+        {
+          "name": "cache mypy",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:05Z",
+          "completed_at": "2026-08-31T13:28:07Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-08-31T13:28:07Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post cache mypy",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166020",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034415,
+      "runner_name": "GitHub Actions 1000034415",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166485,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukWVQ",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166485",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166485",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:59Z",
+      "completed_at": "2026-08-31T13:28:15Z",
+      "name": "3.11",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166485",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034425,
+      "runner_name": "GitHub Actions 1000034425",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166537,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukWiQ",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166537",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166537",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:59Z",
+      "completed_at": "2026-08-31T13:28:35Z",
+      "name": "PyPy",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:04Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:04Z",
+          "completed_at": "2026-08-31T13:28:07Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:07Z",
+          "completed_at": "2026-08-31T13:28:07Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:07Z",
+          "completed_at": "2026-08-31T13:28:31Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:31Z",
+          "completed_at": "2026-08-31T13:28:31Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:31Z",
+          "completed_at": "2026-08-31T13:28:32Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:32Z",
+          "completed_at": "2026-08-31T13:28:32Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:32Z",
+          "completed_at": "2026-08-31T13:28:32Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166537",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034422,
+      "runner_name": "GitHub Actions 1000034422",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166550,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukWlg",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166550",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166550",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:12Z",
+      "name": "Minimum Versions",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:27:59Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:00Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166550",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034418,
+      "runner_name": "GitHub Actions 1000034418",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166555,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukWmw",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166555",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166555",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:59Z",
+      "completed_at": "2026-08-31T13:28:32Z",
+      "name": "3.15",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:04Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:04Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:20Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:20Z",
+          "completed_at": "2026-08-31T13:28:27Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:27Z",
+          "completed_at": "2026-08-31T13:28:27Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:27Z",
+          "completed_at": "2026-08-31T13:28:28Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:28Z",
+          "completed_at": "2026-08-31T13:28:28Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:28Z",
+          "completed_at": "2026-08-31T13:28:28Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166555",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034417,
+      "runner_name": "GitHub Actions 1000034417",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166615,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukW1w",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166615",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166615",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:21Z",
+      "name": "Windows",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:00Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:05Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:05Z",
+          "completed_at": "2026-08-31T13:28:09Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:09Z",
+          "completed_at": "2026-08-31T13:28:09Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:09Z",
+          "completed_at": "2026-08-31T13:28:17Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:17Z",
+          "completed_at": "2026-08-31T13:28:17Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:17Z",
+          "completed_at": "2026-08-31T13:28:17Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:17Z",
+          "completed_at": "2026-08-31T13:28:18Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:18Z",
+          "completed_at": "2026-08-31T13:28:18Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166615",
+      "labels": [
+        "windows-latest"
+      ],
+      "runner_id": 1000034423,
+      "runner_name": "GitHub Actions 1000034423",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166617,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukW2Q",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166617",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166617",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:16Z",
+      "name": "3.13",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166617",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034419,
+      "runner_name": "GitHub Actions 1000034419",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166711,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukXNw",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166711",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166711",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:21Z",
+      "name": "Development Versions",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:07Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:07Z",
+          "completed_at": "2026-08-31T13:28:07Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:07Z",
+          "completed_at": "2026-08-31T13:28:17Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:17Z",
+          "completed_at": "2026-08-31T13:28:17Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:17Z",
+          "completed_at": "2026-08-31T13:28:17Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:17Z",
+          "completed_at": "2026-08-31T13:28:18Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:18Z",
+          "completed_at": "2026-08-31T13:28:18Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166711",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034421,
+      "runner_name": "GitHub Actions 1000034421",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166714,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukXOg",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166714",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166714",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:11Z",
+      "name": "3.10",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:00Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:08Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:08Z",
+          "completed_at": "2026-08-31T13:28:09Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:09Z",
+          "completed_at": "2026-08-31T13:28:09Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:09Z",
+          "completed_at": "2026-08-31T13:28:09Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:09Z",
+          "completed_at": "2026-08-31T13:28:09Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166714",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034420,
+      "runner_name": "GitHub Actions 1000034420",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166725,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukXRQ",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166725",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166725",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:13Z",
+      "name": "3.14",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:00Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166725",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034426,
+      "runner_name": "GitHub Actions 1000034426",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166757,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukXZQ",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166757",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166757",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:15Z",
+      "name": "Mac",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:03Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:03Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:12Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:12Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166757",
+      "labels": [
+        "macos-latest"
+      ],
+      "runner_id": 1000034428,
+      "runner_name": "GitHub Actions 1000034428",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166766,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukXbg",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166766",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166766",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:59Z",
+      "completed_at": "2026-08-31T13:28:21Z",
+      "name": "3.14t",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:28:00Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:05Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:05Z",
+          "completed_at": "2026-08-31T13:28:13Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:13Z",
+          "completed_at": "2026-08-31T13:28:19Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:19Z",
+          "completed_at": "2026-08-31T13:28:19Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:19Z",
+          "completed_at": "2026-08-31T13:28:19Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:19Z",
+          "completed_at": "2026-08-31T13:28:19Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:19Z",
+          "completed_at": "2026-08-31T13:28:19Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166766",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034424,
+      "runner_name": "GitHub Actions 1000034424",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 99504166814,
+      "run_id": 33397112701,
+      "workflow_name": "Tests",
+      "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+      "run_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOAAkbnM8AAAAXKukXng",
+      "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "url": "https://api.github.com/repos/pallets/flask/actions/jobs/99504166814",
+      "html_url": "https://github.com/pallets/flask/actions/runs/33397112701/job/99504166814",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-31T13:27:56Z",
+      "started_at": "2026-08-31T13:27:58Z",
+      "completed_at": "2026-08-31T13:28:13Z",
+      "name": "3.12",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-31T13:27:59Z",
+          "completed_at": "2026-08-31T13:28:01Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-31T13:28:01Z",
+          "completed_at": "2026-08-31T13:28:02Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-31T13:28:02Z",
+          "completed_at": "2026-08-31T13:28:05Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-31T13:28:05Z",
+          "completed_at": "2026-08-31T13:28:06Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-31T13:28:06Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:10Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-08-31T13:28:10Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-08-31T13:28:11Z",
+          "completed_at": "2026-08-31T13:28:11Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/pallets/flask/check-runs/99504166814",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000034427,
+      "runner_name": "GitHub Actions 1000034427",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ],
+  "logs": {
+    "/repos/pallets/flask/actions/jobs/99504166020/logs": "﻿2026-08-31T13:27:59.6373962Z Current runner version: '2.337.0'\n2026-08-31T13:27:59.6398767Z ##[group]Runner Image Provisioner\n2026-08-31T13:27:59.6399654Z Hosted Compute Agent\n2026-08-31T13:27:59.6400350Z Version: 20260819.586\n2026-08-31T13:27:59.6401076Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76\n2026-08-31T13:27:59.6401872Z Build Date: 2026-08-18T23:20:18Z\n2026-08-31T13:27:59.6402542Z Worker ID: {f5340c30-69dd-4ecc-b12d-adffe30c2479}\n2026-08-31T13:27:59.6403327Z Azure Region: westus2\n2026-08-31T13:27:59.6403901Z ##[endgroup]\n2026-08-31T13:27:59.6405643Z ##[group]Operating System\n2026-08-31T13:27:59.6406295Z Ubuntu\n2026-08-31T13:27:59.6407035Z 24.04.4\n2026-08-31T13:27:59.6407650Z LTS\n2026-08-31T13:27:59.6408160Z ##[endgroup]\n2026-08-31T13:27:59.6408744Z ##[group]Runner Image\n2026-08-31T13:27:59.6409394Z Image: ubuntu-24.04\n2026-08-31T13:27:59.6409951Z Version: 20260823.283.1\n2026-08-31T13:27:59.6411249Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260823.283/images/ubuntu/Ubuntu2404-Readme.md\n2026-08-31T13:27:59.6412825Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260823.283\n2026-08-31T13:27:59.6413887Z ##[endgroup]\n2026-08-31T13:27:59.6414925Z ##[group]GITHUB_TOKEN Permissions\n2026-08-31T13:27:59.6417220Z Metadata: read\n2026-08-31T13:27:59.6417831Z ##[endgroup]\n2026-08-31T13:27:59.6420033Z Secret source: None\n2026-08-31T13:27:59.6421121Z Prepare workflow directory\n2026-08-31T13:27:59.6759027Z Prepare all required actions\n2026-08-31T13:27:59.6808509Z Getting action download info\n2026-08-31T13:28:00.0533717Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)\n2026-08-31T13:28:00.2059768Z Download action repository 'astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9' (SHA:c771a70e6277c0a99b617c7a806ffedaca235ff9)\n2026-08-31T13:28:00.5390112Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)\n2026-08-31T13:28:00.6569304Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)\n2026-08-31T13:28:00.8777382Z Complete job name: typing\n2026-08-31T13:28:00.9600248Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1\n2026-08-31T13:28:00.9601623Z with:\n2026-08-31T13:28:00.9602252Z   persist-credentials: false\n2026-08-31T13:28:00.9602923Z   repository: pallets/flask\n2026-08-31T13:28:00.9607390Z   token: ***\n2026-08-31T13:28:00.9608002Z   ssh-strict: true\n2026-08-31T13:28:00.9608624Z   ssh-user: git\n2026-08-31T13:28:00.9609199Z   clean: true\n2026-08-31T13:28:00.9609795Z   sparse-checkout-cone-mode: true\n2026-08-31T13:28:00.9610519Z   fetch-depth: 1\n2026-08-31T13:28:00.9611125Z   fetch-tags: false\n2026-08-31T13:28:00.9611711Z   show-progress: true\n2026-08-31T13:28:00.9612394Z   lfs: false\n2026-08-31T13:28:00.9612947Z   submodules: false\n2026-08-31T13:28:00.9613657Z   set-safe-directory: true\n2026-08-31T13:28:00.9614339Z   allow-unsafe-pr-checkout: false\n2026-08-31T13:28:00.9615333Z ##[endgroup]\n2026-08-31T13:28:01.0593046Z Syncing repository: pallets/flask\n2026-08-31T13:28:01.0595433Z ##[group]Getting Git version info\n2026-08-31T13:28:01.0596574Z Working directory is '/home/runner/work/flask/flask'\n2026-08-31T13:28:01.0598229Z [command]/usr/bin/git version\n2026-08-31T13:28:01.0682790Z git version 2.55.0\n2026-08-31T13:28:01.0704852Z ##[endgroup]\n2026-08-31T13:28:01.0716154Z Temporarily overriding HOME='/home/runner/work/_temp/eea22541-f72d-4c08-94bd-3af1f6e44d7c' before making global git config changes\n2026-08-31T13:28:01.0718938Z Adding repository directory to the temporary git global config as a safe directory\n2026-08-31T13:28:01.0721165Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/flask/flask\n2026-08-31T13:28:01.0768437Z Deleting the contents of '/home/runner/work/flask/flask'\n2026-08-31T13:28:01.0771954Z ##[group]Determining repository object format\n2026-08-31T13:28:01.0773532Z ##[endgroup]\n2026-08-31T13:28:01.0774920Z ##[group]Initializing the repository\n2026-08-31T13:28:01.0777822Z [command]/usr/bin/git init /home/runner/work/flask/flask\n2026-08-31T13:28:01.0884626Z hint: Using 'master' as the name for the initial branch. This default branch name\n2026-08-31T13:28:01.0886071Z hint: will change to \"main\" in Git 3.0. To configure the initial branch name\n2026-08-31T13:28:01.0888063Z hint: to use in all of your new repositories, which will suppress this warning,\n2026-08-31T13:28:01.0889484Z hint: call:\n2026-08-31T13:28:01.0890485Z hint:\n2026-08-31T13:28:01.0891273Z hint: \tgit config --global init.defaultBranch <name>\n2026-08-31T13:28:01.0892278Z hint:\n2026-08-31T13:28:01.0893513Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n2026-08-31T13:28:01.0895099Z hint: 'development'. The just-created branch can be renamed via this command:\n2026-08-31T13:28:01.0896217Z hint:\n2026-08-31T13:28:01.0897479Z hint: \tgit branch -m <name>\n2026-08-31T13:28:01.0898625Z hint:\n2026-08-31T13:28:01.0899490Z hint: Disable this message with \"git config set advice.defaultBranchName false\"\n2026-08-31T13:28:01.0900721Z Initialized empty Git repository in /home/runner/work/flask/flask/.git/\n2026-08-31T13:28:01.0902758Z [command]/usr/bin/git remote add origin https://github.com/pallets/flask\n2026-08-31T13:28:01.0947527Z ##[endgroup]\n2026-08-31T13:28:01.0949007Z ##[group]Disabling automatic garbage collection\n2026-08-31T13:28:01.0950329Z [command]/usr/bin/git config --local gc.auto 0\n2026-08-31T13:28:01.0979998Z ##[endgroup]\n2026-08-31T13:28:01.0981880Z ##[group]Setting up auth\n2026-08-31T13:28:01.0982576Z Removing SSH command configuration\n2026-08-31T13:28:01.0985041Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-08-31T13:28:01.1014058Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-08-31T13:28:01.1366366Z Removing HTTP extra header\n2026-08-31T13:28:01.1373174Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-08-31T13:28:01.1404628Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-08-31T13:28:01.1616981Z Removing includeIf entries pointing to credentials config files\n2026-08-31T13:28:01.1628507Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-08-31T13:28:01.1726598Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-08-31T13:28:01.1893305Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config http.https://github.com/.extraheader AUTHORIZATION: basic ***\n2026-08-31T13:28:01.1929499Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/flask/flask/.git.path /home/runner/work/_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.1957474Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/flask/flask/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.1987954Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.2018840Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.2046013Z ##[endgroup]\n2026-08-31T13:28:01.2047348Z ##[group]Fetching the repository\n2026-08-31T13:28:01.2052916Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fec2631289e6ad731241b6e54ac44a916722858e:refs/remotes/pull/6145/merge\n2026-08-31T13:28:01.8019302Z From https://github.com/pallets/flask\n2026-08-31T13:28:01.8021045Z  * [new ref]         fec2631289e6ad731241b6e54ac44a916722858e -> pull/6145/merge\n2026-08-31T13:28:01.8024946Z ##[endgroup]\n2026-08-31T13:28:01.8026474Z ##[group]Determining the checkout info\n2026-08-31T13:28:01.8028717Z ##[endgroup]\n2026-08-31T13:28:01.8031179Z [command]/usr/bin/git sparse-checkout disable\n2026-08-31T13:28:01.8081770Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig\n2026-08-31T13:28:01.8110916Z ##[group]Checking out the ref\n2026-08-31T13:28:01.8114390Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6145/merge\n2026-08-31T13:28:01.8329105Z Note: switching to 'refs/remotes/pull/6145/merge'.\n2026-08-31T13:28:01.8330456Z \n2026-08-31T13:28:01.8331535Z You are in 'detached HEAD' state. You can look around, make experimental\n2026-08-31T13:28:01.8333717Z changes and commit them, and you can discard any commits you make in this\n2026-08-31T13:28:01.8337936Z state without impacting any branches by switching back to a branch.\n2026-08-31T13:28:01.8340099Z \n2026-08-31T13:28:01.8341827Z If you want to create a new branch to retain commits you create, you may\n2026-08-31T13:28:01.8345254Z do so (now or later) by using -c with the switch command. Example:\n2026-08-31T13:28:01.8347607Z \n2026-08-31T13:28:01.8348526Z   git switch -c <new-branch-name>\n2026-08-31T13:28:01.8349839Z \n2026-08-31T13:28:01.8350621Z Or undo this operation with:\n2026-08-31T13:28:01.8351804Z \n2026-08-31T13:28:01.8352526Z   git switch -\n2026-08-31T13:28:01.8353501Z \n2026-08-31T13:28:01.8355289Z Turn off this advice by setting config variable advice.detachedHead to false\n2026-08-31T13:28:01.8357431Z \n2026-08-31T13:28:01.8359379Z HEAD is now at fec2631 Merge 56f3db172de7f3e843a3ebf048f6f475ef700b40 into d318b683471101618febed18996405ad26462110\n2026-08-31T13:28:01.8365165Z ##[endgroup]\n2026-08-31T13:28:01.8389504Z [command]/usr/bin/git log -1 --format=%H\n2026-08-31T13:28:01.8415669Z fec2631289e6ad731241b6e54ac44a916722858e\n2026-08-31T13:28:01.8425643Z ##[group]Removing auth\n2026-08-31T13:28:01.8427360Z Removing SSH command configuration\n2026-08-31T13:28:01.8430400Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-08-31T13:28:01.8464475Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-08-31T13:28:01.8683945Z Removing HTTP extra header\n2026-08-31T13:28:01.8687477Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-08-31T13:28:01.8721332Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-08-31T13:28:01.8937703Z Removing includeIf entries pointing to credentials config files\n2026-08-31T13:28:01.8941391Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-08-31T13:28:01.8965542Z includeif.gitdir:/home/runner/work/flask/flask/.git.path\n2026-08-31T13:28:01.8968300Z includeif.gitdir:/home/runner/work/flask/flask/.git/worktrees/*.path\n2026-08-31T13:28:01.8970714Z includeif.gitdir:/github/workspace/.git.path\n2026-08-31T13:28:01.8972459Z includeif.gitdir:/github/workspace/.git/worktrees/*.path\n2026-08-31T13:28:01.8977236Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/flask/flask/.git.path\n2026-08-31T13:28:01.8996983Z /home/runner/work/_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.9007458Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/flask/flask/.git.path \\/home\\/runner\\/work\\/_temp\\/git\\-credentials\\-b1a82731\\-2e0d\\-4541\\-8c3f\\-5a308659a600\\.config\n2026-08-31T13:28:01.9039519Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/flask/flask/.git/worktrees/*.path\n2026-08-31T13:28:01.9060907Z /home/runner/work/_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.9071669Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/flask/flask/.git/worktrees/*.path \\/home\\/runner\\/work\\/_temp\\/git\\-credentials\\-b1a82731\\-2e0d\\-4541\\-8c3f\\-5a308659a600\\.config\n2026-08-31T13:28:01.9134179Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path\n2026-08-31T13:28:01.9155849Z /github/runner_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.9166446Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \\/github\\/runner_temp\\/git\\-credentials\\-b1a82731\\-2e0d\\-4541\\-8c3f\\-5a308659a600\\.config\n2026-08-31T13:28:01.9198055Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path\n2026-08-31T13:28:01.9220273Z /github/runner_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config\n2026-08-31T13:28:01.9233942Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \\/github\\/runner_temp\\/git\\-credentials\\-b1a82731\\-2e0d\\-4541\\-8c3f\\-5a308659a600\\.config\n2026-08-31T13:28:01.9263846Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-08-31T13:28:01.9479933Z Removing credentials config '/home/runner/work/_temp/git-credentials-b1a82731-2e0d-4541-8c3f-5a308659a600.config'\n2026-08-31T13:28:01.9487324Z ##[endgroup]\n2026-08-31T13:28:01.9917886Z ##[group]Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9\n2026-08-31T13:28:01.9919498Z with:\n2026-08-31T13:28:01.9920366Z   enable-cache: true\n2026-08-31T13:28:01.9921333Z   prune-cache: false\n2026-08-31T13:28:01.9922342Z   activate-environment: false\n2026-08-31T13:28:01.9923436Z   no-project: false\n2026-08-31T13:28:01.9924541Z   working-directory: /home/runner/work/flask/flask\n2026-08-31T13:28:01.9934116Z   github-token: ***\n2026-08-31T13:28:01.9936441Z   cache-dependency-glob: **/*requirements*.txt\n**/*requirements*.in\n**/*constraints*.txt\n**/*constraints*.in\n**/pyproject.toml\n**/uv.lock\n**/*.py.lock\n\n2026-08-31T13:28:01.9939395Z   restore-cache: true\n2026-08-31T13:28:01.9940386Z   save-cache: true\n2026-08-31T13:28:01.9941323Z   cache-python: false\n2026-08-31T13:28:01.9942331Z   ignore-nothing-to-cache: false\n2026-08-31T13:28:01.9943481Z   ignore-empty-workdir: false\n2026-08-31T13:28:01.9944629Z   download-from-astral-mirror: true\n2026-08-31T13:28:01.9945868Z   add-problem-matchers: true\n2026-08-31T13:28:01.9947066Z   quiet: false\n2026-08-31T13:28:01.9948011Z   resolution-strategy: highest\n2026-08-31T13:28:01.9949080Z ##[endgroup]\n2026-08-31T13:28:02.1786396Z Trying to find version for uv in: /home/runner/work/flask/flask/uv.toml\n2026-08-31T13:28:02.1790061Z Could not find file: /home/runner/work/flask/flask/uv.toml\n2026-08-31T13:28:02.1793378Z Trying to find version for uv in: /home/runner/work/flask/flask/pyproject.toml\n2026-08-31T13:28:02.1797569Z Could not determine uv version from uv.toml or pyproject.toml. Falling back to latest.\n2026-08-31T13:28:02.1801460Z Fetching manifest data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...\n2026-08-31T13:28:02.2367830Z Downloading uv from \"https://releases.astral.sh/github/uv/releases/download/0.12.7/uv-x86_64-unknown-linux-gnu.tar.gz\" ...\n2026-08-31T13:28:02.4442899Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/db0bd9e1-31fa-4cb9-b3ff-508a518e2e1a -f /home/runner/work/_temp/5ffa3d7f-c6ac-4678-a554-d813b1991625\n2026-08-31T13:28:02.8127137Z Added /home/runner/.local/bin to the path\n2026-08-31T13:28:02.8130357Z Added /opt/hostedtoolcache/uv/0.12.7/x86_64 to the path\n2026-08-31T13:28:02.8134743Z Set UV_PYTHON_INSTALL_DIR to /home/runner/work/_temp/uv-python-dir\n2026-08-31T13:28:02.8138430Z Added /home/runner/work/_temp/uv-python-dir to the path\n2026-08-31T13:28:02.8160429Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache\n2026-08-31T13:28:02.8162553Z Successfully installed uv version 0.12.7\n2026-08-31T13:28:02.8734656Z Searching files using cache dependency glob: /home/runner/work/flask/flask/**/*requirements*.txt,/home/runner/work/flask/flask/**/*requirements*.in,/home/runner/work/flask/flask/**/*constraints*.txt,/home/runner/work/flask/flask/**/*constraints*.in,/home/runner/work/flask/flask/**/pyproject.toml,/home/runner/work/flask/flask/**/uv.lock,/home/runner/work/flask/flask/**/*.py.lock\n2026-08-31T13:28:02.9013498Z /home/runner/work/flask/flask/examples/celery/pyproject.toml\n2026-08-31T13:28:02.9031830Z /home/runner/work/flask/flask/examples/celery/requirements.txt\n2026-08-31T13:28:02.9078692Z /home/runner/work/flask/flask/examples/javascript/pyproject.toml\n2026-08-31T13:28:02.9130840Z /home/runner/work/flask/flask/examples/tutorial/pyproject.toml\n2026-08-31T13:28:02.9148424Z /home/runner/work/flask/flask/pyproject.toml\n2026-08-31T13:28:02.9315659Z /home/runner/work/flask/flask/uv.lock\n2026-08-31T13:28:02.9327712Z Found 6 files to hash.\n2026-08-31T13:28:02.9391927Z Trying to restore cache from GitHub Actions cache with key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-d58c2332f44e96e8c53f57e4d5195329edc2a97af7596c0e22ee1913996e9507\n2026-08-31T13:28:03.2044624Z Cache hit for: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-d58c2332f44e96e8c53f57e4d5195329edc2a97af7596c0e22ee1913996e9507\n2026-08-31T13:28:04.5071221Z Received 0 of 37783671 (0.0%), 0.0 MBs/sec\n2026-08-31T13:28:04.9454293Z Received 37783671 of 37783671 (100.0%), 25.0 MBs/sec\n2026-08-31T13:28:04.9455232Z Cache Size: ~36 MB (37783671 B)\n2026-08-31T13:28:04.9493951Z [command]/usr/bin/tar -xf /home/runner/work/_temp/76491d1d-61ae-4c17-89e4-cda8ed1c92fa/cache.tzst -P -C /home/runner/work/flask/flask --use-compress-program unzstd\n2026-08-31T13:28:05.1664062Z Cache restored successfully\n2026-08-31T13:28:05.1687841Z cache restored from GitHub Actions cache with key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-d58c2332f44e96e8c53f57e4d5195329edc2a97af7596c0e22ee1913996e9507\n2026-08-31T13:28:05.2915358Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97\n2026-08-31T13:28:05.2915824Z with:\n2026-08-31T13:28:05.2916060Z   python-version-file: pyproject.toml\n2026-08-31T13:28:05.2916348Z   check-latest: false\n2026-08-31T13:28:05.2919127Z   token: ***\n2026-08-31T13:28:05.2919367Z   update-environment: true\n2026-08-31T13:28:05.2919632Z   allow-prereleases: false\n2026-08-31T13:28:05.2919876Z   freethreaded: false\n2026-08-31T13:28:05.2920115Z env:\n2026-08-31T13:28:05.2920423Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir\n2026-08-31T13:28:05.2920825Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache\n2026-08-31T13:28:05.2921148Z ##[endgroup]\n2026-08-31T13:28:05.4223226Z Extracted >=3.10 from pyproject.toml\n2026-08-31T13:28:05.4245321Z ##[group]Installed versions\n2026-08-31T13:28:05.4319583Z Successfully set up CPython (3.14.7)\n2026-08-31T13:28:05.4320798Z ##[endgroup]\n2026-08-31T13:28:05.5044017Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9\n2026-08-31T13:28:05.5044467Z with:\n2026-08-31T13:28:05.5044699Z   path: ./.mypy_cache\n2026-08-31T13:28:05.5045075Z   key: mypy|5f3c5600705956c4745b41029f44a5bd0f17f1c89e3ee2fdf4a2578e6e1be495\n2026-08-31T13:28:05.5045527Z   enableCrossOsArchive: false\n2026-08-31T13:28:05.5045805Z   fail-on-cache-miss: false\n2026-08-31T13:28:05.5046065Z   lookup-only: false\n2026-08-31T13:28:05.5046331Z   save-always: false\n2026-08-31T13:28:05.5046593Z env:\n2026-08-31T13:28:05.5047465Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir\n2026-08-31T13:28:05.5047901Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache\n2026-08-31T13:28:05.5048307Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:05.5048812Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig\n2026-08-31T13:28:05.5049270Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:05.5049960Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:05.5050368Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:05.5050803Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib\n2026-08-31T13:28:05.5051167Z ##[endgroup]\n2026-08-31T13:28:05.8872837Z Cache hit for: mypy|5f3c5600705956c4745b41029f44a5bd0f17f1c89e3ee2fdf4a2578e6e1be495\n2026-08-31T13:28:07.1932747Z Received 983000 of 983000 (100.0%), 1.0 MBs/sec\n2026-08-31T13:28:07.1933276Z Cache Size: ~1 MB (983000 B)\n2026-08-31T13:28:07.1966239Z [command]/usr/bin/tar -xf /home/runner/work/_temp/afe5c179-4202-427b-a450-8ce843205fe4/cache.tzst -P -C /home/runner/work/flask/flask --use-compress-program unzstd\n2026-08-31T13:28:07.2125739Z Cache restored successfully\n2026-08-31T13:28:07.2203827Z Cache restored from key: mypy|5f3c5600705956c4745b41029f44a5bd0f17f1c89e3ee2fdf4a2578e6e1be495\n2026-08-31T13:28:07.2340399Z ##[group]Run uv run --locked --no-default-groups --group dev tox run -e typing\n2026-08-31T13:28:07.2341074Z \u001b[36;1muv run --locked --no-default-groups --group dev tox run -e typing\u001b[0m\n2026-08-31T13:28:07.2383144Z shell: /usr/bin/bash -e {0}\n2026-08-31T13:28:07.2383414Z env:\n2026-08-31T13:28:07.2383712Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir\n2026-08-31T13:28:07.2384199Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache\n2026-08-31T13:28:07.2384600Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2385035Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig\n2026-08-31T13:28:07.2385468Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2385857Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2386263Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2386946Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib\n2026-08-31T13:28:07.2387371Z ##[endgroup]\n2026-08-31T13:28:07.9034198Z Using CPython 3.14.7 interpreter at: /opt/hostedtoolcache/Python/3.14.7/x64/bin/python3\n2026-08-31T13:28:07.9034745Z Creating virtual environment at: .venv\n2026-08-31T13:28:07.9084270Z    Building flask @ file:///home/runner/work/flask/flask\n2026-08-31T13:28:08.6415447Z       Built flask @ file:///home/runner/work/flask/flask\n2026-08-31T13:28:08.6569447Z Installed 23 packages in 14ms\n2026-08-31T13:28:10.2137285Z typing: venv> .venv/bin/uv venv -p /home/runner/work/flask/flask/.venv/bin/python --allow-existing '--prompt=flask[typing]' --python-preference system /home/runner/work/flask/flask/.tox/typing\n2026-08-31T13:28:10.2935299Z typing: uv-sync> .venv/bin/uv sync --locked --python-preference system --no-default-groups --no-editable --reinstall-package Flask --group typing -p /home/runner/work/flask/flask/.venv/bin/python\n2026-08-31T13:28:11.6788698Z typing: freeze> .venv/bin/uv --color never pip freeze\n2026-08-31T13:28:11.6931226Z typing: asgiref==3.12.1,ast-serialize==0.6.0,blinker==1.9.0,cffi==2.1.0,click==8.4.2,cryptography==49.0.0,flask @ file:///home/runner/work/flask/flask,iniconfig==2.3.0,itsdangerous==2.2.0,jinja2==3.1.6,librt==0.13.0,markupsafe==3.0.3,mypy==2.3.0,mypy-extensions==1.1.0,nodeenv==1.10.0,packaging==26.2,pathspec==1.1.1,pluggy==1.6.0,pycparser==3.0,pygments==2.20.0,pyright==1.1.411,pytest==9.1.1,python-dotenv==1.2.2,types-contextvars==2.4.7.3,types-dataclasses==0.6.6,typing-extensions==4.16.0,werkzeug==3.1.8\n2026-08-31T13:28:11.6934733Z typing: commands[0]> mypy\n2026-08-31T13:28:12.7890173Z src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment \n2026-08-31T13:28:12.8868299Z [unused-ignore]\n2026-08-31T13:28:12.8869100Z             return dataclasses.asdict(o)  # type: ignore[arg-type]\n2026-08-31T13:28:12.8869796Z             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n2026-08-31T13:28:12.8870317Z Found 1 error in 1 file (checked 27 source files)\n2026-08-31T13:28:12.8941513Z typing: exit 1 (1.20 seconds) /home/runner/work/flask/flask> mypy pid=2519\n2026-08-31T13:28:12.8947184Z   typing: FAIL code 1 (2.68=setup[1.48]+cmd[1.20] seconds)\n2026-08-31T13:28:12.8947682Z   evaluation failed :( (2.77 seconds)\n2026-08-31T13:28:12.9698568Z ##[error]Process completed with exit code 1.\n2026-08-31T13:28:12.9832409Z Post job cleanup.\n2026-08-31T13:28:13.0715027Z [command]/usr/bin/git version\n2026-08-31T13:28:13.0755789Z git version 2.55.0\n2026-08-31T13:28:13.0797164Z Temporarily overriding HOME='/home/runner/work/_temp/b1905df8-56ac-4a31-9975-37f93a6515ae' before making global git config changes\n2026-08-31T13:28:13.0798850Z Adding repository directory to the temporary git global config as a safe directory\n2026-08-31T13:28:13.0802877Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/flask/flask\n2026-08-31T13:28:13.0837717Z Removing SSH command configuration\n2026-08-31T13:28:13.0844718Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-08-31T13:28:13.0883387Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-08-31T13:28:13.1120680Z Removing HTTP extra header\n2026-08-31T13:28:13.1126322Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-08-31T13:28:13.1167883Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-08-31T13:28:13.1404688Z Removing includeIf entries pointing to credentials config files\n2026-08-31T13:28:13.1411297Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-08-31T13:28:13.1446174Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-08-31T13:28:13.1818715Z Cleaning up orphan processes"
+  },
+  "url": "https://github.com/pallets/flask/actions/runs/33397112701",
+  "run": {
+    "id": 33397112701,
+    "name": "Tests",
+    "node_id": "WFR_kwLOAAkbnM8AAAAHxp9_fQ",
+    "head_branch": "fix/json-pathlike-and-dataclass-class-serialization",
+    "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+    "path": ".github/workflows/tests.yaml",
+    "display_title": "[rejected AI] fix(json): support os.PathLike serialization and guard dataclass class type in DefaultJSONProvider",
+    "run_number": 2504,
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 1367898,
+    "check_suite_id": 90491805125,
+    "check_suite_node_id": "CS_kwDOAAkbnM8AAAAVEbtdxQ",
+    "url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701",
+    "html_url": "https://github.com/pallets/flask/actions/runs/33397112701",
+    "pull_requests": [],
+    "created_at": "2026-08-31T13:27:55Z",
+    "updated_at": "2026-08-31T13:28:36Z",
+    "actor": {
+      "login": "vjymisal0",
+      "id": 97379957,
+      "node_id": "U_kgDOBc3mdQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97379957?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vjymisal0",
+      "html_url": "https://github.com/vjymisal0",
+      "followers_url": "https://api.github.com/users/vjymisal0/followers",
+      "following_url": "https://api.github.com/users/vjymisal0/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vjymisal0/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vjymisal0/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vjymisal0/subscriptions",
+      "organizations_url": "https://api.github.com/users/vjymisal0/orgs",
+      "repos_url": "https://api.github.com/users/vjymisal0/repos",
+      "events_url": "https://api.github.com/users/vjymisal0/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vjymisal0/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-08-31T13:27:55Z",
+    "triggering_actor": {
+      "login": "vjymisal0",
+      "id": 97379957,
+      "node_id": "U_kgDOBc3mdQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97379957?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vjymisal0",
+      "html_url": "https://github.com/vjymisal0",
+      "followers_url": "https://api.github.com/users/vjymisal0/followers",
+      "following_url": "https://api.github.com/users/vjymisal0/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vjymisal0/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vjymisal0/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vjymisal0/subscriptions",
+      "organizations_url": "https://api.github.com/users/vjymisal0/orgs",
+      "repos_url": "https://api.github.com/users/vjymisal0/repos",
+      "events_url": "https://api.github.com/users/vjymisal0/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vjymisal0/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701/jobs",
+    "logs_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701/logs",
+    "check_suite_url": "https://api.github.com/repos/pallets/flask/check-suites/90491805125",
+    "artifacts_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701/artifacts",
+    "cancel_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701/cancel",
+    "rerun_url": "https://api.github.com/repos/pallets/flask/actions/runs/33397112701/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/pallets/flask/actions/workflows/1367898",
+    "head_commit": {
+      "id": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+      "tree_id": "c04ef90fd59c5fb02e39d0a242d489c0aea62eb7",
+      "message": "fix(json): support os.PathLike serialization and guard dataclass class type in DefaultJSONProvider",
+      "timestamp": "2026-08-31T13:27:37Z",
+      "author": {
+        "name": "vjymisal0",
+        "email": "misalvijay153@gmail.com"
+      },
+      "committer": {
+        "name": "vjymisal0",
+        "email": "misalvijay153@gmail.com"
+      }
+    },
+    "repository": {
+      "id": 596892,
+      "node_id": "MDEwOlJlcG9zaXRvcnk1OTY4OTI=",
+      "name": "flask",
+      "full_name": "pallets/flask",
+      "private": false,
+      "owner": {
+        "login": "pallets",
+        "id": 16748505,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjE2NzQ4NTA1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16748505?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pallets",
+        "html_url": "https://github.com/pallets",
+        "followers_url": "https://api.github.com/users/pallets/followers",
+        "following_url": "https://api.github.com/users/pallets/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pallets/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pallets/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pallets/subscriptions",
+        "organizations_url": "https://api.github.com/users/pallets/orgs",
+        "repos_url": "https://api.github.com/users/pallets/repos",
+        "events_url": "https://api.github.com/users/pallets/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pallets/received_events",
+        "type": "Organization",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/pallets/flask",
+      "description": "The Python micro framework for building web applications.",
+      "fork": false,
+      "url": "https://api.github.com/repos/pallets/flask",
+      "forks_url": "https://api.github.com/repos/pallets/flask/forks",
+      "keys_url": "https://api.github.com/repos/pallets/flask/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/pallets/flask/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/pallets/flask/teams",
+      "hooks_url": "https://api.github.com/repos/pallets/flask/hooks",
+      "issue_events_url": "https://api.github.com/repos/pallets/flask/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/pallets/flask/events",
+      "assignees_url": "https://api.github.com/repos/pallets/flask/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/pallets/flask/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/pallets/flask/tags",
+      "blobs_url": "https://api.github.com/repos/pallets/flask/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/pallets/flask/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/pallets/flask/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/pallets/flask/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/pallets/flask/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/pallets/flask/languages",
+      "stargazers_url": "https://api.github.com/repos/pallets/flask/stargazers",
+      "contributors_url": "https://api.github.com/repos/pallets/flask/contributors",
+      "subscribers_url": "https://api.github.com/repos/pallets/flask/subscribers",
+      "subscription_url": "https://api.github.com/repos/pallets/flask/subscription",
+      "commits_url": "https://api.github.com/repos/pallets/flask/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/pallets/flask/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/pallets/flask/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/pallets/flask/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/pallets/flask/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/pallets/flask/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/pallets/flask/merges",
+      "archive_url": "https://api.github.com/repos/pallets/flask/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/pallets/flask/downloads",
+      "issues_url": "https://api.github.com/repos/pallets/flask/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/pallets/flask/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/pallets/flask/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/pallets/flask/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/pallets/flask/labels{/name}",
+      "releases_url": "https://api.github.com/repos/pallets/flask/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/pallets/flask/deployments"
+    },
+    "head_repository": {
+      "id": 1352444621,
+      "node_id": "R_kgDOUJyqzQ",
+      "name": "flask",
+      "full_name": "vjymisal0/flask",
+      "private": false,
+      "owner": {
+        "login": "vjymisal0",
+        "id": 97379957,
+        "node_id": "U_kgDOBc3mdQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/97379957?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/vjymisal0",
+        "html_url": "https://github.com/vjymisal0",
+        "followers_url": "https://api.github.com/users/vjymisal0/followers",
+        "following_url": "https://api.github.com/users/vjymisal0/following{/other_user}",
+        "gists_url": "https://api.github.com/users/vjymisal0/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/vjymisal0/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/vjymisal0/subscriptions",
+        "organizations_url": "https://api.github.com/users/vjymisal0/orgs",
+        "repos_url": "https://api.github.com/users/vjymisal0/repos",
+        "events_url": "https://api.github.com/users/vjymisal0/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/vjymisal0/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/vjymisal0/flask",
+      "description": "The Python micro framework for building web applications.",
+      "fork": true,
+      "url": "https://api.github.com/repos/vjymisal0/flask",
+      "forks_url": "https://api.github.com/repos/vjymisal0/flask/forks",
+      "keys_url": "https://api.github.com/repos/vjymisal0/flask/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/vjymisal0/flask/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/vjymisal0/flask/teams",
+      "hooks_url": "https://api.github.com/repos/vjymisal0/flask/hooks",
+      "issue_events_url": "https://api.github.com/repos/vjymisal0/flask/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/vjymisal0/flask/events",
+      "assignees_url": "https://api.github.com/repos/vjymisal0/flask/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/vjymisal0/flask/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/vjymisal0/flask/tags",
+      "blobs_url": "https://api.github.com/repos/vjymisal0/flask/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/vjymisal0/flask/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/vjymisal0/flask/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/vjymisal0/flask/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/vjymisal0/flask/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/vjymisal0/flask/languages",
+      "stargazers_url": "https://api.github.com/repos/vjymisal0/flask/stargazers",
+      "contributors_url": "https://api.github.com/repos/vjymisal0/flask/contributors",
+      "subscribers_url": "https://api.github.com/repos/vjymisal0/flask/subscribers",
+      "subscription_url": "https://api.github.com/repos/vjymisal0/flask/subscription",
+      "commits_url": "https://api.github.com/repos/vjymisal0/flask/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/vjymisal0/flask/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/vjymisal0/flask/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/vjymisal0/flask/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/vjymisal0/flask/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/vjymisal0/flask/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/vjymisal0/flask/merges",
+      "archive_url": "https://api.github.com/repos/vjymisal0/flask/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/vjymisal0/flask/downloads",
+      "issues_url": "https://api.github.com/repos/vjymisal0/flask/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/vjymisal0/flask/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/vjymisal0/flask/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/vjymisal0/flask/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/vjymisal0/flask/labels{/name}",
+      "releases_url": "https://api.github.com/repos/vjymisal0/flask/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/vjymisal0/flask/deployments"
+    }
+  },
+  "files": {
+    "pallets/flask@fec2631289e6ad731241b6e54ac44a916722858e:.github/workflows/tests.yaml": "name: Tests\non:\n  pull_request:\n    paths-ignore: ['docs/**', 'README.md']\n  push:\n    branches: [main, stable]\n    paths-ignore: ['docs/**', 'README.md']\npermissions: {}\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\njobs:\n  tests:\n    name: ${{ matrix.name || matrix.python }}\n    runs-on: ${{ matrix.os || 'ubuntu-latest' }}\n    strategy:\n      fail-fast: false\n      matrix:\n        include:\n          - {python: '3.15'}\n          - {python: '3.14'}\n          - {python: '3.14t'}\n          - {name: Windows, python: '3.14', os: windows-latest}\n          - {name: Mac, python: '3.14', os: macos-latest}\n          - {python: '3.13'}\n          - {python: '3.12'}\n          - {python: '3.11'}\n          - {python: '3.10'}\n          - {name: PyPy, python: 'pypy-3.11', tox: pypy3.11}\n          - {name: Minimum Versions, python: '3.14', tox: tests-min}\n          - {name: Development Versions, python: '3.10', tox: tests-dev}\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: ${{ matrix.python }}\n          allow-prereleases: true\n      - run: uv run --locked --no-default-groups --group dev tox run\n        env:\n          TOX_ENV: ${{ matrix.tox || format('py{0}', matrix.python) }}\n  typing:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version-file: pyproject.toml\n      - name: cache mypy\n        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0\n        with:\n          path: ./.mypy_cache\n          key: mypy|${{ hashFiles('pyproject.toml') }}\n      - run: uv run --locked --no-default-groups --group dev tox run -e typing\n",
+    "pallets/flask@56f3db172de7f3e843a3ebf048f6f475ef700b40:.github/workflows/tests.yaml": "name: Tests\non:\n  pull_request:\n    paths-ignore: ['docs/**', 'README.md']\n  push:\n    branches: [main, stable]\n    paths-ignore: ['docs/**', 'README.md']\npermissions: {}\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\njobs:\n  tests:\n    name: ${{ matrix.name || matrix.python }}\n    runs-on: ${{ matrix.os || 'ubuntu-latest' }}\n    strategy:\n      fail-fast: false\n      matrix:\n        include:\n          - {python: '3.15'}\n          - {python: '3.14'}\n          - {python: '3.14t'}\n          - {name: Windows, python: '3.14', os: windows-latest}\n          - {name: Mac, python: '3.14', os: macos-latest}\n          - {python: '3.13'}\n          - {python: '3.12'}\n          - {python: '3.11'}\n          - {python: '3.10'}\n          - {name: PyPy, python: 'pypy-3.11', tox: pypy3.11}\n          - {name: Minimum Versions, python: '3.14', tox: tests-min}\n          - {name: Development Versions, python: '3.10', tox: tests-dev}\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: ${{ matrix.python }}\n          allow-prereleases: true\n      - run: uv run --locked --no-default-groups --group dev tox run\n        env:\n          TOX_ENV: ${{ matrix.tox || format('py{0}', matrix.python) }}\n  typing:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version-file: pyproject.toml\n      - name: cache mypy\n        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0\n        with:\n          path: ./.mypy_cache\n          key: mypy|${{ hashFiles('pyproject.toml') }}\n      - run: uv run --locked --no-default-groups --group dev tox run -e typing\n"
+  }
+}

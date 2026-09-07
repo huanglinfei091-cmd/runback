@@ -1,0 +1,20 @@
+diff --git a/src/click/types.py b/src/click/types.py
+index f7926fa..7101ed3 100644
+--- a/src/click/types.py
++++ b/src/click/types.py
+@@ -1,7 +1,6 @@
+ from __future__ import annotations
+ 
+ import abc
+-import builtins
+ import collections.abc as cabc
+ import enum
+ import os
+@@ -21,6 +20,7 @@ from .utils import _safecall
+ from .utils import format_filename
+ 
+ if t.TYPE_CHECKING:
++    import builtins
+     import typing_extensions as te
+ 
+     from .core import Context

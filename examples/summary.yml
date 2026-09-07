@@ -1,0 +1,9 @@
+# Copy into a job after the steps that may fail.
+# For local use, check out RunBack to a separate path first.
+- uses: actions/checkout@v4
+  if: failure()
+  with:
+    repository: huanglinfei091-cmd/runback
+    path: .runback-action
+- uses: ./.runback-action
+  if: failure()

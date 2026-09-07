@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.ps1 text eol=lf
+*.png binary
+*.gif binary
+
+# Evidence checksums cover the captured bytes. Never normalize line endings in
+# authoritative evidence or fixtures that model raw logs.
+docs/m1/** -text
+docs/m2/** -text
+docs/online/evidence/** -text
+testdata/real/*.log -text

@@ -1,0 +1,76 @@
+Evidence: ONLINE
+Cache: CACHE_INCOMPLETE
+Auth mode: token
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network:  (GENERIC_DEFAULT)
+Workflow      .github/workflows/tests.yaml
+Commit        06a9506ef7ee194c3ee64ae30a55e02ae08e2387
+Job           3.9 [tests]
+Matrix        map[python:3.9]
+Runner        ubuntu-latest
+Failed step   Run uv run --locked --no-default-groups --group dev tox run
+Command       uv run --locked --no-default-groups --group dev tox run
+Lock          /tmp/rb/846ddbbab9d1/runback.lock
+NOTE          9 supported failed jobs; selected lowest job ID automatically; --job chooses another
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+BLOCKED       historical checkout workflow unavailable
+
+Result: REPLAY_BLOCKED
+Stage: PREPARE
+Cause: historical checkout workflow unavailable
+Evidence level: STEP
+Remote failures: 1
+Local failures: 0
+Matched: 0
+act did not fail in the original target step
+Report: /tmp/rb/846ddbbab9d1/result.json
+{
+  "status": "REPLAY_BLOCKED",
+  "evidence_level": "STEP",
+  "reason": "act did not fail in the original target step",
+  "remote": {
+    "failure_count": 1,
+    "level": "TEST",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [
+      "E   Failed: DID NOT RAISE \u003cclass 'werkzeug.exceptions.RequestEntityTooLarge'\u003e",
+      "FAILED tests/test_formparser.py::TestFormParser::test_limiting - Failed: DID ...",
+      "tests/test_formparser.py::TestFormParser::test_limiting FAILED           [ 33%]"
+    ],
+    "items": [
+      {
+        "kind": "pytest",
+        "identity": "tests/test_formparser.py::TestFormParser::test_limiting",
+        "exception": "Failed",
+        "file": "tests/test_formparser.py",
+        "line": 61,
+        "message": "DID NOT RAISE \u003cclass 'werkzeug.exceptions.RequestEntityTooLarge'\u003e"
+      }
+    ]
+  },
+  "local": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": -1,
+    "normalized_excerpt": [],
+    "items": []
+  },
+  "matched_fields": {
+    "Identity": false,
+    "Exception": false,
+    "File": false,
+    "Line": false,
+    "Message": false,
+    "Exit": false
+  },
+  "remote_failures": 1,
+  "local_failures": 0,
+  "matched_failures": 0
+}
+RunBack: replay blocked: historical checkout workflow unavailable
+CLI elapsed: 41.407s (through final result)

@@ -1,0 +1,46 @@
+{
+  "status": "STEP_PASSED_UNVERIFIED",
+  "mode": "STEP_ONLY",
+  "session": "33760631267-100665765259-1788655911544661446",
+  "image": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+  "container": "runback-debug-1788656467032193314",
+  "worktree": "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/worktree",
+  "exit": 0,
+  "dependency_setup": true,
+  "dependency_reset": true,
+  "network_download": "UNKNOWN",
+  "evidence": {
+    "status": "",
+    "evidence_level": "",
+    "reason": "",
+    "remote": {
+      "failure_count": 0,
+      "level": "",
+      "step": "",
+      "command": "",
+      "exit": null,
+      "normalized_excerpt": null,
+      "items": null
+    },
+    "local": {
+      "failure_count": 0,
+      "level": "",
+      "step": "",
+      "command": "",
+      "exit": null,
+      "normalized_excerpt": null,
+      "items": null
+    },
+    "matched_fields": {
+      "Identity": false,
+      "Exception": false,
+      "File": false,
+      "Line": false,
+      "Message": false,
+      "Exit": false
+    },
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched_failures": 0
+  }
+}

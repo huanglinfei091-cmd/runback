@@ -1,0 +1,63 @@
+{
+  "status": "SAME_FAILURE",
+  "evidence_level": "TEST",
+  "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+  "remote": {
+    "failure_count": 1,
+    "level": "TEST",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [
+      "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+      "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+      "assert module in ALLOWED_IMPORTS",
+      "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+    ],
+    "items": [
+      {
+        "kind": "pytest",
+        "identity": "tests/test_imports.py::test_light_imports",
+        "exception": "AssertionError",
+        "file": "tests/test_imports.py",
+        "line": 80,
+        "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+      }
+    ]
+  },
+  "local": {
+    "failure_count": 1,
+    "level": "TEST",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [
+      "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+      "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+      "assert module in ALLOWED_IMPORTS",
+      "tests/test_imports.py::test_light_imports FAILED                         [ 32%]",
+      "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+    ],
+    "items": [
+      {
+        "kind": "pytest",
+        "identity": "tests/test_imports.py::test_light_imports",
+        "exception": "AssertionError",
+        "file": "tests/test_imports.py",
+        "line": 80,
+        "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+      }
+    ]
+  },
+  "matched_fields": {
+    "Identity": true,
+    "Exception": true,
+    "File": true,
+    "Line": true,
+    "Message": true,
+    "Exit": true
+  },
+  "remote_failures": 1,
+  "local_failures": 1,
+  "matched_failures": 1
+}

@@ -1,0 +1,13 @@
+{
+  "args": [
+    "https://github.com/pallets/click/actions/runs/33760631267",
+    "--bundle",
+    "docs/m1/evidence/case-b-bundle.json",
+    "--dry-run"
+  ],
+  "token_used": false,
+  "exit": 0,
+  "ttfr_to_result_seconds": null,
+  "cli_launch_to_exit_seconds": 0.27941944299891475,
+  "result": null
+}

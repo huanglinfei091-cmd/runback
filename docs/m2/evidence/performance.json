@@ -1,0 +1,79 @@
+{
+  "measurements": [
+    {
+      "label": "full-prime",
+      "cli_launch_to_exit_seconds": 11.607537555000818,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": true,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    },
+    {
+      "label": "warm-full-1",
+      "cli_launch_to_exit_seconds": 9.52113089500017,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": true,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    },
+    {
+      "label": "warm-fast-1",
+      "cli_launch_to_exit_seconds": 5.458915825000076,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": false,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    },
+    {
+      "label": "warm-full-2",
+      "cli_launch_to_exit_seconds": 9.452698613999019,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": true,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    },
+    {
+      "label": "warm-fast-2",
+      "cli_launch_to_exit_seconds": 5.506708381000863,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": false,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    },
+    {
+      "label": "warm-full-3",
+      "cli_launch_to_exit_seconds": 9.463531432998934,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": true,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    },
+    {
+      "label": "warm-fast-3",
+      "cli_launch_to_exit_seconds": 5.405813695000688,
+      "exit": 0,
+      "image_already_present": true,
+      "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "session": "33760631267-100665765259-1788655911544661446",
+      "dependency_setup_observed": false,
+      "network_download": "NOT_OBSERVED_NOT_PROVEN_OFFLINE"
+    }
+  ],
+  "warm_full_reproduce_duration": 9.463531432998934,
+  "fast_replay_duration": 5.458915825000076,
+  "speedup_ratio": 1.7335917490537238,
+  "aggregation": "median of 3 interleaved pairs",
+  "conditions": "Same host, same unmodified session, same image ID; session uv cache and act tools primed. Full job creates project environments in a fresh checkout; fast replay reuses worktree .venv/.tox. Network remains enabled; setup actions can contact GitHub even with cached tools."
+}

@@ -1,0 +1,22 @@
+name: RunBack failure link
+description: Add the exact failed-run reproduction command to a job summary.
+author: RunBack contributors
+branding:
+  icon: rewind
+  color: orange
+runs:
+  using: composite
+  steps:
+    - name: Show RunBack command
+      shell: bash
+      env:
+        RUNBACK_SERVER: ${{ github.server_url }}
+        RUNBACK_REPO: ${{ github.repository }}
+        RUNBACK_RUN: ${{ github.run_id }}
+        RUNBACK_ATTEMPT: ${{ github.run_attempt }}
+      run: |
+        {
+          printf '### Reproduce this failed run with RunBack\n\n'
+          printf '```bash\nrunback %s/%s/actions/runs/%s/attempts/%s\n```\n' "$RUNBACK_SERVER" "$RUNBACK_REPO" "$RUNBACK_RUN" "$RUNBACK_ATTEMPT"
+          printf '\nRun after the workflow finishes. Public Ubuntu workflows are the V1 focus.\n'
+        } >> "$GITHUB_STEP_SUMMARY"

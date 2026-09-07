@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-09-06T10:59:00.4768163Z",
+  "after_case_c": true,
+  "token_scan": {"files": 35345, "matches": 0},
+  "commands": [
+    {"command": "go test ./...", "exit": 0, "result": "PASS"},
+    {"command": "go vet ./...", "exit": 0, "result": "PASS", "diagnostics": 0},
+    {"command": "go build -o bin/runback ./cmd/runback", "exit": 0, "result": "PASS", "diagnostics": 0},
+    {"command": "sha256sum -c docs/m1/SHA256SUMS", "exit": 0, "result": "PASS"},
+    {"command": "sha256sum -c docs/m2/SHA256SUMS", "exit": 0, "result": "PASS"}
+  ],
+  "case_c": {
+    "url": "https://github.com/pallets/werkzeug/actions/runs/32448268750",
+    "run_attempt": 1,
+    "job_id": 96671790465,
+    "result": "SAME_FAILURE",
+    "evidence_level": "TEST",
+    "remote_failures": 1,
+    "local_failures": 1,
+    "matched_failures": 1,
+    "ttfr_online_cold_seconds": 41.563650838001195,
+    "cli_launch_to_exit_seconds": 48.13075207899965,
+    "cli_overrides": false
+  },
+  "regressions": {
+    "flask_bundle_plan": "PASS",
+    "click_bundle_plan": "PASS",
+    "m2_fast_replay": "STEP_PASSED_UNVERIFIED",
+    "m2_full_verify": "FULL_JOB_PASSED"
+  }
+}

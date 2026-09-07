@@ -1,0 +1,11 @@
+{
+  "args": [
+    "inspect",
+    "https://github.com/pallets/click/actions/runs/33760631267"
+  ],
+  "token_used": true,
+  "exit": 0,
+  "ttfr_to_result_seconds": null,
+  "cli_launch_to_exit_seconds": 6.314684888002375,
+  "result": null
+}

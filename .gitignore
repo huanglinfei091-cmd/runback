@@ -1,0 +1,13 @@
+/.runback/
+/bin/
+/cache/
+/dist/
+/sessions/
+/tmp/
+/runback.lock
+/runback
+/coverage.out
+*.exe
+*.token
+.env
+.env.*

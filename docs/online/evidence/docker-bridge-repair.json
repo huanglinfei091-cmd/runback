@@ -1,0 +1,86 @@
+{
+  "at": "2026-09-06T06:07:41.527892+00:00",
+  "before": [
+    {
+      "ifindex": 3,
+      "ifname": "docker0",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "noqueue",
+      "operstate": "UP",
+      "group": "default",
+      "link_type": "ether",
+      "address": "4e:7d:4f:68:16:e7",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "addr_info": [
+        {
+          "family": "inet6",
+          "local": "fe80::4c7d:4fff:fe68:16e7",
+          "prefixlen": 64,
+          "scope": "link",
+          "valid_life_time": 4294967295,
+          "preferred_life_time": 4294967295
+        }
+      ]
+    }
+  ],
+  "configured_gateway": {
+    "Subnet": "172.17.0.0/16",
+    "IPRange": "",
+    "Gateway": "172.17.0.1"
+  },
+  "command": [
+    "ip",
+    "address",
+    "add",
+    "172.17.0.1/16",
+    "dev",
+    "docker0"
+  ],
+  "after": [
+    {
+      "ifindex": 3,
+      "ifname": "docker0",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "noqueue",
+      "operstate": "UP",
+      "group": "default",
+      "link_type": "ether",
+      "address": "4e:7d:4f:68:16:e7",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "addr_info": [
+        {
+          "family": "inet",
+          "local": "172.17.0.1",
+          "prefixlen": 16,
+          "scope": "global",
+          "label": "docker0",
+          "valid_life_time": 4294967295,
+          "preferred_life_time": 4294967295
+        },
+        {
+          "family": "inet6",
+          "local": "fe80::4c7d:4fff:fe68:16e7",
+          "prefixlen": 64,
+          "scope": "link",
+          "valid_life_time": 4294967295,
+          "preferred_life_time": 4294967295
+        }
+      ]
+    }
+  ],
+  "container_network_probe_exit": 0,
+  "probe_output": "HTTP/2 200 \ndate: Sun, 06 Sep 2026 06:07:34 GMT\ncontent-type: text/html; charset=utf-8\ncontent-language: en-US\nvary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, X-GitHub-Client-Version, Accept-Language, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With\netag: W/\"cba7209a45c67fa8f68e583ac8bc7f52\"\ncache-control: max-age=0, private, must-revalidate\nstrict-transport-security: max-age=31536000; includeSubdomains; preload\nx-frame-options: deny\nx-content-type-options: nosniff\nx-xss-protection: 0\nreferrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin\ncontent-security-policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com wss://production-copilot-host.webpubsub.azure.com edge.fullstory.com rs.fullstory.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com www.youtube-nocookie.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com repository-images.githubusercontent.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com explore-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com images.ctfassets.net/8aevphvgewt8/; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com assets.ctfassets.net/8aevphvgewt8/ videos.ctfassets.net/8aevphvgewt8/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/\nserver: github.com\naccept-ranges: bytes\nset-cookie: _gh_sess=YXJZap3jDTY1oAXhJgOnCFSZCM6Pg4y%2FI4pAXt81BQptwSJUroQAVMwHlxeH%2B4jbrOhMZYQSqNwIO8w5hV%2FxHpORczUQj82o2Bhdlde1RRWSxPKqLmAIVK3NRA%2FZ1odioOznX%2FAucac8cOCtJPg0Ph4NZ8Af6B4Gd24H6KbDCCgMKoCZX%2Fso0Azq9mXUS5RAIWCXGoXXmonaudIME89%2F1X%2FJFSaz16NVfBQupkQzL1ois3B78we1Oi0rEPcuhB3Zh9flIhIcz0ZXdhk1ruKsIQ%3D%3D--e8u4BmiJZsmwIqzz--4aXLJR9gQYRxV18trK4PTw%3D%3D; path=/; HttpOnly; secure; SameSite=Lax\nset-cookie: _octo=GH1.1.594462905.1788674861; expires=Mon, 06 Sep 2027 06:07:41 GMT; domain=.github.com; path=/; secure; SameSite=Lax\nset-cookie: logged_in=no; expires=Mon, 06 Sep 2027 06:07:41 GMT; domain=.github.com; path=/; HttpOnly; secure; SameSite=Lax\nx-github-request-id: CDDC:3E8390:94DD05:E5F604:6A9D032D\nx-github-edge-region: japaneast\n\n  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n",
+  "scope": "Host environment repair; no RunBack image/network default changed; no Docker restart."
+}

@@ -1,0 +1,5 @@
+{
+  "same_failure_on_original": true,
+  "editable_fix_preserved": true,
+  "patch_sha256": "a78c1c381e662fde14c961143e5ab19ae80011df192823449dc8232656a235f8"
+}

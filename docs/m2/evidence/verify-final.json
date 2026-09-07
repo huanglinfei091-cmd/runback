@@ -1,0 +1,131 @@
+{
+  "status": "FULL_JOB_PASSED",
+  "verification_workflow": "ORIGINAL_WORKFLOW",
+  "changes": {
+    "tracked": [
+      "src/click/types.py"
+    ],
+    "untracked": [],
+    "workflow_modified": false
+  },
+  "full_job": {
+    "stage": "MATCH",
+    "executor": "act",
+    "mode": "FULL_JOB",
+    "target_succeeded": true,
+    "target_reached": true,
+    "evidence": {
+      "status": "DIFFERENT_FAILURE",
+      "evidence_level": "STEP",
+      "reason": "the local job succeeded",
+      "remote": {
+        "failure_count": 1,
+        "level": "TEST",
+        "step": "Run uv run --locked --no-default-groups --group dev tox run",
+        "command": "uv run --locked --no-default-groups --group dev tox run",
+        "exit": 1,
+        "normalized_excerpt": [
+          "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+          "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+          "assert module in ALLOWED_IMPORTS",
+          "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+        ],
+        "items": [
+          {
+            "kind": "pytest",
+            "identity": "tests/test_imports.py::test_light_imports",
+            "exception": "AssertionError",
+            "file": "tests/test_imports.py",
+            "line": 80,
+            "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+          }
+        ]
+      },
+      "local": {
+        "failure_count": 0,
+        "level": "STEP",
+        "step": "Run uv run --locked --no-default-groups --group dev tox run",
+        "command": "uv run --locked --no-default-groups --group dev tox run",
+        "exit": 0,
+        "normalized_excerpt": [
+          "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+        ],
+        "items": []
+      },
+      "matched_fields": {
+        "Identity": false,
+        "Exception": false,
+        "File": false,
+        "Line": false,
+        "Message": false,
+        "Exit": false
+      },
+      "remote_failures": 1,
+      "local_failures": 0,
+      "matched_failures": 0
+    },
+    "status": "DIFFERENT_FAILURE",
+    "started_at": "2026-09-06T01:01:13Z",
+    "duration_seconds": 10.619096965,
+    "exit_code": 0,
+    "comparison": {
+      "status": "not_reproduced",
+      "similarity": 0,
+      "remote": {
+        "hash": "9d43e8ec1e2e656a2adb505b4012e8dd23121e1a04415d5087eff06623c5dbc8",
+        "lines": [
+          "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+          "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+          "assert module in ALLOWED_IMPORTS",
+          "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+        ]
+      },
+      "local": {
+        "hash": "68485f71da44eaadd7b1b10785a311ad80cef2e75462ae9158e068551f34d5e7",
+        "lines": [
+          "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+        ]
+      },
+      "reason": "local execution succeeded"
+    },
+    "command": [
+      "act",
+      "pull_request",
+      "-C",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/workspace",
+      "-W",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/replay.yml",
+      "-j",
+      "tests",
+      "-e",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/event.json",
+      "-P",
+      "ubuntu-latest=sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+      "--actor",
+      "dhimasardinata",
+      "--container-architecture",
+      "linux/amd64",
+      "--container-daemon-socket",
+      "-",
+      "--network",
+      "runback-replay",
+      "--secret-file",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/empty.env",
+      "--var-file",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/empty.env",
+      "--env-file",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/empty.env",
+      "--input-file",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/verifications/1788656473305959450/runback-33760631267-1-100665765259/empty.env",
+      "--action-cache-path",
+      "/root/.runback/sessions/33760631267-100665765259-1788655911544661446/cache/actions",
+      "--pull=false",
+      "--use-new-action-cache",
+      "--container-options",
+      "--label io.runback.case=runback-33760631267-1-100665765259 --mount \"type=bind,src=/root/.runback/sessions/33760631267-100665765259-1788655911544661446/cache/uv,dst=/root/.cache/uv\"",
+      "--json"
+    ],
+    "image_id": "sha256:cc542dcefdd558c658863b1f9542ba7bbe6e28a37466222ed8fc92a0596ab1c7",
+    "workspace_dirty": true
+  }
+}

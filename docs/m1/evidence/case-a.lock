@@ -1,0 +1,79 @@
+{
+  "observed_versions": {
+    "python-version": "3.14.7"
+  },
+  "version": 1,
+  "url": "https://github.com/pallets/flask/actions/runs/33397112701",
+  "repository": "pallets/flask",
+  "run_id": 33397112701,
+  "attempt": 1,
+  "head_sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40",
+  "commit": "fec2631289e6ad731241b6e54ac44a916722858e",
+  "checkout_source": "checkout git log in original job log",
+  "branch": "fix/json-pathlike-and-dataclass-class-serialization",
+  "event": "pull_request",
+  "actor": "vjymisal0",
+  "workflow_path": ".github/workflows/tests.yaml",
+  "workflow_ref": ".github/workflows/tests.yaml",
+  "workflow": "name: Tests\non:\n  pull_request:\n    paths-ignore: ['docs/**', 'README.md']\n  push:\n    branches: [main, stable]\n    paths-ignore: ['docs/**', 'README.md']\npermissions: {}\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\njobs:\n  tests:\n    name: ${{ matrix.name || matrix.python }}\n    runs-on: ${{ matrix.os || 'ubuntu-latest' }}\n    strategy:\n      fail-fast: false\n      matrix:\n        include:\n          - {python: '3.15'}\n          - {python: '3.14'}\n          - {python: '3.14t'}\n          - {name: Windows, python: '3.14', os: windows-latest}\n          - {name: Mac, python: '3.14', os: macos-latest}\n          - {python: '3.13'}\n          - {python: '3.12'}\n          - {python: '3.11'}\n          - {python: '3.10'}\n          - {name: PyPy, python: 'pypy-3.11', tox: pypy3.11}\n          - {name: Minimum Versions, python: '3.14', tox: tests-min}\n          - {name: Development Versions, python: '3.10', tox: tests-dev}\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: ${{ matrix.python }}\n          allow-prereleases: true\n      - run: uv run --locked --no-default-groups --group dev tox run\n        env:\n          TOX_ENV: ${{ matrix.tox || format('py{0}', matrix.python) }}\n  typing:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version-file: pyproject.toml\n      - name: cache mypy\n        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0\n        with:\n          path: ./.mypy_cache\n          key: mypy|${{ hashFiles('pyproject.toml') }}\n      - run: uv run --locked --no-default-groups --group dev tox run -e typing\n",
+  "job_id": "typing",
+  "job_name": "typing",
+  "job_number": 99504166020,
+  "matrix": {},
+  "runner": "ubuntu-latest",
+  "image": "ghcr.io/catthehacker/ubuntu:act-latest",
+  "tool_versions": {
+    "python-version-file": "pyproject.toml"
+  },
+  "failure": {
+    "shell": "bash",
+    "working_directory": ".",
+    "environment": {},
+    "name": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+    "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+    "step_index": 4,
+    "log": "2026-08-31T13:28:07.1932747Z Received 983000 of 983000 (100.0%), 1.0 MBs/sec\n2026-08-31T13:28:07.1933276Z Cache Size: ~1 MB (983000 B)\n2026-08-31T13:28:07.1966239Z [command]/usr/bin/tar -xf /home/runner/work/_temp/afe5c179-4202-427b-a450-8ce843205fe4/cache.tzst -P -C /home/runner/work/flask/flask --use-compress-program unzstd\n2026-08-31T13:28:07.2125739Z Cache restored successfully\n2026-08-31T13:28:07.2203827Z Cache restored from key: mypy|5f3c5600705956c4745b41029f44a5bd0f17f1c89e3ee2fdf4a2578e6e1be495\n2026-08-31T13:28:07.2340399Z ##[group]Run uv run --locked --no-default-groups --group dev tox run -e typing\n2026-08-31T13:28:07.2341074Z \u001b[36;1muv run --locked --no-default-groups --group dev tox run -e typing\u001b[0m\n2026-08-31T13:28:07.2383144Z shell: /usr/bin/bash -e {0}\n2026-08-31T13:28:07.2383414Z env:\n2026-08-31T13:28:07.2383712Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir\n2026-08-31T13:28:07.2384199Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache\n2026-08-31T13:28:07.2384600Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2385035Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig\n2026-08-31T13:28:07.2385468Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2385857Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2386263Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64\n2026-08-31T13:28:07.2386946Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib\n2026-08-31T13:28:07.2387371Z ##[endgroup]\n2026-08-31T13:28:07.9034198Z Using CPython 3.14.7 interpreter at: /opt/hostedtoolcache/Python/3.14.7/x64/bin/python3\n2026-08-31T13:28:07.9034745Z Creating virtual environment at: .venv\n2026-08-31T13:28:07.9084270Z    Building flask @ file:///home/runner/work/flask/flask\n2026-08-31T13:28:08.6415447Z       Built flask @ file:///home/runner/work/flask/flask\n2026-08-31T13:28:08.6569447Z Installed 23 packages in 14ms\n2026-08-31T13:28:10.2137285Z typing: venv\u003e .venv/bin/uv venv -p /home/runner/work/flask/flask/.venv/bin/python --allow-existing '--prompt=flask[typing]' --python-preference system /home/runner/work/flask/flask/.tox/typing\n2026-08-31T13:28:10.2935299Z typing: uv-sync\u003e .venv/bin/uv sync --locked --python-preference system --no-default-groups --no-editable --reinstall-package Flask --group typing -p /home/runner/work/flask/flask/.venv/bin/python\n2026-08-31T13:28:11.6788698Z typing: freeze\u003e .venv/bin/uv --color never pip freeze\n2026-08-31T13:28:11.6931226Z typing: asgiref==3.12.1,ast-serialize==0.6.0,blinker==1.9.0,cffi==2.1.0,click==8.4.2,cryptography==49.0.0,flask @ file:///home/runner/work/flask/flask,iniconfig==2.3.0,itsdangerous==2.2.0,jinja2==3.1.6,librt==0.13.0,markupsafe==3.0.3,mypy==2.3.0,mypy-extensions==1.1.0,nodeenv==1.10.0,packaging==26.2,pathspec==1.1.1,pluggy==1.6.0,pycparser==3.0,pygments==2.20.0,pyright==1.1.411,pytest==9.1.1,python-dotenv==1.2.2,types-contextvars==2.4.7.3,types-dataclasses==0.6.6,typing-extensions==4.16.0,werkzeug==3.1.8\n2026-08-31T13:28:11.6934733Z typing: commands[0]\u003e mypy\n2026-08-31T13:28:12.7890173Z src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment \n2026-08-31T13:28:12.8868299Z [unused-ignore]\n2026-08-31T13:28:12.8869100Z             return dataclasses.asdict(o)  # type: ignore[arg-type]\n2026-08-31T13:28:12.8869796Z             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n2026-08-31T13:28:12.8870317Z Found 1 error in 1 file (checked 27 source files)\n2026-08-31T13:28:12.8941513Z typing: exit 1 (1.20 seconds) /home/runner/work/flask/flask\u003e mypy pid=2519\n2026-08-31T13:28:12.8947184Z   typing: FAIL code 1 (2.68=setup[1.48]+cmd[1.20] seconds)\n2026-08-31T13:28:12.8947682Z   evaluation failed :( (2.77 seconds)\n2026-08-31T13:28:12.9698568Z ##[error]Process completed with exit code 1.\n2026-08-31T13:28:12.9832409Z Post job cleanup."
+  },
+  "event_json": {
+    "action": "synchronize",
+    "after": "fec2631289e6ad731241b6e54ac44a916722858e",
+    "number": 6145,
+    "pull_request": {
+      "base": {
+        "repo": {
+          "clone_url": "https://github.com/pallets/flask.git",
+          "default_branch": "",
+          "full_name": "pallets/flask",
+          "name": "flask",
+          "owner": {
+            "login": "pallets"
+          }
+        }
+      },
+      "head": {
+        "ref": "fix/json-pathlike-and-dataclass-class-serialization",
+        "sha": "56f3db172de7f3e843a3ebf048f6f475ef700b40"
+      },
+      "merge_commit_sha": "fec2631289e6ad731241b6e54ac44a916722858e",
+      "number": 6145
+    },
+    "ref": "refs/pull/6145/merge",
+    "repository": {
+      "clone_url": "https://github.com/pallets/flask.git",
+      "default_branch": "",
+      "full_name": "pallets/flask",
+      "name": "flask",
+      "owner": {
+        "login": "pallets"
+      }
+    },
+    "sender": {
+      "login": "vjymisal0"
+    }
+  },
+  "warnings": [
+    "event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable",
+    "act uses a container approximation; the original job conditions and remaining steps are preserved"
+  ],
+  "blockers": []
+}

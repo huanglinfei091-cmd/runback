@@ -1,0 +1,302 @@
+$ go test ./...
+?   	github.com/huanglinfei091-cmd/runback/cmd/runback	[no test files]
+ok  	github.com/huanglinfei091-cmd/runback/internal/failure	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/fingerprint	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/github	(cached)
+?   	github.com/huanglinfei091-cmd/runback/internal/lockfile	[no test files]
+?   	github.com/huanglinfei091-cmd/runback/internal/replay	[no test files]
+ok  	github.com/huanglinfei091-cmd/runback/internal/resolver	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/runner	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/workflow	(cached)
+$ go vet ./...
+$ go build -o bin/runback ./cmd/runback
+
+Capture case-a-local.jsonl expected SAME_FAILURE
+=== RUN   TestCapturedFullJobEvidence
+    integration_test.go:33: {
+          "status": "SAME_FAILURE",
+          "evidence_level": "STRUCTURED",
+          "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+          "remote": {
+            "failure_count": 1,
+            "level": "STRUCTURED",
+            "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+            "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+            "exit": 1,
+            "normalized_excerpt": [
+              "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+            ],
+            "items": [
+              {
+                "kind": "mypy",
+                "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+                "exception": "mypy[unused-ignore]",
+                "file": "src/flask/json/provider.py",
+                "line": 117,
+                "message": "Unused \"type: ignore\" comment"
+              }
+            ]
+          },
+          "local": {
+            "failure_count": 1,
+            "level": "STRUCTURED",
+            "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+            "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+            "exit": 1,
+            "normalized_excerpt": [
+              "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment",
+              "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+            ],
+            "items": [
+              {
+                "kind": "mypy",
+                "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+                "exception": "mypy[unused-ignore]",
+                "file": "src/flask/json/provider.py",
+                "line": 117,
+                "message": "Unused \"type: ignore\" comment"
+              }
+            ]
+          },
+          "matched_fields": {
+            "Identity": true,
+            "Exception": true,
+            "File": true,
+            "Line": true,
+            "Message": true,
+            "Exit": true
+          },
+          "remote_failures": 1,
+          "local_failures": 1,
+          "matched_failures": 1
+        }
+--- PASS: TestCapturedFullJobEvidence (0.01s)
+PASS
+ok  	github.com/huanglinfei091-cmd/runback/internal/runner	0.016s
+
+Capture case-b-local.jsonl expected SAME_FAILURE
+=== RUN   TestCapturedFullJobEvidence
+    integration_test.go:33: {
+          "status": "SAME_FAILURE",
+          "evidence_level": "TEST",
+          "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+          "remote": {
+            "failure_count": 1,
+            "level": "TEST",
+            "step": "Run uv run --locked --no-default-groups --group dev tox run",
+            "command": "uv run --locked --no-default-groups --group dev tox run",
+            "exit": 1,
+            "normalized_excerpt": [
+              "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+              "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+              "assert module in ALLOWED_IMPORTS",
+              "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+            ],
+            "items": [
+              {
+                "kind": "pytest",
+                "identity": "tests/test_imports.py::test_light_imports",
+                "exception": "AssertionError",
+                "file": "tests/test_imports.py",
+                "line": 80,
+                "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+              }
+            ]
+          },
+          "local": {
+            "failure_count": 1,
+            "level": "TEST",
+            "step": "Run uv run --locked --no-default-groups --group dev tox run",
+            "command": "uv run --locked --no-default-groups --group dev tox run",
+            "exit": 1,
+            "normalized_excerpt": [
+              "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+              "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+              "assert module in ALLOWED_IMPORTS",
+              "tests/test_imports.py::test_light_imports FAILED                         [ 32%]",
+              "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+            ],
+            "items": [
+              {
+                "kind": "pytest",
+                "identity": "tests/test_imports.py::test_light_imports",
+                "exception": "AssertionError",
+                "file": "tests/test_imports.py",
+                "line": 80,
+                "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+              }
+            ]
+          },
+          "matched_fields": {
+            "Identity": true,
+            "Exception": true,
+            "File": true,
+            "Line": true,
+            "Message": true,
+            "Exit": true
+          },
+          "remote_failures": 1,
+          "local_failures": 1,
+          "matched_failures": 1
+        }
+--- PASS: TestCapturedFullJobEvidence (0.10s)
+PASS
+ok  	github.com/huanglinfei091-cmd/runback/internal/runner	0.103s
+
+Capture case-b-initial-local.jsonl expected DIFFERENT_FAILURE
+=== RUN   TestCapturedFullJobEvidence
+    integration_test.go:33: {
+          "status": "DIFFERENT_FAILURE",
+          "evidence_level": "STEP",
+          "reason": "reported failure counts differ: remote 1, local 25; 1 structured failures agree",
+          "remote": {
+            "failure_count": 1,
+            "level": "TEST",
+            "step": "Run uv run --locked --no-default-groups --group dev tox run",
+            "command": "uv run --locked --no-default-groups --group dev tox run",
+            "exit": 1,
+            "normalized_excerpt": [
+              "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+              "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+              "assert module in ALLOWED_IMPORTS",
+              "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+            ],
+            "items": [
+              {
+                "kind": "pytest",
+                "identity": "tests/test_imports.py::test_light_imports",
+                "exception": "AssertionError",
+                "file": "tests/test_imports.py",
+                "line": 80,
+                "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+              }
+            ]
+          },
+          "local": {
+            "failure_count": 25,
+            "unparsed_failures": [
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8- less ]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9-less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9- less]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9- less ]"
+            ],
+            "level": "STEP",
+            "step": "Run uv run --locked --no-default-groups --group dev tox run",
+            "command": "uv run --locked --no-default-groups --group dev tox run",
+            "exit": 1,
+            "normalized_excerpt": [
+              "E   AssertionError: Unexpected pager output in test case 'Generator function argument'",
+              "E   AssertionError: Unexpected pager output in test case 'Iterable argument'",
+              "E   AssertionError: Unexpected pager output in test case 'Keyboard interrupt should not terminate the pager'",
+              "E   AssertionError: Unexpected pager output in test case 'Number generator expression argument'",
+              "E   AssertionError: Unexpected pager output in test case 'Plain string argument'",
+              "E   AssertionError: Unexpected pager output in test case 'String generator argument'",
+              "E   AssertionError: Unexpected pager output in test case 'Writing to stderr during generator execution'",
+              "E   AssertionError: Unexpected pager output in test case 'Writing to stdout during generator execution'",
+              "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+              "E   assert '' == '012345\\n'",
+              "E   assert '' == 'abcabc\\n'",
+              "E   assert '' == 'iterable\\n'",
+              "E   assert '' == 'just text\\n'",
+              "E   assert '' == 'output_befor...ard_interrupt'",
+              "E   assert '' == 'testtest\\n'",
+              "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8-less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9- less ]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9- less]",
+              "FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9-less]",
+              "assert module in ALLOWED_IMPORTS",
+              "assert pager == expected_pager, (",
+              "tests/test_imports.py::test_light_imports FAILED                         [ 32%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0- less ] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0- less] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0-less] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1- less ] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1- less] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test1-less] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2- less ] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2- less] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test2-less] FAILED [ 90%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3- less ] FAILED [ 91%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3- less] FAILED [ 91%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test3-less] FAILED [ 91%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4- less ] FAILED [ 91%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4- less] FAILED [ 91%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test4-less] FAILED [ 91%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7- less ] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7- less] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test7-less] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8- less ] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8- less] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test8-less] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9- less ] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9- less] FAILED [ 92%]",
+              "tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test9-less] FAILED [ 92%]",
+              "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+            ],
+            "items": [
+              {
+                "kind": "pytest",
+                "identity": "tests/test_imports.py::test_light_imports",
+                "exception": "AssertionError",
+                "file": "tests/test_imports.py",
+                "line": 80,
+                "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+              }
+            ]
+          },
+          "matched_fields": {
+            "Identity": false,
+            "Exception": false,
+            "File": false,
+            "Line": false,
+            "Message": false,
+            "Exit": true
+          },
+          "remote_failures": 1,
+          "local_failures": 25,
+          "matched_failures": 1
+        }
+--- PASS: TestCapturedFullJobEvidence (0.10s)
+PASS
+ok  	github.com/huanglinfei091-cmd/runback/internal/runner	0.101s

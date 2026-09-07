@@ -1,0 +1,18 @@
+Evidence: BUNDLE
+Cache: 
+Auth mode: 
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network:  (GENERIC_DEFAULT)
+Workflow      .github/workflows/tests.yaml
+Commit        fec2631289e6ad731241b6e54ac44a916722858e
+Job           typing [typing]
+Matrix        map[]
+Runner        ubuntu-latest
+Failed step   Run uv run --locked --no-default-groups --group dev tox run -e typing
+Command       uv run --locked --no-default-groups --group dev tox run -e typing
+Lock          /tmp/rb/45bf454e3773/runback.lock
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+Prepared: /tmp/rb/45bf454e3773/replay.yml
+Command argv: ["act","pull_request","-C","/tmp/rb/45bf454e3773/workspace","-W","/tmp/rb/45bf454e3773/replay.yml","-j","typing","-e","/tmp/rb/45bf454e3773/event.json","-P","ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest","--actor","vjymisal0","--container-architecture","linux/amd64","--container-daemon-socket","-","--network","bridge","--secret-file","/tmp/rb/45bf454e3773/empty.env","--var-file","/tmp/rb/45bf454e3773/empty.env","--env-file","/tmp/rb/45bf454e3773/empty.env","--input-file","/tmp/rb/45bf454e3773/empty.env","--action-cache-path","/tmp/rb/45bf454e3773/actions","--pull=false","--use-new-action-cache","--container-options","--label io.runback.case=runback-33397112701-1-99504166020","--json"]
+CLI elapsed: 0.267s (through final result)

@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a failed reproduction, incorrect verdict, or installation problem.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing RunBack. **DO NOT INCLUDE TOKENS OR SECRETS.**
+  - type: input
+    id: version
+    attributes:
+      label: RunBack version
+      placeholder: RunBack v0.1.0-alpha
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Ubuntu 24.04, Linux amd64
+    validations:
+      required: true
+  - type: input
+    id: docker
+    attributes:
+      label: Docker version
+      placeholder: Output of docker --version
+    validations:
+      required: true
+  - type: input
+    id: act
+    attributes:
+      label: act version
+      placeholder: Output of act --version
+    validations:
+      required: true
+  - type: input
+    id: run_url
+    attributes:
+      label: Failed GitHub Actions run URL
+      placeholder: https://github.com/owner/repo/actions/runs/123456789
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: RunBack result
+      options:
+        - SAME_FAILURE
+        - DIFFERENT_FAILURE
+        - INSUFFICIENT_EVIDENCE
+        - REPLAY_BLOCKED
+        - EVIDENCE_UNAVAILABLE
+        - Installation or doctor failed
+    validations:
+      required: true
+  - type: input
+    id: stage
+    attributes:
+      label: Stage
+      placeholder: ACQUIRE, PREPARE, EXECUTE, or MATCH
+  - type: input
+    id: cause
+    attributes:
+      label: Cause
+      placeholder: NETWORK, ACTION_FETCH_FAILED, or the reported cause
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: Remove credentials, secrets, cookies, private source, and personal data before pasting output.
+    validations:
+      required: true

@@ -1,0 +1,1048 @@
+{
+  "run": {
+    "id": 33251265226,
+    "name": "Tests",
+    "node_id": "WFR_kwLOAB2tys8AAAAHve4Kyg",
+    "head_branch": "fix/issue-429-reject-max-age",
+    "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+    "path": ".github/workflows/tests.yaml",
+    "display_title": "AI junk",
+    "run_number": 549,
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 1278724,
+    "check_suite_id": 90116057390,
+    "check_suite_node_id": "CS_kwDOAB2tys8AAAAU-1XpLg",
+    "url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+    "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226",
+    "pull_requests": [],
+    "created_at": "2026-08-29T11:55:52Z",
+    "updated_at": "2026-08-29T11:56:26Z",
+    "actor": {
+      "login": "mikemikimike",
+      "id": 186855910,
+      "node_id": "U_kgDOCyMx5g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186855910?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mikemikimike",
+      "html_url": "https://github.com/mikemikimike",
+      "followers_url": "https://api.github.com/users/mikemikimike/followers",
+      "following_url": "https://api.github.com/users/mikemikimike/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mikemikimike/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mikemikimike/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mikemikimike/subscriptions",
+      "organizations_url": "https://api.github.com/users/mikemikimike/orgs",
+      "repos_url": "https://api.github.com/users/mikemikimike/repos",
+      "events_url": "https://api.github.com/users/mikemikimike/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mikemikimike/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-08-29T11:55:52Z",
+    "triggering_actor": {
+      "login": "mikemikimike",
+      "id": 186855910,
+      "node_id": "U_kgDOCyMx5g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186855910?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mikemikimike",
+      "html_url": "https://github.com/mikemikimike",
+      "followers_url": "https://api.github.com/users/mikemikimike/followers",
+      "following_url": "https://api.github.com/users/mikemikimike/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mikemikimike/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mikemikimike/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mikemikimike/subscriptions",
+      "organizations_url": "https://api.github.com/users/mikemikimike/orgs",
+      "repos_url": "https://api.github.com/users/mikemikimike/repos",
+      "events_url": "https://api.github.com/users/mikemikimike/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mikemikimike/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226/jobs",
+    "logs_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226/logs",
+    "check_suite_url": "https://api.github.com/repos/pallets/itsdangerous/check-suites/90116057390",
+    "artifacts_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226/artifacts",
+    "cancel_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226/cancel",
+    "rerun_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/pallets/itsdangerous/actions/workflows/1278724",
+    "head_commit": {
+      "id": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+      "tree_id": "59b5487f3a91e871720c77ffccdf5efab393ee3b",
+      "message": "Test max_age rejection for URLSafeSerializer",
+      "timestamp": "2026-08-29T11:55:35Z",
+      "author": {
+        "name": "mikemikimike",
+        "email": "13286568797@163.com"
+      },
+      "committer": {
+        "name": "mikemikimike",
+        "email": "13286568797@163.com"
+      }
+    },
+    "repository": {
+      "id": 1945034,
+      "node_id": "MDEwOlJlcG9zaXRvcnkxOTQ1MDM0",
+      "name": "itsdangerous",
+      "full_name": "pallets/itsdangerous",
+      "private": false,
+      "owner": {
+        "login": "pallets",
+        "id": 16748505,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjE2NzQ4NTA1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16748505?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pallets",
+        "html_url": "https://github.com/pallets",
+        "followers_url": "https://api.github.com/users/pallets/followers",
+        "following_url": "https://api.github.com/users/pallets/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pallets/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pallets/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pallets/subscriptions",
+        "organizations_url": "https://api.github.com/users/pallets/orgs",
+        "repos_url": "https://api.github.com/users/pallets/repos",
+        "events_url": "https://api.github.com/users/pallets/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pallets/received_events",
+        "type": "Organization",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/pallets/itsdangerous",
+      "description": "Safely pass trusted data to untrusted environments and back.",
+      "fork": false,
+      "url": "https://api.github.com/repos/pallets/itsdangerous",
+      "forks_url": "https://api.github.com/repos/pallets/itsdangerous/forks",
+      "keys_url": "https://api.github.com/repos/pallets/itsdangerous/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/pallets/itsdangerous/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/pallets/itsdangerous/teams",
+      "hooks_url": "https://api.github.com/repos/pallets/itsdangerous/hooks",
+      "issue_events_url": "https://api.github.com/repos/pallets/itsdangerous/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/pallets/itsdangerous/events",
+      "assignees_url": "https://api.github.com/repos/pallets/itsdangerous/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/pallets/itsdangerous/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/pallets/itsdangerous/tags",
+      "blobs_url": "https://api.github.com/repos/pallets/itsdangerous/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/pallets/itsdangerous/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/pallets/itsdangerous/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/pallets/itsdangerous/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/pallets/itsdangerous/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/pallets/itsdangerous/languages",
+      "stargazers_url": "https://api.github.com/repos/pallets/itsdangerous/stargazers",
+      "contributors_url": "https://api.github.com/repos/pallets/itsdangerous/contributors",
+      "subscribers_url": "https://api.github.com/repos/pallets/itsdangerous/subscribers",
+      "subscription_url": "https://api.github.com/repos/pallets/itsdangerous/subscription",
+      "commits_url": "https://api.github.com/repos/pallets/itsdangerous/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/pallets/itsdangerous/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/pallets/itsdangerous/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/pallets/itsdangerous/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/pallets/itsdangerous/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/pallets/itsdangerous/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/pallets/itsdangerous/merges",
+      "archive_url": "https://api.github.com/repos/pallets/itsdangerous/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/pallets/itsdangerous/downloads",
+      "issues_url": "https://api.github.com/repos/pallets/itsdangerous/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/pallets/itsdangerous/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/pallets/itsdangerous/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/pallets/itsdangerous/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/pallets/itsdangerous/labels{/name}",
+      "releases_url": "https://api.github.com/repos/pallets/itsdangerous/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/pallets/itsdangerous/deployments"
+    },
+    "head_repository": {
+      "id": 1350539794,
+      "node_id": "R_kgDOUH-aEg",
+      "name": "itsdangerous",
+      "full_name": "mikemikimike/itsdangerous",
+      "private": false,
+      "owner": {
+        "login": "mikemikimike",
+        "id": 186855910,
+        "node_id": "U_kgDOCyMx5g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/186855910?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mikemikimike",
+        "html_url": "https://github.com/mikemikimike",
+        "followers_url": "https://api.github.com/users/mikemikimike/followers",
+        "following_url": "https://api.github.com/users/mikemikimike/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mikemikimike/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mikemikimike/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mikemikimike/subscriptions",
+        "organizations_url": "https://api.github.com/users/mikemikimike/orgs",
+        "repos_url": "https://api.github.com/users/mikemikimike/repos",
+        "events_url": "https://api.github.com/users/mikemikimike/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mikemikimike/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/mikemikimike/itsdangerous",
+      "description": "Safely pass trusted data to untrusted environments and back.",
+      "fork": true,
+      "url": "https://api.github.com/repos/mikemikimike/itsdangerous",
+      "forks_url": "https://api.github.com/repos/mikemikimike/itsdangerous/forks",
+      "keys_url": "https://api.github.com/repos/mikemikimike/itsdangerous/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/mikemikimike/itsdangerous/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/mikemikimike/itsdangerous/teams",
+      "hooks_url": "https://api.github.com/repos/mikemikimike/itsdangerous/hooks",
+      "issue_events_url": "https://api.github.com/repos/mikemikimike/itsdangerous/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/mikemikimike/itsdangerous/events",
+      "assignees_url": "https://api.github.com/repos/mikemikimike/itsdangerous/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/mikemikimike/itsdangerous/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/mikemikimike/itsdangerous/tags",
+      "blobs_url": "https://api.github.com/repos/mikemikimike/itsdangerous/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/mikemikimike/itsdangerous/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/mikemikimike/itsdangerous/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/mikemikimike/itsdangerous/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/mikemikimike/itsdangerous/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/mikemikimike/itsdangerous/languages",
+      "stargazers_url": "https://api.github.com/repos/mikemikimike/itsdangerous/stargazers",
+      "contributors_url": "https://api.github.com/repos/mikemikimike/itsdangerous/contributors",
+      "subscribers_url": "https://api.github.com/repos/mikemikimike/itsdangerous/subscribers",
+      "subscription_url": "https://api.github.com/repos/mikemikimike/itsdangerous/subscription",
+      "commits_url": "https://api.github.com/repos/mikemikimike/itsdangerous/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/mikemikimike/itsdangerous/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/mikemikimike/itsdangerous/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/mikemikimike/itsdangerous/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/mikemikimike/itsdangerous/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/mikemikimike/itsdangerous/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/mikemikimike/itsdangerous/merges",
+      "archive_url": "https://api.github.com/repos/mikemikimike/itsdangerous/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/mikemikimike/itsdangerous/downloads",
+      "issues_url": "https://api.github.com/repos/mikemikimike/itsdangerous/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/mikemikimike/itsdangerous/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/mikemikimike/itsdangerous/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/mikemikimike/itsdangerous/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/mikemikimike/itsdangerous/labels{/name}",
+      "releases_url": "https://api.github.com/repos/mikemikimike/itsdangerous/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/mikemikimike/itsdangerous/deployments"
+    }
+  },
+  "jobs": {
+    "total_count": 8,
+    "jobs": [
+      {
+        "id": 99097226868,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeudA",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226868",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226868",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:09Z",
+        "name": "typing",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:55Z",
+            "completed_at": "2026-08-29T11:55:56Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:56Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:55:59Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:55:59Z",
+            "completed_at": "2026-08-29T11:55:59Z"
+          },
+          {
+            "name": "cache mypy",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-08-29T11:55:59Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e typing",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post cache mypy",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226868",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000034056,
+        "runner_name": "GitHub Actions 1000034056",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097226921,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeuqQ",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226921",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226921",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:07Z",
+        "name": "3.13",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:55Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e py3.13",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226921",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000034057,
+        "runner_name": "GitHub Actions 1000034057",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097226922,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeuqg",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226922",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226922",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:25Z",
+        "name": "Windows",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:55Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:56:03Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:56:03Z",
+            "completed_at": "2026-08-29T11:56:10Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:56:10Z",
+            "completed_at": "2026-08-29T11:56:10Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e py3.13",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:56:10Z",
+            "completed_at": "2026-08-29T11:56:22Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:22Z",
+            "completed_at": "2026-08-29T11:56:22Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:22Z",
+            "completed_at": "2026-08-29T11:56:22Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:22Z",
+            "completed_at": "2026-08-29T11:56:23Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:23Z",
+            "completed_at": "2026-08-29T11:56:23Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226922",
+        "labels": [
+          "windows-latest"
+        ],
+        "runner_id": 1000034059,
+        "runner_name": "GitHub Actions 1000034059",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097226951,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeuxw",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226951",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226951",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:21Z",
+        "name": "PyPy",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:55Z",
+            "completed_at": "2026-08-29T11:55:56Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:56Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:55:59Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:55:59Z",
+            "completed_at": "2026-08-29T11:55:59Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e pypy311",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:55:59Z",
+            "completed_at": "2026-08-29T11:56:20Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:20Z",
+            "completed_at": "2026-08-29T11:56:20Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:20Z",
+            "completed_at": "2026-08-29T11:56:20Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:20Z",
+            "completed_at": "2026-08-29T11:56:20Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:20Z",
+            "completed_at": "2026-08-29T11:56:20Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226951",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000034061,
+        "runner_name": "GitHub Actions 1000034061",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097226957,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeuzQ",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226957",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226957",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:08Z",
+        "name": "Mac",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:55Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:55:58Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:58Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e py3.13",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:05Z",
+            "completed_at": "2026-08-29T11:56:05Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226957",
+        "labels": [
+          "macos-latest"
+        ],
+        "runner_id": 1000034060,
+        "runner_name": "GitHub Actions 1000034060",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097226960,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeu0A",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226960",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226960",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:05Z",
+        "name": "3.11",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:56Z",
+            "completed_at": "2026-08-29T11:55:56Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:56Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:57Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:00Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e py3.11",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:56:00Z",
+            "completed_at": "2026-08-29T11:56:04Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:04Z",
+            "completed_at": "2026-08-29T11:56:04Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:04Z",
+            "completed_at": "2026-08-29T11:56:04Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:04Z",
+            "completed_at": "2026-08-29T11:56:04Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:04Z",
+            "completed_at": "2026-08-29T11:56:04Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226960",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000034062,
+        "runner_name": "GitHub Actions 1000034062",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097226971,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqeu2w",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097226971",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097226971",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:09Z",
+        "name": "3.12",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:56Z",
+            "completed_at": "2026-08-29T11:55:58Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:58Z",
+            "completed_at": "2026-08-29T11:55:58Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:58Z",
+            "completed_at": "2026-08-29T11:56:02Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:56:02Z",
+            "completed_at": "2026-08-29T11:56:03Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e py3.12",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:56:03Z",
+            "completed_at": "2026-08-29T11:56:06Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:06Z",
+            "completed_at": "2026-08-29T11:56:06Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:06Z",
+            "completed_at": "2026-08-29T11:56:06Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:06Z",
+            "completed_at": "2026-08-29T11:56:06Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:06Z",
+            "completed_at": "2026-08-29T11:56:06Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097226971",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000034063,
+        "runner_name": "GitHub Actions 1000034063",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 99097227017,
+        "run_id": 33251265226,
+        "workflow_name": "Tests",
+        "head_branch": "fix/issue-429-reject-max-age",
+        "run_url": "https://api.github.com/repos/pallets/itsdangerous/actions/runs/33251265226",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOAB2tys8AAAAXEqevCQ",
+        "head_sha": "fa752002b59ba2403401cd3437f9f5d934f1e379",
+        "url": "https://api.github.com/repos/pallets/itsdangerous/actions/jobs/99097227017",
+        "html_url": "https://github.com/pallets/itsdangerous/actions/runs/33251265226/job/99097227017",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-08-29T11:55:53Z",
+        "started_at": "2026-08-29T11:55:55Z",
+        "completed_at": "2026-08-29T11:56:10Z",
+        "name": "3.10",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-08-29T11:55:56Z",
+            "completed_at": "2026-08-29T11:55:57Z"
+          },
+          {
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-08-29T11:55:58Z",
+            "completed_at": "2026-08-29T11:55:58Z"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-08-29T11:55:58Z",
+            "completed_at": "2026-08-29T11:56:02Z"
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-08-29T11:56:02Z",
+            "completed_at": "2026-08-29T11:56:03Z"
+          },
+          {
+            "name": "Run uv run --locked tox run -e py3.10",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-08-29T11:56:03Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:07Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-08-29T11:56:07Z",
+            "completed_at": "2026-08-29T11:56:08Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-08-29T11:56:08Z",
+            "completed_at": "2026-08-29T11:56:08Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/pallets/itsdangerous/check-runs/99097227017",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000034064,
+        "runner_name": "GitHub Actions 1000034064",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  },
+  "workflow": "name: Tests\non:\n  pull_request:\n    paths-ignore: ['docs/**', 'README.md']\n  push:\n    branches: [main, stable]\n    paths-ignore: ['docs/**', 'README.md']\njobs:\n  tests:\n    name: ${{ matrix.name || matrix.python }}\n    runs-on: ${{ matrix.os || 'ubuntu-latest' }}\n    strategy:\n      fail-fast: false\n      matrix:\n        include:\n          - {python: '3.13'}\n          - {name: Windows, python: '3.13', os: windows-latest}\n          - {name: Mac, python: '3.13', os: macos-latest}\n          - {python: '3.12'}\n          - {python: '3.11'}\n          - {python: '3.10'}\n          - {name: PyPy, python: 'pypy-3.11', tox: pypy311}\n    steps:\n      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2\n      - uses: astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb # v6.1.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0\n        with:\n          python-version: ${{ matrix.python }}\n      - run: uv run --locked tox run -e ${{ matrix.tox || format('py{0}', matrix.python) }}\n  typing:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2\n      - uses: astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb # v6.1.0\n        with:\n          enable-cache: true\n          prune-cache: false\n      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0\n        with:\n          python-version-file: pyproject.toml\n      - name: cache mypy\n        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3\n        with:\n          path: ./.mypy_cache\n          key: mypy|${{ hashFiles('pyproject.toml') }}\n      - run: uv run --locked tox run -e typing\n"
+}

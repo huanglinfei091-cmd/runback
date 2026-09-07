@@ -1,0 +1,96 @@
+{
+  "bundle": {
+    "commit_sha": "fec2631289e6ad731241b6e54ac44a916722858e",
+    "event": "pull_request",
+    "failed_step": {
+      "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+      "environment": {},
+      "name": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+      "shell": "bash",
+      "working_directory": "."
+    },
+    "failure_evidence": {
+      "failure_count": 1,
+      "level": "STRUCTURED",
+      "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+      "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+      "exit": 1,
+      "normalized_excerpt": [
+        "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+      ],
+      "items": [
+        {
+          "kind": "mypy",
+          "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+          "exception": "mypy[unused-ignore]",
+          "file": "src/flask/json/provider.py",
+          "line": 117,
+          "message": "Unused \"type: ignore\" comment"
+        }
+      ]
+    },
+    "job_id": 99504166020,
+    "job_name": "typing",
+    "matrix": {},
+    "repository": "pallets/flask",
+    "run_attempt": 1,
+    "run_id": 33397112701,
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "python-version": "3.14.7",
+      "uv-version": "0.12.7"
+    },
+    "workflow_job_id": "typing",
+    "workflow_path": ".github/workflows/tests.yaml"
+  },
+  "bundle_semantic_hash": "50178bb88e832b791c08feef6db6bc3ad3775ba93acca60f9ec578250693c4d8",
+  "online": {
+    "commit_sha": "fec2631289e6ad731241b6e54ac44a916722858e",
+    "event": "pull_request",
+    "failed_step": {
+      "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+      "environment": {},
+      "name": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+      "shell": "bash",
+      "working_directory": "."
+    },
+    "failure_evidence": {
+      "failure_count": 1,
+      "level": "STRUCTURED",
+      "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+      "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+      "exit": 1,
+      "normalized_excerpt": [
+        "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+      ],
+      "items": [
+        {
+          "kind": "mypy",
+          "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+          "exception": "mypy[unused-ignore]",
+          "file": "src/flask/json/provider.py",
+          "line": 117,
+          "message": "Unused \"type: ignore\" comment"
+        }
+      ]
+    },
+    "job_id": 99504166020,
+    "job_name": "typing",
+    "matrix": {},
+    "repository": "pallets/flask",
+    "run_attempt": 1,
+    "run_id": 33397112701,
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "python-version": "3.14.7",
+      "uv-version": "0.12.7"
+    },
+    "workflow_job_id": "typing",
+    "workflow_path": ".github/workflows/tests.yaml"
+  },
+  "online_semantic_hash": "50178bb88e832b791c08feef6db6bc3ad3775ba93acca60f9ec578250693c4d8",
+  "repository": "pallets/flask",
+  "run_attempt": 1,
+  "run_id": 33397112701,
+  "status": "PASS"
+}

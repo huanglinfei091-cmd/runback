@@ -1,0 +1,125 @@
+{
+  "stage": "MATCH",
+  "executor": "act",
+  "mode": "FULL_JOB",
+  "target_reached": true,
+  "evidence": {
+    "status": "SAME_FAILURE",
+    "evidence_level": "STRUCTURED",
+    "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+    "remote": {
+      "level": "STRUCTURED",
+      "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+      "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+      "exit": 1,
+      "normalized_excerpt": [
+        "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+      ],
+      "items": [
+        {
+          "kind": "mypy",
+          "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+          "exception": "mypy[unused-ignore]",
+          "file": "src/flask/json/provider.py",
+          "line": 117,
+          "message": "Unused \"type: ignore\" comment"
+        }
+      ]
+    },
+    "local": {
+      "level": "STRUCTURED",
+      "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+      "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+      "exit": 1,
+      "normalized_excerpt": [
+        "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment",
+        "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+      ],
+      "items": [
+        {
+          "kind": "mypy",
+          "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+          "exception": "mypy[unused-ignore]",
+          "file": "src/flask/json/provider.py",
+          "line": 117,
+          "message": "Unused \"type: ignore\" comment"
+        }
+      ]
+    },
+    "matched_fields": {
+      "Identity": true,
+      "Exception": true,
+      "File": true,
+      "Line": true,
+      "Message": true,
+      "Exit": true
+    },
+    "remote_failures": 1,
+    "local_failures": 1,
+    "matched_failures": 1
+  },
+  "status": "SAME_FAILURE",
+  "started_at": "2026-09-05T15:40:12Z",
+  "duration_seconds": 85.581828144,
+  "exit_code": 1,
+  "comparison": {
+    "status": "unverified",
+    "similarity": 0,
+    "remote": {
+      "hash": "75c37c2df709ca6035465535a94cbc88abde989032e3f295b5135ba8cc8ce81f",
+      "lines": [
+        "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+      ]
+    },
+    "local": {
+      "hash": "2df7cc22b7ffcee14f8a624bae7c990f2a23a90b7e376c811cd33991feec9278",
+      "lines": [
+        "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment",
+        "warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance."
+      ]
+    },
+    "reason": "need at least two distinctive error lines on each side"
+  },
+  "command": [
+    "act",
+    "pull_request",
+    "-C",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/workspace",
+    "-W",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/replay.yml",
+    "-j",
+    "typing",
+    "-e",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/event.json",
+    "-P",
+    "ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest",
+    "--actor",
+    "vjymisal0",
+    "--container-architecture",
+    "linux/amd64",
+    "--container-daemon-socket",
+    "-",
+    "--network",
+    "bridge",
+    "--secret-file",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/empty.env",
+    "--var-file",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/empty.env",
+    "--env-file",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/empty.env",
+    "--input-file",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/empty.env",
+    "--action-cache-path",
+    "/root/runback-work/temp/m1-case-a/runback-33397112701-1-99504166020/actions",
+    "--pull=false",
+    "--use-new-action-cache",
+    "--container-options",
+    "--label io.runback.case=runback-33397112701-1-99504166020",
+    "--json"
+  ],
+  "image_id": "sha256:62d572b92f9f32d3427b6d220ad1f9dca9c7b6ffad37d295425037dbff78abaf",
+  "container_ids": [
+    "a176b5a1cd64258fb2e9fd16b9cd5329153fcbd3d6e5141929f529cd25be9bf0"
+  ],
+  "workspace_dirty": false
+}

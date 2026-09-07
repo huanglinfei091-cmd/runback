@@ -1,0 +1,11 @@
+{
+  "args": [
+    "inspect",
+    "https://github.com/pallets/flask/actions/runs/33397112701"
+  ],
+  "token_used": true,
+  "exit": 0,
+  "ttfr_to_result_seconds": null,
+  "cli_launch_to_exit_seconds": 5.605811769997672,
+  "result": null
+}

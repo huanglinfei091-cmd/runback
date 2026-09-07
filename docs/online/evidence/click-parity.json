@@ -1,0 +1,110 @@
+{
+  "bundle": {
+    "commit_sha": "4a0598c3c179b70b5116a800b485571bcc341ddf",
+    "event": "pull_request",
+    "failed_step": {
+      "command": "uv run --locked --no-default-groups --group dev tox run",
+      "environment": {
+        "TOX_ENV": "${{ matrix.tox || format('py{0}', matrix.python) }}"
+      },
+      "name": "Run uv run --locked --no-default-groups --group dev tox run",
+      "shell": "bash",
+      "working_directory": "."
+    },
+    "failure_evidence": {
+      "failure_count": 1,
+      "level": "TEST",
+      "step": "Run uv run --locked --no-default-groups --group dev tox run",
+      "command": "uv run --locked --no-default-groups --group dev tox run",
+      "exit": 1,
+      "normalized_excerpt": [
+        "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+        "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+        "assert module in ALLOWED_IMPORTS",
+        "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+      ],
+      "items": [
+        {
+          "kind": "pytest",
+          "identity": "tests/test_imports.py::test_light_imports",
+          "exception": "AssertionError",
+          "file": "tests/test_imports.py",
+          "line": 80,
+          "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+        }
+      ]
+    },
+    "job_id": 100665765259,
+    "job_name": "3.13",
+    "matrix": {
+      "python": "3.13"
+    },
+    "repository": "pallets/click",
+    "run_attempt": 1,
+    "run_id": 33760631267,
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "python-version": "3.13.15",
+      "uv-version": "0.12.9"
+    },
+    "workflow_job_id": "tests",
+    "workflow_path": ".github/workflows/tests.yaml"
+  },
+  "bundle_semantic_hash": "13e96a17f2ebc45a1d8e3145857e50251220ed43f5ac65ffb5ea6a55376333b3",
+  "online": {
+    "commit_sha": "4a0598c3c179b70b5116a800b485571bcc341ddf",
+    "event": "pull_request",
+    "failed_step": {
+      "command": "uv run --locked --no-default-groups --group dev tox run",
+      "environment": {
+        "TOX_ENV": "${{ matrix.tox || format('py{0}', matrix.python) }}"
+      },
+      "name": "Run uv run --locked --no-default-groups --group dev tox run",
+      "shell": "bash",
+      "working_directory": "."
+    },
+    "failure_evidence": {
+      "failure_count": 1,
+      "level": "TEST",
+      "step": "Run uv run --locked --no-default-groups --group dev tox run",
+      "command": "uv run --locked --no-default-groups --group dev tox run",
+      "exit": 1,
+      "normalized_excerpt": [
+        "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+        "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+        "assert module in ALLOWED_IMPORTS",
+        "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+      ],
+      "items": [
+        {
+          "kind": "pytest",
+          "identity": "tests/test_imports.py::test_light_imports",
+          "exception": "AssertionError",
+          "file": "tests/test_imports.py",
+          "line": 80,
+          "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+        }
+      ]
+    },
+    "job_id": 100665765259,
+    "job_name": "3.13",
+    "matrix": {
+      "python": "3.13"
+    },
+    "repository": "pallets/click",
+    "run_attempt": 1,
+    "run_id": 33760631267,
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "python-version": "3.13.15",
+      "uv-version": "0.12.9"
+    },
+    "workflow_job_id": "tests",
+    "workflow_path": ".github/workflows/tests.yaml"
+  },
+  "online_semantic_hash": "13e96a17f2ebc45a1d8e3145857e50251220ed43f5ac65ffb5ea6a55376333b3",
+  "repository": "pallets/click",
+  "run_attempt": 1,
+  "run_id": 33760631267,
+  "status": "PASS"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "SAME_FAILURE",
+  "evidence_level": "STRUCTURED",
+  "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+  "remote": {
+    "level": "STRUCTURED",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+    "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+    "exit": 1,
+    "normalized_excerpt": [
+      "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+    ],
+    "items": [
+      {
+        "kind": "mypy",
+        "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+        "exception": "mypy[unused-ignore]",
+        "file": "src/flask/json/provider.py",
+        "line": 117,
+        "message": "Unused \"type: ignore\" comment"
+      }
+    ]
+  },
+  "local": {
+    "level": "STRUCTURED",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+    "command": "uv run --locked --no-default-groups --group dev tox run -e typing",
+    "exit": 1,
+    "normalized_excerpt": [
+      "src/flask/json/provider.py:117: error: Unused \"type: ignore\" comment"
+    ],
+    "items": [
+      {
+        "kind": "mypy",
+        "identity": "src/flask/json/provider.py:117:mypy[unused-ignore]",
+        "exception": "mypy[unused-ignore]",
+        "file": "src/flask/json/provider.py",
+        "line": 117,
+        "message": "Unused \"type: ignore\" comment"
+      }
+    ]
+  },
+  "matched_fields": {
+    "Identity": true,
+    "Exception": true,
+    "File": true,
+    "Line": true,
+    "Message": true,
+    "Exit": true
+  },
+  "remote_failures": 1,
+  "local_failures": 1,
+  "matched_failures": 1
+}

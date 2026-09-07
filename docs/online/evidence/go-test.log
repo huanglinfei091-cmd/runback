@@ -1,0 +1,12 @@
+ok  	github.com/huanglinfei091-cmd/runback/cmd/runback	0.021s
+ok  	github.com/huanglinfei091-cmd/runback/internal/acquire	0.028s
+ok  	github.com/huanglinfei091-cmd/runback/internal/failure	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/fingerprint	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/github	0.005s
+?   	github.com/huanglinfei091-cmd/runback/internal/lockfile	[no test files]
+ok  	github.com/huanglinfei091-cmd/runback/internal/online	(cached)
+?   	github.com/huanglinfei091-cmd/runback/internal/replay	[no test files]
+ok  	github.com/huanglinfei091-cmd/runback/internal/resolver	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/runner	0.009s
+ok  	github.com/huanglinfei091-cmd/runback/internal/session	0.098s
+ok  	github.com/huanglinfei091-cmd/runback/internal/workflow	(cached)

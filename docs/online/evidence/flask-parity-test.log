@@ -1,0 +1,5 @@
+=== RUN   TestLiveOnlineBundleCanonicalParity
+    parity_integration_test.go:22: pallets/flask PASS 50178bb88e832b791c08feef6db6bc3ad3775ba93acca60f9ec578250693c4d8
+--- PASS: TestLiveOnlineBundleCanonicalParity (0.01s)
+PASS
+ok  	github.com/huanglinfei091-cmd/runback/internal/acquire	0.009s

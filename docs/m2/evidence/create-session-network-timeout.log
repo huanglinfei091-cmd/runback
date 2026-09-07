@@ -1,0 +1,108 @@
+Workflow      .github/workflows/tests.yaml
+Commit        4a0598c3c179b70b5116a800b485571bcc341ddf
+Job           3.13 [tests]
+Matrix        map[python:3.13]
+Runner        ubuntu-latest
+Failed step   Run uv run --locked --no-default-groups --group dev tox run
+Command       uv run --locked --no-default-groups --group dev tox run
+Lock          /root/runback-work/cases/case-b.lock
+NOTE          7 supported failed jobs; selected lowest job ID automatically; --job chooses another
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+NOTE          Explicit runner image override: runback-ubuntu:24.04-less
+OK       git: /usr/bin/git
+OK       docker: /usr/bin/docker
+OK       act: /usr/local/bin/act
+OK       Docker linux / 29.1.3
+HOST     linux/amd64
+AUTH     Public API or copied evidence bundle; credentials are not required in Ubuntu
+{"level":"info","msg":"Using docker host 'unix:///var/run/docker.sock', and daemon socket '-'","time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"⭐ Run Set up job","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"🚀  Start image=runback-ubuntu:24.04-less","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  🐳  docker pull image=runback-ubuntu:24.04-less platform=linux/amd64 username= forcePull=false","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  🐳  docker create image=runback-ubuntu:24.04-less platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  🐳  docker run image=runback-ubuntu:24.04-less platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  ✅  Success - Set up job","step":"Set up job","stepResult":"success","stepid":["--setup-job"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache fetch https://github.com/astral-sh/setup-uv with ref c771a70e6277c0a99b617c7a806ffedaca235ff9 at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/astral-sh-setup-uv.git","stage":"Pre","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:37Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache fetch https://github.com/astral-sh/setup-uv with ref c771a70e6277c0a99b617c7a806ffedaca235ff9 at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/astral-sh-setup-uv.git resolved to c771a70e6277c0a99b617c7a806ffedaca235ff9","stage":"Pre","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:38Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache get content astral-sh/setup-uv with sha c771a70e6277c0a99b617c7a806ffedaca235ff9 subpath 'action.yml' at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/astral-sh-setup-uv.git","stage":"Pre","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:38Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache fetch https://github.com/actions/setup-python with ref 5fda3b95a4ea91299a34e894583c3862153e4b97 at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/actions-setup-python.git","stage":"Pre","step":"actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97","stepID":["2"],"time":"2026-09-06T00:44:38Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache fetch https://github.com/actions/setup-python with ref 5fda3b95a4ea91299a34e894583c3862153e4b97 at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/actions-setup-python.git resolved to 5fda3b95a4ea91299a34e894583c3862153e4b97","stage":"Pre","step":"actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97","stepID":["2"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache get content actions/setup-python with sha 5fda3b95a4ea91299a34e894583c3862153e4b97 subpath 'action.yml' at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/actions-setup-python.git","stage":"Pre","step":"actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97","stepID":["2"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"🧪  Matrix: map[python:3.13]","time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"⭐ Run Main actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1","stage":"Main","step":"actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1","stepID":["0"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  🐳  docker cp src=/root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/workspace/. dst=/root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/workspace","stage":"Main","step":"actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1","stepID":["0"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"executionTime":50820648,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  ✅  Success - Main actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 [50.820648ms]","stage":"Main","step":"actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1","stepID":["0"],"stepResult":"success","time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"⭐ Run Main astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"GoGitActionCache get content astral-sh/setup-uv with sha c771a70e6277c0a99b617c7a806ffedaca235ff9 subpath '' at /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/actions/astral-sh-setup-uv.git","stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  🐳  docker exec cmd=[/opt/acttoolcache/node/24.19.0/x64/bin/node /var/run/act/actions/astral-sh-setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9/dist/setup/index.cjs] user= workdir=","stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"Trying to find version for uv in: /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/workspace/uv.toml\n","raw_output":true,"stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"Could not find file: /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/workspace/uv.toml\n","raw_output":true,"stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"Trying to find version for uv in: /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/workspace/pyproject.toml\n","raw_output":true,"stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"Could not determine uv version from uv.toml or pyproject.toml. Falling back to latest.\n","raw_output":true,"stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"Fetching manifest data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...\n","raw_output":true,"stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:39Z"}
+{"arg":"The operation was aborted due to timeout","command":"error","dryrun":false,"job":"Tests/3.13","jobID":"tests","kvPairs":{},"level":"error","matrix":{"python":"3.13"},"msg":"  ❗  ::error::The operation was aborted due to timeout\n","raw":"::error::The operation was aborted due to timeout\n","stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:44:44Z"}
+{"dryrun":false,"executionTime":24936468116,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  ❌  Failure - Main astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 [24.936468116s]","stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"stepResult":"failure","time":"2026-09-06T00:45:04Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"error","matrix":{"python":"3.13"},"msg":"exitcode '1': failure","stage":"Main","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T00:45:04Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"⭐ Run Complete job","step":"Complete job","stepid":["--complete-job"],"time":"2026-09-06T00:45:04Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","level":"info","matrix":{"python":"3.13"},"msg":"  ✅  Success - Complete job","step":"Complete job","stepResult":"success","stepid":["--complete-job"],"time":"2026-09-06T00:45:04Z"}
+{"dryrun":false,"job":"Tests/3.13","jobID":"tests","jobResult":"failure","level":"info","matrix":{"python":"3.13"},"msg":"🏁  Job failed","time":"2026-09-06T00:45:04Z"}
+Error: Job '${{ matrix.name || matrix.python }}' failed
+
+Result: REPLAY_BLOCKED
+Evidence level: STEP
+Remote failures: 1
+Local failures: 0
+Matched: 0
+act did not fail in the original target step
+Report: /root/runback-work/temp/m1-case-b/runback-33760631267-1-100665765259/result.json
+{
+  "status": "REPLAY_BLOCKED",
+  "evidence_level": "STEP",
+  "reason": "act did not fail in the original target step",
+  "remote": {
+    "failure_count": 1,
+    "level": "TEST",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [
+      "E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}",
+      "FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...",
+      "assert module in ALLOWED_IMPORTS",
+      "tests/test_imports.py::test_light_imports FAILED                         [ 32%]"
+    ],
+    "items": [
+      {
+        "kind": "pytest",
+        "identity": "tests/test_imports.py::test_light_imports",
+        "exception": "AssertionError",
+        "file": "tests/test_imports.py",
+        "line": 80,
+        "message": "assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}"
+      }
+    ]
+  },
+  "local": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [],
+    "items": []
+  },
+  "matched_fields": {
+    "Identity": false,
+    "Exception": false,
+    "File": false,
+    "Line": false,
+    "Message": false,
+    "Exit": false
+  },
+  "remote_failures": 1,
+  "local_failures": 0,
+  "matched_failures": 0
+}
+CLI elapsed: 27.417s (through final result)

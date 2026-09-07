@@ -1,0 +1,17 @@
+Session: 33760631267-100665765259-1788655911544661446
+Worktree: /root/.runback/sessions/33760631267-100665765259-1788655911544661446/worktree
+Mode: DEV
+[?2004hbash-5.2# pwd; python3 -c 'from pathlib import Path
+[?2004l[?2004h> p=Path('"'"'src/click/types.py'"'"')
+[?2004l[?2004h> s=p.read_text()
+[?2004l[?2004h> assert '"'"'import builtins\n'"'"' in s
+[?2004l[?2004h> s=s.replace('"'"'import builtins\n'"'"','"'"''"'"',1)
+[?2004l[?2004h> s=s.replace('"'"'if t.TYPE_CHECKING:\n'"'"','"'"'if t.TYPE_CHECKING:\n    imporrt builtins\n'"'"',1)
+[?2004l[?2004h> p.write_text(s)
+[?2004l[?2004h> Path('"'"'.runback-bind-proof'"'"').write_text('"'"'persisted from dev containeer'"'"')
+[?2004l[?2004h> '; exit
+[?2004l/github/workspace
+exit
+Result: DEV_EXITED
+Report: /root/.runback/sessions/33760631267-100665765259-1788655911544661446/logs/runback-debug-1788656087968109424.json
+CLI elapsed: 0.327s (through final result)

@@ -1,0 +1,480 @@
+{
+  "measured_at": "2026-09-05T11:16:49.804623+00:00",
+  "mode": "inspect",
+  "summary": {
+    "collected": 32,
+    "outside_scope": 8,
+    "eligible": 14,
+    "unclassified": 10,
+    "executed": 0,
+    "reproduced": 0,
+    "eligible_reproduction_rate": null
+  },
+  "cases": [
+    {
+      "url": "https://github.com/encode/httpx/actions/runs/22379030162",
+      "repository": "encode/httpx",
+      "run_id": 22379030162,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "WORKFLOW_UNSUPPORTED",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: failure has no failed step\n",
+      "duration_seconds": 0.008
+    },
+    {
+      "url": "https://github.com/encode/httpx/actions/runs/22547825202",
+      "repository": "encode/httpx",
+      "run_id": 22547825202,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "WORKFLOW_UNSUPPORTED",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: failure has no failed step\n",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/encode/httpx/actions/runs/26175769958",
+      "repository": "encode/httpx",
+      "run_id": 26175769958,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "ENVIRONMENT_MISMATCH",
+      "eligible": null,
+      "executed": false,
+      "job": "Python 3.12",
+      "matrix": {
+        "python-version": "3.12"
+      },
+      "commit": "86eb33fe9d4f4ed3bca9e407c1d72ceefda4ff81",
+      "reason": "ENVIRONMENT_MISMATCH: historical PR checkout SHA unavailable; refusing to substitute head for merge commit",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/go-chi/chi/actions/runs/27413656805",
+      "repository": "go-chi/chi",
+      "run_id": 27413656805,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: failed step \"Set up job\" cannot be uniquely mapped\n",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/go-chi/chi/actions/runs/27915466909",
+      "repository": "go-chi/chi",
+      "run_id": 27915466909,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "WORKFLOW_UNSUPPORTED",
+      "eligible": null,
+      "executed": false,
+      "job": "test (1.24.x, ubuntu-latest)",
+      "matrix": {
+        "go-version": "1.24.x",
+        "os": "ubuntu-latest"
+      },
+      "commit": "393599e48574ce651bababb43f42ad505a2ba62a",
+      "reason": "WORKFLOW_UNSUPPORTED: custom checkout path",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/go-chi/chi/actions/runs/28647011995",
+      "repository": "go-chi/chi",
+      "run_id": 28647011995,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "WORKFLOW_UNSUPPORTED",
+      "eligible": null,
+      "executed": false,
+      "job": "test (1.26.x, ubuntu-latest)",
+      "matrix": {
+        "go-version": "1.26.x",
+        "os": "ubuntu-latest"
+      },
+      "commit": "a1694e590f6d2509522d2f61f92e788e96f8c226",
+      "reason": "WORKFLOW_UNSUPPORTED: custom checkout path",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/sindresorhus/p-queue/actions/runs/29955048710",
+      "repository": "sindresorhus/p-queue",
+      "run_id": 29955048710,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Node.js 26",
+      "matrix": {
+        "node-version": 26
+      },
+      "commit": "66be14bd7791bd504d441cf4f849771139dabf37",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/sindresorhus/p-queue/actions/runs/29955054349",
+      "repository": "sindresorhus/p-queue",
+      "run_id": 29955054349,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Node.js 26",
+      "matrix": {
+        "node-version": 26
+      },
+      "commit": "4ac9ee023e4b0810bd37c8f10cce8dc48811b457",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/chalk/chalk/actions/runs/30008595230",
+      "repository": "chalk/chalk",
+      "run_id": 30008595230,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Node.js 14",
+      "matrix": {
+        "node-version": 14
+      },
+      "commit": "61a008f22479bc2bbf8dd1042a571809a0083fb1",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/chalk/chalk/actions/runs/30009317887",
+      "repository": "chalk/chalk",
+      "run_id": 30009317887,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Node.js 14",
+      "matrix": {
+        "node-version": 14
+      },
+      "commit": "863adf7254cf3538a04d9ddecc2ccacafa6bf2b5",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/chalk/chalk/actions/runs/30010318335",
+      "repository": "chalk/chalk",
+      "run_id": 30010318335,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Node.js 16",
+      "matrix": {
+        "node-version": 16
+      },
+      "commit": "d3aa173f61f2ffb9514e20fb8d79b12d08111d6d",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/sindresorhus/p-queue/actions/runs/31591584184",
+      "repository": "sindresorhus/p-queue",
+      "run_id": 31591584184,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Node.js 20",
+      "matrix": {
+        "node-version": 20
+      },
+      "commit": "886b8bdec1a026685429527d86d6180d916b1b9d",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/urfave/cli/actions/runs/32760458898",
+      "repository": "urfave/cli",
+      "run_id": 32760458898,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "RUNNER_UNSUPPORTED",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: golangci-lint: RUNNER_UNSUPPORTED\n",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/stretchr/testify/actions/runs/32806168547",
+      "repository": "stretchr/testify",
+      "run_id": 32806168547,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "build (oldstable)",
+      "matrix": {
+        "go_version": "oldstable"
+      },
+      "commit": "625ac839e975c0ab655dac8bf62e56346dc26865",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.007
+    },
+    {
+      "url": "https://github.com/stretchr/testify/actions/runs/32806180341",
+      "repository": "stretchr/testify",
+      "run_id": 32806180341,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "build (stable)",
+      "matrix": {
+        "go_version": "stable"
+      },
+      "commit": "89c4dbc5f0ce1ba682fa17611cbe544b8fa03492",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/stretchr/testify/actions/runs/32970000641",
+      "repository": "stretchr/testify",
+      "run_id": 32970000641,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "test-old-go (1.20)",
+      "matrix": {
+        "go_version": "1.20"
+      },
+      "commit": "f70ac7380b295221edc4ef8bf1225cf37c689883",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.009
+    },
+    {
+      "url": "https://github.com/pallets/flask/actions/runs/33236247623",
+      "repository": "pallets/flask",
+      "run_id": 33236247623,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "main",
+      "matrix": {},
+      "commit": "8f1836e85c053c5ea84d5e1ef2e27febb9f2234d",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/urfave/cli/actions/runs/33236636042",
+      "repository": "urfave/cli",
+      "run_id": 33236636042,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "RUNNER_UNSUPPORTED",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: ubuntu-24.04 @ Go stable: RUNNER_UNSUPPORTED\n",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/urfave/cli/actions/runs/33236636057",
+      "repository": "urfave/cli",
+      "run_id": 33236636057,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "RUNNER_UNSUPPORTED",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: golangci-lint: RUNNER_UNSUPPORTED\n",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/pallets/flask/actions/runs/33397112701",
+      "repository": "pallets/flask",
+      "run_id": 33397112701,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "typing",
+      "matrix": {},
+      "commit": "fec2631289e6ad731241b6e54ac44a916722858e",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/pallets/flask/actions/runs/33397112741",
+      "repository": "pallets/flask",
+      "run_id": 33397112741,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "main",
+      "matrix": {},
+      "commit": "fec2631289e6ad731241b6e54ac44a916722858e",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/Textualize/rich/actions/runs/33714945821",
+      "repository": "Textualize/rich",
+      "run_id": 33714945821,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "OUT_OF_SCOPE",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: OUT_OF_SCOPE: event issues\n",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/Textualize/rich/actions/runs/33728275019",
+      "repository": "Textualize/rich",
+      "run_id": 33728275019,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "OUT_OF_SCOPE",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: OUT_OF_SCOPE: event issues\n",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/fastify/fastify/actions/runs/33808820342",
+      "repository": "fastify/fastify",
+      "run_id": 33808820342,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "MATRIX_RESOLUTION_FAILED",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: job/matrix mapping for \"coverage-nix / check-coverage\" has 0 candidates (requires exactly one); ; job/matrix mapping for \"coverage-win / check-coverage\" has 0 candidates (requires exactly one); \n",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/gin-gonic/gin/actions/runs/33820158435",
+      "repository": "gin-gonic/gin",
+      "run_id": 33820158435,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "OUT_OF_SCOPE",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: OUT_OF_SCOPE: event schedule\n",
+      "duration_seconds": 0.005
+    },
+    {
+      "url": "https://github.com/fastify/fastify/actions/runs/33852876767",
+      "repository": "fastify/fastify",
+      "run_id": 33852876767,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "MATRIX_RESOLUTION_FAILED",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: job/matrix mapping for \"coverage-win / check-coverage\" has 0 candidates (requires exactly one); ; job/matrix mapping for \"coverage-nix / check-coverage\" has 0 candidates (requires exactly one); \n",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/fastify/fastify/actions/runs/33853095623",
+      "repository": "fastify/fastify",
+      "run_id": 33853095623,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "pnpm (24, ubuntu-latest, 11)",
+      "matrix": {
+        "node-version": 24,
+        "os": "ubuntu-latest",
+        "pnpm-version": 11
+      },
+      "commit": "82f827561f9053617d5c07fde53bbf4e0f8f95a8",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.012
+    },
+    {
+      "url": "https://github.com/nodejs/undici/actions/runs/33859239292",
+      "repository": "nodejs/undici",
+      "run_id": 33859239292,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "UNKNOWN",
+      "eligible": true,
+      "executed": false,
+      "job": "Lint",
+      "matrix": {},
+      "commit": "627e61578f309a50d05977e63bff206988841cd1",
+      "reason": "plan resolved; replay not attempted",
+      "duration_seconds": 0.011
+    },
+    {
+      "url": "https://github.com/nodejs/undici/actions/runs/33878696560",
+      "repository": "nodejs/undici",
+      "run_id": 33878696560,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "MATRIX_RESOLUTION_FAILED",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: job/matrix mapping for \"Test with Node.js 20 on macos-latest / Test with Node.js 20 on macos-latest\" has 0 candidates (requires exactly one); \n",
+      "duration_seconds": 0.008
+    },
+    {
+      "url": "https://github.com/nodejs/undici/actions/runs/33883089291",
+      "repository": "nodejs/undici",
+      "run_id": 33883089291,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "MATRIX_RESOLUTION_FAILED",
+      "eligible": null,
+      "executed": false,
+      "reason": "RunBack: no uniquely resolvable supported failed job: job/matrix mapping for \"test (18, macos-latest) / Test with Node.js 18 on macos-latest\" has 0 candidates (requires exactly one); \n",
+      "duration_seconds": 0.006
+    },
+    {
+      "url": "https://github.com/Textualize/rich/actions/runs/33896602851",
+      "repository": "Textualize/rich",
+      "run_id": 33896602851,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "OUT_OF_SCOPE",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: OUT_OF_SCOPE: event issues\n",
+      "duration_seconds": 0.004
+    },
+    {
+      "url": "https://github.com/gin-gonic/gin/actions/runs/33931657750",
+      "repository": "gin-gonic/gin",
+      "run_id": 33931657750,
+      "source": "real-github-run",
+      "stage": "inspect",
+      "status": "OUT_OF_SCOPE",
+      "eligible": false,
+      "executed": false,
+      "reason": "RunBack: OUT_OF_SCOPE: event schedule\n",
+      "duration_seconds": 0.004
+    }
+  ]
+}

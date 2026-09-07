@@ -1,0 +1,88 @@
+Evidence: ONLINE
+Cache: HIT
+Auth mode: token
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network:  (GENERIC_DEFAULT)
+Workflow      .github/workflows/tests.yaml
+Commit        06a9506ef7ee194c3ee64ae30a55e02ae08e2387
+Job           3.9 [tests]
+Matrix        map[python:3.9]
+Runner        ubuntu-latest
+Failed step   Run uv run --locked --no-default-groups --group dev tox run
+Command       uv run --locked --no-default-groups --group dev tox run
+Lock          /tmp/rb/c4953489a3b3/runback.lock
+NOTE          9 supported failed jobs; selected lowest job ID automatically; --job chooses another
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+OK       git: /usr/bin/git
+OK       docker: /usr/bin/docker
+OK       act: /usr/local/bin/act
+OK       Docker linux / 29.1.3
+HOST     linux/amd64
+AUTH     GitHub acquisition: RUNBACK_GITHUB_TOKEN > GH_TOKEN > anonymous; execution is isolated
+{"level":"info","msg":"Using docker host 'unix:///var/run/docker.sock', and daemon socket '-'","time":"2026-09-06T10:40:31Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"⭐ Run Set up job","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T10:40:31Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"🚀  Start image=ghcr.io/catthehacker/ubuntu:act-latest","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T10:40:31Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"  🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=false","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T10:40:31Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"  🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T10:40:32Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"  🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T10:40:32Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"  🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-06T10:40:32Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"  ✅  Success - Set up job","step":"Set up job","stepResult":"success","stepid":["--setup-job"],"time":"2026-09-06T10:40:32Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"GoGitActionCache fetch https://github.com/astral-sh/setup-uv with ref c771a70e6277c0a99b617c7a806ffedaca235ff9 at /tmp/rb/c4953489a3b3/actions/astral-sh-setup-uv.git","stage":"Pre","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T10:40:32Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"error","matrix":{"python":"3.9"},"msg":"failed to fetch \"https://github.com/astral-sh/setup-uv\" version \"c771a70e6277c0a99b617c7a806ffedaca235ff9\": GoGitActionCache failed to fetch https://github.com/astral-sh/setup-uv with ref c771a70e6277c0a99b617c7a806ffedaca235ff9 at /tmp/rb/c4953489a3b3/actions/astral-sh-setup-uv.git: Get \"https://github.com/astral-sh/setup-uv/info/refs?service=git-upload-pack\": read tcp \u003cprivate-host\u003e:44100-\u003e198.18.0.17:443: read: connection reset by peer","stage":"Pre","step":"astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9","stepID":["1"],"time":"2026-09-06T10:40:37Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"⭐ Run Complete job","step":"Complete job","stepid":["--complete-job"],"time":"2026-09-06T10:40:37Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","level":"info","matrix":{"python":"3.9"},"msg":"  ✅  Success - Complete job","step":"Complete job","stepResult":"success","stepid":["--complete-job"],"time":"2026-09-06T10:40:37Z"}
+{"dryrun":false,"job":"Tests/3.9","jobID":"tests","jobResult":"failure","level":"info","matrix":{"python":"3.9"},"msg":"🏁  Job failed","time":"2026-09-06T10:40:37Z"}
+Error: failed to fetch "https://github.com/astral-sh/setup-uv" version "c771a70e6277c0a99b617c7a806ffedaca235ff9": GoGitActionCache failed to fetch https://github.com/astral-sh/setup-uv with ref c771a70e6277c0a99b617c7a806ffedaca235ff9 at /tmp/rb/c4953489a3b3/actions/astral-sh-setup-uv.git: Get "https://github.com/astral-sh/setup-uv/info/refs?service=git-upload-pack": read tcp <private-host>:44100->198.18.0.17:443: read: connection reset by peer
+
+Result: REPLAY_BLOCKED
+Stage: EXECUTE
+Cause: NETWORK_DEPENDENCY
+Evidence level: STEP
+Remote failures: 1
+Local failures: 0
+Matched: 0
+act did not fail in the original target step
+Report: /tmp/rb/c4953489a3b3/result.json
+{
+  "status": "REPLAY_BLOCKED",
+  "evidence_level": "STEP",
+  "reason": "act did not fail in the original target step",
+  "remote": {
+    "failure_count": 1,
+    "unparsed_failures": [
+      "tests/test_formparser.py::TestFormParser::test_limiting"
+    ],
+    "level": "STEP",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [
+      "E   Failed: DID NOT RAISE \u003cclass 'werkzeug.exceptions.RequestEntityTooLarge'\u003e",
+      "FAILED tests/test_formparser.py::TestFormParser::test_limiting - Failed: DID ...",
+      "tests/test_formparser.py::TestFormParser::test_limiting FAILED           [ 33%]"
+    ],
+    "items": []
+  },
+  "local": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Run uv run --locked --no-default-groups --group dev tox run",
+    "command": "uv run --locked --no-default-groups --group dev tox run",
+    "exit": 1,
+    "normalized_excerpt": [],
+    "items": []
+  },
+  "matched_fields": {
+    "Identity": false,
+    "Exception": false,
+    "File": false,
+    "Line": false,
+    "Message": false,
+    "Exit": false
+  },
+  "remote_failures": 1,
+  "local_failures": 0,
+  "matched_failures": 0
+}
+CLI elapsed: 14.835s (through final result)

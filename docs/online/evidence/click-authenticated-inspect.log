@@ -1,0 +1,17 @@
+Evidence: ONLINE
+Cache: CACHE_INCOMPLETE
+Auth mode: token
+Image: runback-ubuntu:24.04-less (RECORDED_SESSION)
+Network: runback-replay (RECORDED_SESSION)
+Workflow      .github/workflows/tests.yaml
+Commit        4a0598c3c179b70b5116a800b485571bcc341ddf
+Job           3.13 [tests]
+Matrix        map[python:3.13]
+Runner        ubuntu-latest
+Failed step   Run uv run --locked --no-default-groups --group dev tox run
+Command       uv run --locked --no-default-groups --group dev tox run
+Lock          /root/.runback/reproductions/pallets/click/33760631267/attempt-1/100665765259/execution-2699028366/runback-33760631267-1-100665765259/runback.lock
+NOTE          7 supported failed jobs; selected lowest job ID automatically; --job chooses another
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+CLI elapsed: 6.310s (through final result)

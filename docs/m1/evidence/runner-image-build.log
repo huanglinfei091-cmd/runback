@@ -1,0 +1,20 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  144.4kB
+Step 1/3 : FROM ghcr.io/catthehacker/ubuntu@sha256:62d572b92f9f32d3427b6d220ad1f9dca9c7b6ffad37d295425037dbff78abaf
+ ---> 62d572b92f9f
+Step 2/3 : COPY less.deb /tmp/runback-less.deb
+ ---> 32cd0527192e
+Step 3/3 : RUN dpkg -i /tmp/runback-less.deb && rm /tmp/runback-less.deb
+ ---> Running in 1f2e4ab9548d
+Selecting previously unselected package less.
+(Reading database ... 26493 files and directories currently installed.)
+Preparing to unpack /tmp/runback-less.deb ...
+Unpacking less (590-2ubuntu2.1) ...
+Setting up less (590-2ubuntu2.1) ...
+ ---> Removed intermediate container 1f2e4ab9548d
+ ---> cc542dcefdd5
+Successfully built cc542dcefdd5
+Successfully tagged runback-ubuntu:24.04-less

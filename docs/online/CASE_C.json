@@ -1,0 +1,30 @@
+{
+  "designation": "DIRECT_URL_ACCEPTANCE",
+  "case": "C",
+  "repository": "pallets/werkzeug",
+  "url": "https://github.com/pallets/werkzeug/actions/runs/32448268750",
+  "run_id": 32448268750,
+  "run_attempt": 1,
+  "head_sha": "9ed37b2893bba8e2a8e946abd8244ecb48b1803e",
+  "workflow_path": ".github/workflows/tests.yaml",
+  "job_id": 96671790465,
+  "job_name": "3.9",
+  "runner": "ubuntu-latest",
+  "matrix": {
+    "python": "3.9"
+  },
+  "selected_at": "2026-09-06T06:07:13.723381+00:00",
+  "selection_basis": "GitHub remote run/attempt jobs/workflow at head_sha and pyproject; no local replay or RunBack online cache acquisition performed.",
+  "reason": "Public completed failed tests run; lowest supported failed job is Ubuntu CPython 3.9; checkout/setup-uv/setup-python only before explicit uv/tox run command, pytest configured in pyproject, locked dependency installation, no services/container/local action or target secrets.",
+  "prior_static_candidate_excluded": {
+    "repository": "pallets/itsdangerous",
+    "run_id": 33251265226,
+    "reason": "Unnamed run step includes format expression that existing FailedCommand cannot statically map; excluded before preregistration and before any replay."
+  },
+  "scope": "Acceptance only; not general compatibility evidence. Retain all failed attempts; never replace Case C.",
+  "command": [
+    "runback",
+    "https://github.com/pallets/werkzeug/actions/runs/32448268750"
+  ],
+  "expected_result": "Unknown until real execution; SAME_FAILURE preferred, truthful blocking or different failure retained."
+}

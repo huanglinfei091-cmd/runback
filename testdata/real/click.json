@@ -1,0 +1,142 @@
+{
+  "logs": {
+    "/repos/pallets/click/actions/jobs/100665765259/logs": "2026-09-03T13:21:08.0919368Z [command]/usr/bin/git log -1 --format=%H\n2026-09-03T13:21:08.0939878Z 4a0598c3c179b70b5116a800b485571bcc341ddf\n2026-09-03T13:21:11.3296361Z Successfully set up CPython (3.13.15)\n2026-09-03T13:21:19.5001423Z tests/test_utils/test_style.py::test_unstyle_other_ansi[x\\x1b[3~y-xy] PASSED [100%]\n2026-09-03T13:21:19.5002451Z \n2026-09-03T13:21:19.5003170Z =================================== FAILURES ===================================\n2026-09-03T13:21:19.5004382Z ______________________________ test_light_imports ______________________________\n2026-09-03T13:21:19.5005560Z tests/test_imports.py:80: in test_light_imports\n2026-09-03T13:21:19.5006495Z     assert module in ALLOWED_IMPORTS\n2026-09-03T13:21:19.5008105Z E   AssertionError: assert 'builtins' in {'__future__', 'abc', 'codecs', 'collections', 'collections.abc', 'configparser', ...}\n2026-09-03T13:21:19.5010115Z =========================== short test summary info ============================\n2026-09-03T13:21:19.5011573Z FAILED tests/test_imports.py::test_light_imports - AssertionError: assert 'bu...\n2026-09-03T13:21:19.5013359Z === 1 failed, 1990 passed, 24 skipped, 31000 deselected, 1 xfailed in 5.61s ====\n2026-09-03T13:21:20.0145843Z py3.13: exit 1 (7.35 seconds) /home/runner/work/click/click> pytest -v --tb=short --basetemp=/home/runner/work/click/click/.tox/py3.13/tmp pid=2343\n2026-09-03T13:21:20.0150548Z   py3.13: FAIL code 1 (7.73=setup[0.38]+cmd[7.35] seconds)\n2026-09-03T13:21:20.0151638Z   evaluation failed :( (7.78 seconds)\n2026-09-03T13:21:20.0544680Z ##[error]Process completed with exit code 1.\n2026-09-03T13:21:20.0663076Z Post job cleanup.\n2026-09-03T13:21:20.1477612Z [command]/usr/bin/git version\n2026-09-03T13:21:20.1512031Z git version 2.55.0\n2026-09-03T13:21:20.1544541Z Temporarily overriding HOME='/home/runner/work/_temp/019c8371-17b2-40f9-bacc-1914b7555deb' before making global git config changes\n2026-09-03T13:21:20.1545988Z Adding repository directory to the temporary git global config as a safe directory\n2026-09-03T13:21:20.1549061Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/click/click\n2026-09-03T13:21:20.1574946Z Removing SSH command configuration\n2026-09-03T13:21:20.1581499Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-09-03T13:21:20.1611046Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-09-03T13:21:20.1787527Z Removing HTTP extra header\n2026-09-03T13:21:20.1792532Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-09-03T13:21:20.1820362Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-09-03T13:21:20.1989848Z Removing includeIf entries pointing to credentials config files\n2026-09-03T13:21:20.1996847Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-09-03T13:21:20.2025067Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-09-03T13:21:20.2316327Z Cleaning up orphan processes"
+  },
+  "jobs": [
+    {
+      "id": 100665765259,
+      "conclusion": "failure",
+      "name": "3.13",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-03T13:21:04Z",
+          "completed_at": "2026-09-03T13:21:06Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-03T13:21:06Z",
+          "completed_at": "2026-09-03T13:21:08Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-03T13:21:08Z",
+          "completed_at": "2026-09-03T13:21:11Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-03T13:21:11Z",
+          "completed_at": "2026-09-03T13:21:11Z"
+        },
+        {
+          "name": "Run uv run --locked --no-default-groups --group dev tox run",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5,
+          "started_at": "2026-09-03T13:21:11Z",
+          "completed_at": "2026-09-03T13:21:20Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-09-03T13:21:20Z",
+          "completed_at": "2026-09-03T13:21:20Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-09-03T13:21:20Z",
+          "completed_at": "2026-09-03T13:21:20Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-09-03T13:21:20Z",
+          "completed_at": "2026-09-03T13:21:20Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-09-03T13:21:20Z",
+          "completed_at": "2026-09-03T13:21:20Z"
+        }
+      ],
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_name": "GitHub Actions 1000034938"
+    }
+  ],
+  "run": {
+    "id": 33760631267,
+    "name": "Tests",
+    "head_branch": "fix-path-generic",
+    "head_sha": "e50f62cdbdcd26ca19889fcc3ad741628e63a922",
+    "path": ".github/workflows/tests.yaml",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "failure",
+    "pull_requests": [],
+    "actor": {
+      "login": "dhimasardinata",
+      "id": 112082563,
+      "node_id": "U_kgDOBq4-gw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112082563?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dhimasardinata",
+      "html_url": "https://github.com/dhimasardinata",
+      "followers_url": "https://api.github.com/users/dhimasardinata/followers",
+      "following_url": "https://api.github.com/users/dhimasardinata/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dhimasardinata/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dhimasardinata/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dhimasardinata/subscriptions",
+      "organizations_url": "https://api.github.com/users/dhimasardinata/orgs",
+      "repos_url": "https://api.github.com/users/dhimasardinata/repos",
+      "events_url": "https://api.github.com/users/dhimasardinata/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dhimasardinata/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "repository": {
+      "full_name": "pallets/click",
+      "private": false
+    },
+    "head_repository": {
+      "full_name": "dhimasardinata/click",
+      "private": false
+    }
+  },
+  "url": "https://github.com/pallets/click/actions/runs/33760631267",
+  "files": {
+    "pallets/click@e50f62cdbdcd26ca19889fcc3ad741628e63a922:.github/workflows/tests.yaml": "name: Tests\non:\n  pull_request:\n    paths-ignore: ['docs/**', 'README.md']\n  push:\n    branches: [main, stable]\n    paths-ignore: ['docs/**', 'README.md']\npermissions: {}\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\njobs:\n  tests:\n    name: ${{ matrix.name || matrix.python }}\n    runs-on: ${{ matrix.os || 'ubuntu-latest' }}\n    strategy:\n      fail-fast: false\n      matrix:\n        include:\n          - {python: '3.14'}\n          - {python: '3.14t'}\n          - {name: Windows, python: '3.14', os: windows-latest}\n          - {name: Mac, python: '3.14', os: macos-latest}\n          - {python: '3.13'}\n          - {python: '3.12'}\n          - {python: '3.11'}\n          - {python: '3.10'}\n          - {name: PyPy, python: 'pypy-3.11', tox: pypy3.11}\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: ${{ matrix.python }}\n      - run: uv run --locked --no-default-groups --group dev tox run\n        env:\n          TOX_ENV: ${{ matrix.tox || format('py{0}', matrix.python) }}\n  typing:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version-file: pyproject.toml\n      - name: cache mypy\n        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0\n        with:\n          path: ./.mypy_cache\n          key: mypy|${{ hashFiles('pyproject.toml') }}\n      - run: uv run --locked --no-default-groups --group dev tox run -e typing\n",
+    "pallets/click@4a0598c3c179b70b5116a800b485571bcc341ddf:.github/workflows/tests.yaml": "name: Tests\non:\n  pull_request:\n    paths-ignore: ['docs/**', 'README.md']\n  push:\n    branches: [main, stable]\n    paths-ignore: ['docs/**', 'README.md']\npermissions: {}\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\njobs:\n  tests:\n    name: ${{ matrix.name || matrix.python }}\n    runs-on: ${{ matrix.os || 'ubuntu-latest' }}\n    strategy:\n      fail-fast: false\n      matrix:\n        include:\n          - {python: '3.14'}\n          - {python: '3.14t'}\n          - {name: Windows, python: '3.14', os: windows-latest}\n          - {name: Mac, python: '3.14', os: macos-latest}\n          - {python: '3.13'}\n          - {python: '3.12'}\n          - {python: '3.11'}\n          - {python: '3.10'}\n          - {name: PyPy, python: 'pypy-3.11', tox: pypy3.11}\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: ${{ matrix.python }}\n      - run: uv run --locked --no-default-groups --group dev tox run\n        env:\n          TOX_ENV: ${{ matrix.tox || format('py{0}', matrix.python) }}\n  typing:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false\n      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0\n        with:\n          enable-cache: true\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version-file: pyproject.toml\n      - name: cache mypy\n        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0\n        with:\n          path: ./.mypy_cache\n          key: mypy|${{ hashFiles('pyproject.toml') }}\n      - run: uv run --locked --no-default-groups --group dev tox run -e typing\n"
+  },
+  "provenance": {
+    "repository": "https://github.com/pallets/click",
+    "run": "https://github.com/pallets/click/actions/runs/33760631267",
+    "job_id": 100665765259,
+    "note": "Real metadata and workflow; log excerpt preserves checkout SHA, runtime version and failure details. Not a synthetic failure."
+  }
+}
