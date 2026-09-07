@@ -57,8 +57,9 @@ promotion.
 
 ## Next checkpoint
 
-The first wave began at 2026-09-07 03:42 UTC. The reserve wave must not be contacted before
-approximately 09:42 UTC. At that checkpoint, a second wave of at most 15 is allowed only if
+The first wave began at 2026-09-07 03:42 UTC. The user moved the first feedback checkpoint
+from six hours to two hours, so the reserve wave must not be contacted before approximately
+05:42 UTC. At that checkpoint, a second wave of at most 15 is allowed only if
 fewer than two people have actually tested RunBack. If three or more people have tested, direct
 outreach stops and the work switches to responding to evidence. The day-one direct-outreach
 cap remains 30.

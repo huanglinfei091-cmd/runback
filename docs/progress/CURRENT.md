@@ -70,5 +70,6 @@ Day-one 用户发现从近期 public pull_request failure 建立 100 个候选�
 并明确失败复现也有价值。
 
 首轮刚完成时尚未观察到真人安装或执行，因此当前外部验证状态为
-`USER_VALIDATION_PENDING`。第二轮最早约在首轮 6 小时后检查，只有实际 tester 少于 2 才可
+`USER_VALIDATION_PENDING`。用户随后将首次检查从 6 小时提前到 2 小时，约在 2026-09-07
+05:42 UTC 检查；只有实际 tester 少于 2 才可
 联系 reserve 中最多 15 人；全天直接联系上限保持 30。M1、M2、Direct URL 和 Case C 保持冻结。

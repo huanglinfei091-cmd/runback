@@ -82,5 +82,5 @@ be contacted in the first wave.
 Wave 1 contains 15 distinct repositories and authors. Each message will reference the exact
 failed run and job, identify RunBack as early alpha software, ask for the observed verdict and
 installation feedback, and explicitly avoid asking for a star or promotion. Reserve candidates
-will only be considered after approximately six hours if fewer than two people have actually
+will only be considered at the user-adjusted two-hour checkpoint if fewer than two people have actually
 tested RunBack. Total direct outreach remains capped at 30 for the day.
