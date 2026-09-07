@@ -54,3 +54,21 @@ Flask/Click bundle plan 回归 PASS。旧 M2 session 的冻结网络失效后，
 全部 PASS。发布扫描 218 个文本文件 0 findings；对当前认证 token 的精确扫描覆盖 38,762
 个开发与 runtime 文件，0 matches，token 未打印或落盘。当前进入 Windows commit、公开仓库、
 tag、GitHub Release 与外部用户验证。
+
+## 2026-09-07 — v0.1.0-alpha 已公开并启动首轮真人验证
+
+公开仓库为 `https://github.com/huanglinfei091-cmd/runback`。tag `v0.1.0-alpha` 锁定在
+commit `eb3725213a0892f801ea7a07283bd90abf75b6b3`，GitHub Release 已发布为 prerelease，
+不是 draft。Linux amd64 archive 和 SHA256SUMS 可匿名下载；公开下载后的 checksum 与
+`a74ff36aa93bc3e3726a8955a009504f412874af5b056cdb85df6e68f74ddd83` 一致。tag commit 的
+GitHub Actions run 34076426813 全部 PASS。
+
+Day-one 用户发现从近期 public pull_request failure 建立 100 个候选池，语言分布为 Python
+18、JavaScript 13、TypeScript 37、Go 32。逐个核验 PR、run、attempt、jobs、Ubuntu runner 和
+失败 step 后，保留 Tier A 30。首轮从 15 个不同仓库选择普通 test/lint/format/build failure，
+逐条发送带具体 run/job/step 的 early-alpha 邀请；15 条成功，0 失败，0 跳过，不求 Star，
+并明确失败复现也有价值。
+
+首轮刚完成时尚未观察到真人安装或执行，因此当前外部验证状态为
+`USER_VALIDATION_PENDING`。第二轮最早约在首轮 6 小时后检查，只有实际 tester 少于 2 才可
+联系 reserve 中最多 15 人；全天直接联系上限保持 30。M1、M2、Direct URL 和 Case C 保持冻结。

@@ -42,7 +42,8 @@ The repository also received publication-safe defaults:
 
 ## Final verification
 
-`scripts/publication-scan.py` scanned 218 publication text files and returned:
+The pre-publication scan covered 218 text files. After adding the two external-user reports,
+`scripts/publication-scan.py` scanned the final 220 publication text files and returned:
 
 ```text
 safe_to_publish: true
@@ -50,10 +51,14 @@ findings: 0
 ```
 
 An exact in-memory comparison against the Ubuntu account's current `gh auth token` scanned
-38,762 files across the development checkout and RunBack runtime roots. It returned:
+38,762 files across the development checkout and RunBack runtime roots. A second exact scan
+against the authenticated Windows control account covered all 220 tracked and pending
+publication files. They returned:
 
 ```text
 exact_token_matches=0
+exact_current_token_scan_files=220
+exact_current_token_matches=0
 ```
 
 The token value was never printed, written to a file or passed on a command line. Unit and
@@ -65,11 +70,15 @@ separate credential-free HTTP client with no cookie jar.
 
 | Gate | Result |
 | --- | --- |
-| Publication pattern scan | PASS, 218 text files, 0 findings |
-| Exact authenticated-token scan | PASS, 38,762 files, 0 matches |
+| Publication pattern scan | PASS, 220 text files, 0 findings |
+| Exact authenticated-token scans | PASS, Ubuntu 38,762 files and Windows publication set, 0 matches |
 | M1 `SHA256SUMS` | PASS |
 | M2 `SHA256SUMS` | PASS |
 | Release artifact checksum after Windows transfer | PASS |
 
 No GitHub credential, GitHub CLI credential store, private key, RunBack cache, session,
 lock, worktree or development binary is part of the Git commit or release archive.
+
+The public repository, tagged source, README and release assets were inspected after
+publication. The repository is public, the release is a prerelease rather than a draft, and
+the public asset digest matches the locally recorded archive SHA256.
