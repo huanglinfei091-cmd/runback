@@ -150,6 +150,12 @@ Secrets。运行陌生 workflow 前，应先查看其代码。
 ## 项目状态
 
 RunBack 当前是 early alpha，已有三条保留的真实案例证据链，但兼容范围仍然有限。
+
+如果你有一个 public GitHub Actions failed run，可以在
+[v0.1.0-alpha 测试讨论](https://github.com/huanglinfei091-cmd/runback/discussions/1)中提交 URL 和
+真实 verdict。`SAME_FAILURE`、`DIFFERENT_FAILURE`、`INSUFFICIENT_EVIDENCE`、
+`REPLAY_BLOCKED` 和 `EVIDENCE_UNAVAILABLE` 都是有价值的 Alpha 结果。不要提交 token、
+secret、cookie、私有源码或凭据。
 项目不宣称 100% GitHub Actions 兼容。开发检查：
 
 ```bash

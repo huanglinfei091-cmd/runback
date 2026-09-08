@@ -25,7 +25,8 @@ runback verify
 ```
 
 [中文说明](README.zh-CN.md) · [Architecture](docs/architecture.md) ·
-[Known limitations](docs/limitations.md) · [Direct URL evidence](docs/online/DIRECT_URL_REPORT.md)
+[Known limitations](docs/limitations.md) · [Direct URL evidence](docs/online/DIRECT_URL_REPORT.md) ·
+[Try your failed run](https://github.com/huanglinfei091-cmd/runback/discussions/1)
 
 ## What is RunBack?
 
@@ -185,6 +186,11 @@ code before executing any CI job locally.
 Use the [Bug report form](https://github.com/huanglinfei091-cmd/runback/issues/new?template=bug_report.yml)
 and include the RunBack version, OS, Docker and act versions, failed run URL, result,
 Stage and Cause. **Do not include tokens, secrets, cookies, private source or credentials.**
+
+To share a public failed run before filing a bug, use the
+[v0.1.0-alpha testing discussion](https://github.com/huanglinfei091-cmd/runback/discussions/1).
+`SAME_FAILURE`, `DIFFERENT_FAILURE`, `INSUFFICIENT_EVIDENCE`, `REPLAY_BLOCKED` and
+`EVIDENCE_UNAVAILABLE` are all useful alpha results.
 
 ## Project status
 

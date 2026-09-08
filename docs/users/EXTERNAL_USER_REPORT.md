@@ -85,3 +85,18 @@ The total direct outreach is 21, below the daily cap of 30. No more outreach is 
 the launch window. The final day-one checkpoint is 2026-09-08 03:42 UTC.
 
 Current verdict: `USER_VALIDATION_PENDING`.
+
+## Public opt-in channel
+
+GitHub Discussions was enabled on 2026-09-08 and an alpha testing announcement was published:
+
+- https://github.com/huanglinfei091-cmd/runback/discussions/1
+
+This gives maintainers and contributors a public place to volunteer a failed run URL and share
+any truthful RunBack verdict. It does not increase the direct-outreach count. Show HN, Reddit
+DevOps and DEV Community drafts exist in `docs/launch/`, but they are not counted as published
+because no authenticated submission was made on those services.
+
+No page view, release download, star, reaction or discussion visit is counted as a tester. The
+status remains `USER_VALIDATION_PENDING` until an external person reports an actual RunBack
+invocation or provides equivalent concrete execution evidence.

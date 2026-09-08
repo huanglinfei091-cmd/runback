@@ -84,3 +84,16 @@ multi-pod、Testplane 汇总结果和 Rust job 3 个案例因超出当前 Alpha 
 仍开放且原 failed job 保持 completed/failure，已发送第二轮定制邀请。第二轮 6 条全部发送成功，
 累计直接联系 21，未达到全天上限 30。当前仍没有已证实的安装或运行，状态保持
 `USER_VALIDATION_PENDING`。24 小时最终检查点为 2026-09-08 03:42 UTC。
+
+## 2026-09-08 — Public opt-in 分发入口
+
+拒绝向 1000 个陌生 GitHub 用户批量发送宣传评论，保留精准联系和全天 30 条上限。按用户确认，
+改为扩大公开、自愿参与的曝光：已为 RunBack 仓库启用 GitHub Discussions，并在 Announcements
+发布 `RunBack v0.1.0-alpha — try it on a failed GitHub Actions run`。公开入口为
+`https://github.com/huanglinfei091-cmd/runback/discussions/1`。
+
+公告只使用已验证的 Release、兼容边界和 Werkzeug Case C 结果，公开征集 failed run URL 和
+真实 verdict，明确不提交 token/secret/private log。README 中英文均加入入口；Show HN、Reddit
+DevOps 和 DEV Community 的渠道化草稿保存在 `docs/launch/`，在对应账号实际认证发布前不宣称
+已发布。曝光、浏览、下载、Star 不计作真人测试，外部状态继续保持
+`USER_VALIDATION_PENDING`。
