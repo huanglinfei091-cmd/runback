@@ -73,3 +73,14 @@ Day-one 用户发现从近期 public pull_request failure 建立 100 个候选�
 `USER_VALIDATION_PENDING`。用户随后将首次检查从 6 小时提前到 2 小时，约在 2026-09-07
 05:42 UTC 检查；只有实际 tester 少于 2 才可
 联系 reserve 中最多 15 人；全天直接联系上限保持 30。M1、M2、Direct URL 和 Case C 保持冻结。
+
+## 2026-09-08 — Day-one 第二轮精准邀请
+
+在 2026-09-08 00:08 UTC 重新检查首轮 15 个 PR。首轮评论之后出现 5 条普通开发或审查
+评论，但没有任何一条提到 RunBack 安装、命令或 verdict，因此真实 reply/tester 均仍为 0。
+
+reserve 15 个案例逐个重新验证 PR、run、attempt、job 和 Ubuntu runner：6 个 PR 已关闭；
+multi-pod、Testplane 汇总结果和 Rust job 3 个案例因超出当前 Alpha 范围未联系；其余 6 个
+仍开放且原 failed job 保持 completed/failure，已发送第二轮定制邀请。第二轮 6 条全部发送成功，
+累计直接联系 21，未达到全天上限 30。当前仍没有已证实的安装或运行，状态保持
+`USER_VALIDATION_PENDING`。24 小时最终检查点为 2026-09-08 03:42 UTC。

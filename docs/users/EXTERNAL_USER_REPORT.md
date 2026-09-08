@@ -20,8 +20,12 @@ Status: `USER_VALIDATION_PENDING`
 | Tier A | 30 |
 | Wave 1 messages attempted | 15 |
 | Wave 1 messages posted | 15 |
+| Wave 2 messages attempted | 6 |
+| Wave 2 messages posted | 6 |
+| Total direct outreach | 21 |
 | Failed or skipped posts | 0 |
-| Replies observed at initial checkpoint | 0 |
+| Later PR comments inspected | 5 |
+| Replies addressing RunBack | 0 |
 | People known to have installed RunBack | 0 |
 | People known to have run RunBack | 0 |
 | Reproductions reported by external users | 0 |
@@ -55,13 +59,29 @@ promotion.
 | 14 | [web-infra-dev/rslib#1909](https://github.com/web-infra-dev/rslib/pull/1909) | [Node 24 unit test](https://github.com/web-infra-dev/rslib/actions/runs/34075715726) | [comment](https://github.com/web-infra-dev/rslib/pull/1909#issuecomment-5564722801) | 2026-09-07 03:43:55Z |
 | 15 | [web-infra-dev/rstest#1755](https://github.com/web-infra-dev/rstest/pull/1755) | [unit test](https://github.com/web-infra-dev/rstest/actions/runs/33865470108) | [comment](https://github.com/web-infra-dev/rstest/pull/1755#issuecomment-5564723201) | 2026-09-07 03:43:59Z |
 
-## Next checkpoint
+## First checkpoint and second wave
 
-The first wave began at 2026-09-07 03:42 UTC. The user moved the first feedback checkpoint
-from six hours to two hours, so the reserve wave must not be contacted before approximately
-05:42 UTC. At that checkpoint, a second wave of at most 15 is allowed only if
-fewer than two people have actually tested RunBack. If three or more people have tested, direct
-outreach stops and the work switches to responding to evidence. The day-one direct-outreach
-cap remains 30.
+At the 2026-09-08 00:08 UTC checkpoint, five comments had appeared on first-wave PRs after the
+outreach messages. All five were ordinary PR implementation or review updates and none
+mentioned RunBack, installation, a RunBack command or a RunBack verdict. They are therefore
+not replies to the outreach and are not counted as testers.
+
+The 15 reserve entries were revalidated against the live PR, run, attempt and job APIs. Six PRs
+had already closed. Three still-open cases were withheld because their relevant path was a
+multi-pod scenario, an aggregate Testplane result, or a Rust job outside the validated alpha
+scope. The remaining six had open PRs and an unchanged completed failed Ubuntu job, so a
+tailored second wave was posted:
+
+| Pull request | Failed job / run | Outreach | Posted at (UTC) |
+| --- | --- | --- | --- |
+| [opskat/opskat#262](https://github.com/opskat/opskat/pull/262) | [Go Lint](https://github.com/opskat/opskat/actions/runs/30076945745) | [comment](https://github.com/opskat/opskat/pull/262#issuecomment-5577097590) | 2026-09-08 00:14:32Z |
+| [pwrdrvr/PwrAgent#2001](https://github.com/pwrdrvr/PwrAgent/pull/2001) | [Test](https://github.com/pwrdrvr/PwrAgent/actions/runs/34067602810) | [comment](https://github.com/pwrdrvr/PwrAgent/pull/2001#issuecomment-5577098007) | 2026-09-08 00:14:36Z |
+| [raullenchai/Rapid-MLX#3104](https://github.com/raullenchai/Rapid-MLX/pull/3104) | [tests](https://github.com/raullenchai/Rapid-MLX/actions/runs/34058117205) | [comment](https://github.com/raullenchai/Rapid-MLX/pull/3104#issuecomment-5577098380) | 2026-09-08 00:14:40Z |
+| [Servosity/msp-skills#311](https://github.com/Servosity/msp-skills/pull/311) | [guards](https://github.com/Servosity/msp-skills/actions/runs/34077884077) | [comment](https://github.com/Servosity/msp-skills/pull/311#issuecomment-5577098781) | 2026-09-08 00:14:43Z |
+| [stackrox/stackrox#22609](https://github.com/stackrox/stackrox/pull/22609) | [style-check](https://github.com/stackrox/stackrox/actions/runs/34074932625) | [comment](https://github.com/stackrox/stackrox/pull/22609#issuecomment-5577099164) | 2026-09-08 00:14:47Z |
+| [zouyuxuan122/DSH-Desktop-EAC#290](https://github.com/zouyuxuan122/DSH-Desktop-EAC/pull/290) | [Ubuntu type-check/test](https://github.com/zouyuxuan122/DSH-Desktop-EAC/actions/runs/33772213740) | [comment](https://github.com/zouyuxuan122/DSH-Desktop-EAC/pull/290#issuecomment-5577099920) | 2026-09-08 00:14:51Z |
+
+The total direct outreach is 21, below the daily cap of 30. No more outreach is planned during
+the launch window. The final day-one checkpoint is 2026-09-08 03:42 UTC.
 
 Current verdict: `USER_VALIDATION_PENDING`.
