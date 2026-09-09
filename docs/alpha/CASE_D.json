@@ -1,0 +1,41 @@
+{
+  "case": "D",
+  "status": "PRE_REGISTERED",
+  "selected_at": "2026-09-09T11:30:29Z",
+  "selection_basis": "remote metadata and workflow snapshot only; no RunBack replay was performed before registration",
+  "repository": "opencitations/ramose",
+  "url": "https://github.com/opencitations/ramose/actions/runs/33990762256",
+  "run_id": 33990762256,
+  "run_attempt": 1,
+  "event": "push",
+  "head_sha": "d243662f719ebd630625d7f8f767a7f1c84bf4a6",
+  "workflow_id": 290490115,
+  "workflow_path": ".github/workflows/pyright.yml",
+  "workflow_git_blob_sha": "413a6d7eb5be3f7b6e3d80f223c6b0f53e00b735",
+  "job_id": 101372447310,
+  "job_name": "pyright",
+  "runner": "ubuntu-latest",
+  "failed_step": "Pyright",
+  "failed_command": "uv run pyright",
+  "workflow_characteristics": [
+    "actions/checkout pinned to a commit",
+    "astral-sh/setup-uv pinned to a commit",
+    "setup-uv cache enabled",
+    "uv sync --locked --dev",
+    "multiple run steps",
+    "explicit pyright command"
+  ],
+  "scope_checks": {
+    "public_repository": true,
+    "completed_failure": true,
+    "ubuntu_runner": true,
+    "services": false,
+    "job_container": false,
+    "repository_local_action": false,
+    "secret_dependent_replay_path": false,
+    "private_checkout": false
+  },
+  "selection_reason": "A fresh Python failure with a common setup action, cache use, dependency installation and a structured type-checking failure. It is more complex than Case C without entering the excluded services, secrets, platform or infrastructure-heavy scope.",
+  "replacement_policy": "Case D remains recorded regardless of its first result. A later Case E may be added but cannot replace Case D.",
+  "first_result": null
+}
