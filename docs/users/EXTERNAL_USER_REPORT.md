@@ -1,8 +1,8 @@
 # External User Validation Report
 
-Date: 2026-09-07
+Date: 2026-09-09
 
-Status: `USER_VALIDATION_PENDING`
+Status: `DAY_ONE_COMPLETE` / `USER_VALIDATION_PENDING`
 
 ## Public alpha surface
 
@@ -24,8 +24,12 @@ Status: `USER_VALIDATION_PENDING`
 | Wave 2 messages posted | 6 |
 | Total direct outreach | 21 |
 | Failed or skipped posts | 0 |
-| Later PR comments inspected | 5 |
-| Replies addressing RunBack | 0 |
+| Outreach comments still available | 19 |
+| Outreach comments currently unavailable | 2 |
+| Later issue comments inspected | 21 |
+| Later reviews and inline comments inspected | 96 |
+| Replies addressing RunBack | 1 |
+| Explicit declines | 1 |
 | People known to have installed RunBack | 0 |
 | People known to have run RunBack | 0 |
 | Reproductions reported by external users | 0 |
@@ -100,3 +104,49 @@ because no authenticated submission was made on those services.
 No page view, release download, star, reaction or discussion visit is counted as a tester. The
 status remains `USER_VALIDATION_PENDING` until an external person reports an actual RunBack
 invocation or provides equivalent concrete execution evidence.
+
+## Final 24-hour checkpoint
+
+The outreach window ended at 2026-09-08 03:42 UTC. The final audit was completed at
+2026-09-09 07:09 UTC after checking all 21 contacted pull requests through the GitHub issue
+comment, review and inline review-comment APIs. No further outreach was sent after the window.
+
+After the corresponding outreach timestamps, the targets contained 21 non-owner issue
+comments and 96 reviews or inline review comments. Only one item addressed RunBack:
+
+- [block/schemabot#1317 reply](https://github.com/block/schemabot/pull/1317#issuecomment-5565123670):
+  the maintainer thanked the project and explicitly said they would pass on trying it locally.
+
+This is a real reply and an explicit decline. It is not an installation, invocation or tester.
+The other inspected items were ordinary implementation discussion, review activity, test
+commands or bot output unrelated to RunBack.
+
+Nineteen of the 21 outreach comments remain retrievable. The original comments on
+`inkstitch/inkstitch#4548` and `looplj/axonhub#2395` now return HTTP 404. They remain in the
+historical posted count because publication succeeded and their URLs were recorded at the
+time. The audit does not speculate about why they are no longer available, and neither target
+was contacted again.
+
+No external user supplied a RunBack verdict, Stage/Cause, TTFR, help request or evidence for
+`dev`, `replay --step` or `verify`:
+
+| Requested evidence | Final observation |
+| --- | --- |
+| Installation | none reported |
+| Direct URL invocation | none reported |
+| Run verdict | none reported |
+| TTFR | not observed |
+| Help needed | none reported |
+| `runback dev` | not observed |
+| `runback replay --step` | not observed |
+| `runback verify` | not observed |
+
+GitHub reported 37 repository views from 4 unique visitors and 38 clones from 20 unique
+cloners for the available 14-day traffic window. The release archive had 3 downloads and its
+checksum file had 2. The public testing discussion had 0 comments; the repository had 0
+issues, stars, forks and subscribers at the final audit. These counters can include the owner,
+automation or repeated activity and are recorded only as distribution signals. None is counted
+as a tester.
+
+The truthful day-one result is therefore 21 direct invitations, 1 explicit decline and 0
+verified testers. The sprint is complete, while external user validation remains pending.

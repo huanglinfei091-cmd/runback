@@ -97,3 +97,21 @@ multi-pod、Testplane 汇总结果和 Rust job 3 个案例因超出当前 Alpha 
 DevOps 和 DEV Community 的渠道化草稿保存在 `docs/launch/`，在对应账号实际认证发布前不宣称
 已发布。曝光、浏览、下载、Star 不计作真人测试，外部状态继续保持
 `USER_VALIDATION_PENDING`。
+
+## 2026-09-09 — Day-one 真人验证窗口结束
+
+24 小时窗口已于 2026-09-08 03:42 UTC 结束，最终审计于 2026-09-09 07:09 UTC 完成。
+逐个核对累计联系的 21 个 PR 的 issue comments、reviews 和 inline review comments：邀请后共有
+21 条非项目所有者 issue comment，以及 96 条 review/inline review activity。只有
+`block/schemabot#1317` 的 1 条回复直接回应 RunBack；对方明确表示暂不在本地尝试，因此计为
+真实回复和明确拒绝，不计作 tester。
+
+最终仍为 0 个已确认安装、0 个已确认 RunBack invocation、0 个外部 reproduction。没有可记录的
+verdict、TTFR、求助、`dev`、`replay --step` 或 `verify` 证据。21 条历史成功发布的邀请中当前
+19 条仍可读取；`inkstitch/inkstitch#4548` 与 `looplj/axonhub#2395` 的原评论返回 404，未推测
+原因，也未重新联系。
+
+同期 GitHub 可见计数为仓库 37 views / 4 unique visitors、38 clones / 20 unique cloners，Release
+archive 3 downloads、checksum 2 downloads，Discussion 0 comments，Issue/Star/Fork/Subscriber
+均为 0。这些只作为曝光信号，可能包含所有者或自动化活动，不计作真人测试。Day-one sprint 状态为
+`DAY_ONE_COMPLETE`，外部验证继续为 `USER_VALIDATION_PENDING`；窗口结束后不再发送邀请。
