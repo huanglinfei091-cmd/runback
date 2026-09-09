@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "case": "E",
+  "purpose": "FRESH_COMPATIBILITY",
+  "selected_at": "2026-09-09T12:24:38Z",
+  "repository": "AidenAI-IO/aiden-firmware",
+  "url": "https://github.com/AidenAI-IO/aiden-firmware/actions/runs/34079675283",
+  "run_id": 34079675283,
+  "run_attempt": 1,
+  "event": "pull_request",
+  "head_sha": "81983e688175e052c5606d90ed1010693979a9c4",
+  "workflow_id": 287669449,
+  "workflow_path": ".github/workflows/ci.yml",
+  "workflow_git_blob_sha": "e6c19013d2a9368d24e8de151986f5895c1faed1",
+  "job_id": 101612452314,
+  "job_name": "go-tests",
+  "runner": "ubuntu-latest",
+  "failed_step": "Run Go unit tests",
+  "command": "go test ./...",
+  "working_directory": "src/agent",
+  "remote_failure": {
+    "test": "TestAudioDialogPublishesStreamingReasoningForVoiceRun",
+    "file": "audio_dialog_test.go",
+    "line": 1077,
+    "message": "published messages = []agent.Message(nil), want one streaming reasoning message"
+  },
+  "static_scope_check": {
+    "public_repository": true,
+    "completed_failed_run": true,
+    "ubuntu_runner": true,
+    "services": false,
+    "job_container": false,
+    "repository_local_action": false,
+    "secret_dependent_target_path": false,
+    "actions": [
+      "actions/checkout@v4",
+      "actions/setup-go@v5"
+    ]
+  },
+  "selection_reason": "Fresh Go coverage with a completed failed ubuntu-latest job, standard GitHub-maintained actions, a direct go test command, and a concrete test name, source line, and failure message in the remote log.",
+  "prior_relation": "Listed as an outreach candidate, but no maintainer or contributor reported running RunBack and RunBack had never replayed this repository before registration.",
+  "replacement_policy": "The first RunBack result is retained even if it is REPLAY_BLOCKED, DIFFERENT_FAILURE, or INSUFFICIENT_EVIDENCE; Case E will not be replaced to obtain a success.",
+  "first_result": null
+}
