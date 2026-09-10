@@ -184,3 +184,15 @@ SHA256 为 `d78abad886ebe4bdd0b4338a218d27c1fca3d07ebee2bf5cfcf699e3ba0ecb0e`。
 也全部以退出码 0 完成。
 
 本阶段状态：`PASS`。核心开发与发布已完成；唯一仍未完成的产品验证是陌生真人实际安装和运行，状态继续保持 `USER_VALIDATION_PENDING`，不作为代码完成度的伪造结论。
+
+发布后重新检查了外部入口：RunBack 仓库仍无外部 Issue，Alpha Discussion 无回复，未把 Release
+下载计为 tester。Case F 的 PR 已合并且新 CI 通过，因此没有联系。Case G 的 PR 仍开放、原失败
+run 仍为 completed/failure、没有历史 RunBack 评论或拒绝记录，已于 2026-09-10 07:10:15 UTC
+发送一条与该失败直接相关的邀请：
+`https://github.com/ClickHouse/click-ui/pull/1190#issuecomment-5614602425`。累计精准联系从 21 增至
+22；当前仍没有真人实际运行证据，`USER_VALIDATION_PENDING` 不变。
+
+同日 07:15:33 UTC，原有公开 Alpha Discussion #1 已原位更新为 `v0.1.2-alpha`，包含当前二进制
+安装、`runback doctor`、直接 URL 命令、支持边界和真实 verdict 提交方式：
+`https://github.com/huanglinfei091-cmd/runback/discussions/1`。GitHub API 回读确认标题和正文已经更新，
+验证时评论数为 0；该项目自有文档更新不计作外部 tester，状态仍为 `USER_VALIDATION_PENDING`。

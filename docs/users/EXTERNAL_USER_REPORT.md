@@ -1,16 +1,16 @@
 # External User Validation Report
 
-Date: 2026-09-09
+Date: 2026-09-10
 
 Status: `DAY_ONE_COMPLETE` / `USER_VALIDATION_PENDING`
 
 ## Public alpha surface
 
 - Repository: https://github.com/huanglinfei091-cmd/runback
-- Release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.0-alpha
+- Current release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.2-alpha
 - Release state: public prerelease, not a draft
-- Linux amd64 archive: `runback-v0.1.0-alpha-linux-amd64.tar.gz`
-- Archive SHA256: `a74ff36aa93bc3e3726a8955a009504f412874af5b056cdb85df6e68f74ddd83`
+- Linux amd64 archive: `runback-v0.1.2-alpha-linux-amd64.tar.gz`
+- Archive SHA256: `d78abad886ebe4bdd0b4338a218d27c1fca3d07ebee2bf5cfcf699e3ba0ecb0e`
 
 ## Day-one funnel
 
@@ -22,7 +22,7 @@ Status: `DAY_ONE_COMPLETE` / `USER_VALIDATION_PENDING`
 | Wave 1 messages posted | 15 |
 | Wave 2 messages attempted | 6 |
 | Wave 2 messages posted | 6 |
-| Total direct outreach | 21 |
+| Day-one direct outreach | 21 |
 | Failed or skipped posts | 0 |
 | Outreach comments still available | 19 |
 | Outreach comments currently unavailable | 2 |
@@ -158,10 +158,44 @@ Cases D and E were project-run compatibility experiments and are not counted as 
 No new direct outreach was sent during this iteration, and no external install, invocation,
 verdict, TTFR, help request, `dev`, `replay --step` or `verify` evidence was supplied.
 
-RunBack `v0.1.1-alpha` is now the current public prerelease:
+At that checkpoint, RunBack `v0.1.1-alpha` was the current public prerelease:
 
 - https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha
 
 The public installer and release smoke passed, but project-owned validation is not external
 user validation. Verified tester count remains 0 and status remains
 `USER_VALIDATION_PENDING`.
+
+## 2026-09-10 TypeScript case follow-up
+
+After `v0.1.2-alpha` passed public release validation, the project surfaces were checked again.
+The RunBack repository had no external issue and the alpha testing Discussion still had no
+comment. Release downloads were observed but were not counted as people or tests.
+
+Fresh Case F was not contacted because `DeHubToken/dehub-mobile#673` had already merged and its
+replacement CI run passed. Fresh Case G remained directly relevant: `ClickHouse/click-ui#1190`
+was open, failed run `34430830779` was still a completed failure, no earlier RunBack comment was
+present, and no decline was recorded. One tailored comment was posted:
+
+- Pull request: https://github.com/ClickHouse/click-ui/pull/1190
+- Failed run/job: https://github.com/ClickHouse/click-ui/actions/runs/34430830779,
+  `Build health checkup / build`, attempt 1
+- Outreach: https://github.com/ClickHouse/click-ui/pull/1190#issuecomment-5614602425
+- Posted at: 2026-09-10 07:10:15 UTC
+
+The message reports the retained first and final RunBack results, asks only for an actual
+invocation result and installation friction, accepts unsuccessful outcomes, requests no Star,
+and asks the recipient not to share credentials. This raises cumulative direct outreach from
+21 to 22. At the time of publication there was no reply or external invocation, so verified
+tester count remains 0 and status remains `USER_VALIDATION_PENDING`.
+
+The existing public alpha Discussion was also refreshed in place on 2026-09-10 at
+07:15:33 UTC so a new visitor sees the current `v0.1.2-alpha` binary install, `runback doctor`,
+the one-command URL flow, supported boundaries, and the accepted result categories. The URL
+was preserved and no duplicate Discussion was created:
+
+- https://github.com/huanglinfei091-cmd/runback/discussions/1
+
+The update was read back through the GitHub API. Its title and body match the current release,
+and it had 0 comments at verification time. Updating a project-owned Discussion is product
+documentation, not external validation, so the verified tester count remains 0.
