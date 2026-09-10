@@ -1,6 +1,6 @@
 {
   "case": "D",
-  "status": "PRE_REGISTERED",
+  "status": "COMPLETED",
   "selected_at": "2026-09-09T11:30:29Z",
   "selection_basis": "remote metadata and workflow snapshot only; no RunBack replay was performed before registration",
   "repository": "opencitations/ramose",
@@ -37,5 +37,28 @@
   },
   "selection_reason": "A fresh Python failure with a common setup action, cache use, dependency installation and a structured type-checking failure. It is more complex than Case C without entering the excluded services, secrets, platform or infrastructure-heavy scope.",
   "replacement_policy": "Case D remains recorded regardless of its first result. A later Case E may be added but cannot replace Case D.",
-  "first_result": null
+  "first_result": {
+    "verdict": "REPLAY_BLOCKED",
+    "stage": "PREPARE",
+    "cause": "NETWORK_DEPENDENCY",
+    "elapsed_seconds": 53,
+    "evidence": "docs/alpha/evidence/case-d/first-run.log"
+  },
+  "pre_fix_replay_result": {
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched_failures": 0,
+    "elapsed_seconds": 66,
+    "evidence": "docs/alpha/evidence/case-d/retry-1.log"
+  },
+  "final_result": {
+    "verdict": "SAME_FAILURE",
+    "evidence_level": "STRUCTURED",
+    "remote_failures": 1,
+    "local_failures": 1,
+    "matched_failures": 1,
+    "elapsed_seconds": 56,
+    "evidence": "docs/alpha/evidence/case-d/retry-3.log"
+  }
 }

@@ -41,10 +41,13 @@ type Match struct {
 	MatchedCount  int      `json:"matched_failures"`
 }
 
-var mypy = regexp.MustCompile(`^(.+?\.py):(\d+):(?:\d+:)?\s*error:\s*(.+?)(?:\s+\[([a-zA-Z0-9_-]+)\])?$`)
+var mypy = regexp.MustCompile(`^(.+?\.pyi?):(\d+):(?:\d+:)?\s*error:\s*(.+?)(?:\s+\[([a-zA-Z0-9_-]+)\])?$`)
+var pyright = regexp.MustCompile(`^(.+?\.pyi?):(\d+):(\d+)\s+-\s+error:\s+(.+?)(?:\s+\(([A-Za-z][A-Za-z0-9_-]+)\))?$`)
 var diagnosticCode = regexp.MustCompile(`^\[([a-zA-Z0-9_-]+)\]$`)
 var frame = regexp.MustCompile(`^(.+?\.py):(\d+): in ([A-Za-z0-9_]+)$`)
 var exception = regexp.MustCompile(`^E\s+((?:[A-Za-z0-9_.]*(?:Error|Exception))|Failed)(?::\s*(.*))?$`)
+var goTestFailure = regexp.MustCompile(`^--- FAIL: ([^\s(]+) \([^)]+\)$`)
+var goTestDiagnostic = regexp.MustCompile(`^(.+?_test\.go):(\d+):\s+(.+)$`)
 var remoteExit = regexp.MustCompile(`Process completed with exit code (\d+)`)
 var uuid = regexp.MustCompile(`\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b`)
 var temp = regexp.MustCompile(`(?:/tmp|/home/runner/work/_temp)/[^ /:]+`)
@@ -72,8 +75,23 @@ func Parse(log, step, command string, exit *int) Evidence {
 	var traces []traceback
 	active := -1
 	var nodes []string
+	type goFailure struct {
+		Item
+		Name string
+	}
+	var goFailures []goFailure
+	activeGo := -1
 	for _, line := range lines {
 		line = Normalize(line)
+		if m := pyright.FindStringSubmatch(line); m != nil {
+			n, _ := strconv.Atoi(m[2])
+			diagnostic := "pyright"
+			if m[5] != "" {
+				diagnostic += "[" + m[5] + "]"
+			}
+			diagnostics = append(diagnostics, Item{Kind: "pyright", File: m[1], Line: n, Message: strings.TrimSpace(m[4]), Exception: diagnostic})
+			continue
+		}
 		if m := mypy.FindStringSubmatch(line); m != nil {
 			n, _ := strconv.Atoi(m[2])
 			diagnostics = append(diagnostics, Item{Kind: "mypy", File: m[1], Line: n, Message: strings.TrimSpace(m[3]), Exception: m[4]})
@@ -97,6 +115,18 @@ func Parse(log, step, command string, exit *int) Evidence {
 			traces[active].Message = Normalize(m[2])
 			continue
 		}
+		if m := goTestFailure.FindStringSubmatch(line); m != nil {
+			goFailures = append(goFailures, goFailure{Item: Item{Kind: "go-test", Identity: m[1], Exception: "go-test"}, Name: m[1]})
+			activeGo = len(goFailures) - 1
+			continue
+		}
+		if m := goTestDiagnostic.FindStringSubmatch(line); m != nil && activeGo >= 0 && goFailures[activeGo].File == "" {
+			n, _ := strconv.Atoi(m[2])
+			goFailures[activeGo].File = m[1]
+			goFailures[activeGo].Line = n
+			goFailures[activeGo].Message = strings.TrimSpace(m[3])
+			continue
+		}
 		if strings.HasPrefix(line, "FAILED ") {
 			node := strings.SplitN(strings.TrimPrefix(line, "FAILED "), " - ", 2)[0]
 			if strings.Contains(node, ".py::") {
@@ -104,10 +134,12 @@ func Parse(log, step, command string, exit *int) Evidence {
 			}
 		}
 	}
-	e.FailureCount = len(diagnostics) + len(nodes)
+	e.FailureCount = len(diagnostics) + len(nodes) + len(goFailures)
 	for _, d := range diagnostics {
 		if d.Exception != "" {
-			d.Exception = "mypy[" + d.Exception + "]"
+			if d.Kind == "mypy" {
+				d.Exception = "mypy[" + d.Exception + "]"
+			}
 			d.Identity = fmt.Sprintf("%s:%d:%s", d.File, d.Line, d.Exception)
 			e.Items = append(e.Items, d)
 		}
@@ -141,9 +173,16 @@ func Parse(log, step, command string, exit *int) Evidence {
 			e.UnparsedFailures = append(e.UnparsedFailures, node)
 		}
 	}
-	if len(e.Items) > 0 && len(e.Items) == len(diagnostics)+len(nodes) {
+	for _, g := range goFailures {
+		if g.File == "" || g.Line == 0 || g.Message == "" {
+			e.UnparsedFailures = append(e.UnparsedFailures, "go test: "+g.Name)
+			continue
+		}
+		e.Items = append(e.Items, g.Item)
+	}
+	if len(e.Items) > 0 && len(e.Items) == len(diagnostics)+len(nodes)+len(goFailures) {
 		e.Level = "TEST"
-		if len(nodes) == 0 {
+		if len(nodes) == 0 && len(goFailures) == 0 {
 			e.Level = "STRUCTURED"
 		}
 	}

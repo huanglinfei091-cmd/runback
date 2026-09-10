@@ -2,6 +2,7 @@
   "schema_version": 1,
   "case": "E",
   "purpose": "FRESH_COMPATIBILITY",
+  "status": "COMPLETED",
   "selected_at": "2026-09-09T12:24:38Z",
   "repository": "AidenAI-IO/aiden-firmware",
   "url": "https://github.com/AidenAI-IO/aiden-firmware/actions/runs/34079675283",
@@ -40,5 +41,26 @@
   "selection_reason": "Fresh Go coverage with a completed failed ubuntu-latest job, standard GitHub-maintained actions, a direct go test command, and a concrete test name, source line, and failure message in the remote log.",
   "prior_relation": "Listed as an outreach candidate, but no maintainer or contributor reported running RunBack and RunBack had never replayed this repository before registration.",
   "replacement_policy": "The first RunBack result is retained even if it is REPLAY_BLOCKED, DIFFERENT_FAILURE, or INSUFFICIENT_EVIDENCE; Case E will not be replaced to obtain a success.",
-  "first_result": null
+  "first_result": {
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "stage": "MATCH",
+    "evidence_level": "STEP",
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched_failures": 0,
+    "elapsed_seconds": 154,
+    "historical_checkout_sha": "e7be449bdaf181dbee75002a0d2ca8fe510a2674",
+    "evidence": "docs/alpha/evidence/case-e/first-run.log"
+  },
+  "final_result": {
+    "verdict": "SAME_FAILURE",
+    "stage": "MATCH",
+    "evidence_level": "TEST",
+    "remote_failures": 1,
+    "local_failures": 1,
+    "matched_failures": 1,
+    "elapsed_seconds": 164,
+    "historical_checkout_sha": "e7be449bdaf181dbee75002a0d2ca8fe510a2674",
+    "evidence": "docs/alpha/evidence/case-e/retry-1.log"
+  }
 }

@@ -1,0 +1,75 @@
+Evidence: ONLINE
+Cache: CACHE_INCOMPLETE
+Auth mode: token
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network: bridge
+Network Source: GENERIC_DEFAULT
+Workflow      .github/workflows/pyright.yml
+Commit        d243662f719ebd630625d7f8f767a7f1c84bf4a6
+Job           pyright [pyright]
+Matrix        map[]
+Runner        ubuntu-latest
+Failed step   Pyright
+Command       uv run pyright
+Lock          /tmp/rb/3a7a2f921497/runback.lock
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+OK       git: /usr/bin/git
+OK       docker: /usr/bin/docker
+OK       act: /usr/local/bin/act
+OK       Docker linux / 29.1.3
+HOST     linux/amd64
+AUTH     GitHub acquisition: RUNBACK_GITHUB_TOKEN > GH_TOKEN > anonymous; execution is isolated
+
+Result: REPLAY_BLOCKED
+Stage: PREPARE
+Cause: NETWORK_DEPENDENCY
+Evidence level: STEP
+Remote failures: 0
+Local failures: 0
+Matched: 0
+act did not fail in the original target step
+Report: /tmp/rb/3a7a2f921497/result.json
+{
+  "status": "REPLAY_BLOCKED",
+  "evidence_level": "STEP",
+  "reason": "act did not fail in the original target step",
+  "remote": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Pyright",
+    "command": "uv run pyright",
+    "exit": 1,
+    "normalized_excerpt": [
+      "benchmarks/federation/benchmark.py:27:6 - error: Import \"scipy.stats\" could not be resolved (reportMissingImports)"
+    ],
+    "items": []
+  },
+  "local": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Pyright",
+    "command": "uv run pyright",
+    "exit": -1,
+    "normalized_excerpt": [],
+    "items": []
+  },
+  "matched_fields": {
+    "Identity": false,
+    "Exception": false,
+    "File": false,
+    "Line": false,
+    "Message": false,
+    "Exit": false
+  },
+  "remote_failures": 0,
+  "local_failures": 0,
+  "matched_failures": 0
+}
+RunBack: git failed: exit status 128: error: RPC failed; curl 56 GnuTLS recv error (-9): Error decoding the received TLS packet.
+error: 20 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+
+CLI elapsed: 52.114s (through final result)

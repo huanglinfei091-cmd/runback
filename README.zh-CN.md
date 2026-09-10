@@ -38,28 +38,39 @@ RunBack 不是 act 替代品。act 负责运行 workflow；RunBack 负责还原�
 
 ## 快速开始
 
-从 [v0.1.0-alpha Release](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.0-alpha)
-下载 `runback-v0.1.0-alpha-linux-amd64.tar.gz` 和 `SHA256SUMS`：
+Linux amd64 用户无需 Go、无需 sudo 即可安装。脚本会下载公开 Release、校验 SHA256，
+并且只写入 `~/.local/bin`：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/huanglinfei091-cmd/runback/main/scripts/install-release.sh | bash
+export PATH="$HOME/.local/bin:$PATH"
+runback doctor
+```
+
+如需安装到系统目录，可从
+[Release 页面](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha)
+下载 archive 与 `SHA256SUMS`，校验后安装：
 
 ```bash
 sha256sum -c SHA256SUMS
-tar -xzf runback-v0.1.0-alpha-linux-amd64.tar.gz
-mkdir -p "$HOME/.local/bin"
-cp runback-v0.1.0-alpha-linux-amd64/runback "$HOME/.local/bin/runback"
-"$HOME/.local/bin/runback" version
-"$HOME/.local/bin/runback" doctor
+tar -xzf runback-v0.1.1-alpha-linux-amd64.tar.gz
+sudo install -m 0755 runback-v0.1.1-alpha-linux-amd64/runback /usr/local/bin/runback
 ```
 
-可选的系统安装：
+## 可复制 Demo
 
-```bash
-sudo install -m 0755 runback-v0.1.0-alpha-linux-amd64/runback /usr/local/bin/runback
-```
-
-运行一个真实公开失败：
+下面是 RunBack 项目预注册的 Werkzeug Case C，是已知 Demo，不是外部用户案例：
 
 ```bash
 runback https://github.com/pallets/werkzeug/actions/runs/32448268750
+```
+
+## 复现你自己的 CI 失败
+
+复制一个已完成且失败的 public GitHub Actions run URL：
+
+```bash
+runback https://github.com/OWNER/REPOSITORY/actions/runs/RUN_ID
 ```
 
 得到 `SAME_FAILURE` 后，RunBack 会创建调试 session 并显示工作目录：
@@ -91,8 +102,9 @@ docker0 或宿主网络。
 
 ## `runback doctor`
 
-`doctor` 检查 Git、Docker、daemon、act、GitHub API 模式和额度、短 replay workspace
-以及 Docker 网络。它只诊断，不自动修复宿主机。
+`doctor` 检查 Git、Docker、daemon、act、GitHub API 模式和额度、短 replay workspace、
+磁盘空间、PATH 和 Docker 网络。它只诊断，不自动修复宿主机。失败项会给出
+`Problem`、`Cause` 和可以继续执行的 `Next`。
 
 公开仓库允许匿名访问，未配置 Token 时只会提示 API 额度较低。可选认证优先级为：
 
@@ -109,10 +121,14 @@ RunBack 不会自动读取现有的 GitHub CLI 登录。
 | Flask | Bundle 取证 → resolver → full replay → matcher | `SAME_FAILURE` |
 | Click | Bundle replay → session → dev → step replay → full verify | 修复前 `SAME_FAILURE`，修复后 `FULL_JOB_PASSED` |
 | Werkzeug Case C | 认证 Direct URL → online evidence → full replay → matcher | `Remote 1 / Local 1 / Matched 1`，`SAME_FAILURE` |
+| Ramose Case D | 认证 Direct URL → setup-uv/cache → Pyright | 首次 `REPLAY_BLOCKED`，通用解析修复后严格 `SAME_FAILURE` |
+| Aiden Firmware Case E | 认证 Direct URL → setup-go → Go test | 首次 `INSUFFICIENT_EVIDENCE`，通用解析修复后严格 `SAME_FAILURE` |
 
 Werkzeug Case C 在本地重放前已经登记。中间出现的 `DIFFERENT_FAILURE`、
 `REPLAY_BLOCKED` 和 `INSUFFICIENT_EVIDENCE` 都被保留，详情见
 [Direct URL 报告](docs/online/DIRECT_URL_REPORT.md)。
+Fresh Case D/E 的首次失败、通用问题和最终结果保存在
+[真实兼容记录](docs/compatibility/REAL_CASES.md)。
 
 ## 兼容范围和结果
 
@@ -149,10 +165,10 @@ Secrets。运行陌生 workflow 前，应先查看其代码。
 
 ## 项目状态
 
-RunBack 当前是 early alpha，已有三条保留的真实案例证据链，但兼容范围仍然有限。
+RunBack 当前是 early alpha，已有五条保留的真实案例证据链，但兼容范围仍然有限。
 
 如果你有一个 public GitHub Actions failed run，可以在
-[v0.1.0-alpha 测试讨论](https://github.com/huanglinfei091-cmd/runback/discussions/1)中提交 URL 和
+[Alpha 测试讨论](https://github.com/huanglinfei091-cmd/runback/discussions/1)中提交 URL 和
 真实 verdict。`SAME_FAILURE`、`DIFFERENT_FAILURE`、`INSUFFICIENT_EVIDENCE`、
 `REPLAY_BLOCKED` 和 `EVIDENCE_UNAVAILABLE` 都是有价值的 Alpha 结果。不要提交 token、
 secret、cookie、私有源码或凭据。

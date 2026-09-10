@@ -1,0 +1,306 @@
+Evidence: ONLINE
+Cache: HIT
+Auth mode: token
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network: bridge
+Network Source: GENERIC_DEFAULT
+Workflow      .github/workflows/pyright.yml
+Commit        d243662f719ebd630625d7f8f767a7f1c84bf4a6
+Job           pyright [pyright]
+Matrix        map[]
+Runner        ubuntu-latest
+Failed step   Pyright
+Command       uv run pyright
+Lock          /tmp/rb/4dcf2751bc86/runback.lock
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+OK       git: /usr/bin/git
+OK       docker: /usr/bin/docker
+OK       act: /usr/local/bin/act
+OK       Docker linux / 29.1.3
+HOST     linux/amd64
+AUTH     GitHub acquisition: RUNBACK_GITHUB_TOKEN > GH_TOKEN > anonymous; execution is isolated
+{"level":"info","msg":"Using docker host 'unix:///var/run/docker.sock', and daemon socket '-'","time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"⭐ Run Set up job","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"🚀  Start image=ghcr.io/catthehacker/ubuntu:act-latest","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=false","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-09T12:07:50Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ✅  Success - Set up job","step":"Set up job","stepResult":"success","stepid":["--setup-job"],"time":"2026-09-09T12:07:51Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"GoGitActionCache fetch https://github.com/astral-sh/setup-uv with ref fac544c07dec837d0ccb6301d7b5580bf5edae39 at /tmp/rb/4dcf2751bc86/actions/astral-sh-setup-uv.git","stage":"Pre","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:07:51Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"GoGitActionCache fetch https://github.com/astral-sh/setup-uv with ref fac544c07dec837d0ccb6301d7b5580bf5edae39 at /tmp/rb/4dcf2751bc86/actions/astral-sh-setup-uv.git resolved to fac544c07dec837d0ccb6301d7b5580bf5edae39","stage":"Pre","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:04Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"GoGitActionCache get content astral-sh/setup-uv with sha fac544c07dec837d0ccb6301d7b5580bf5edae39 subpath 'action.yml' at /tmp/rb/4dcf2751bc86/actions/astral-sh-setup-uv.git","stage":"Pre","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:04Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"⭐ Run Main actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10","stage":"Main","step":"actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10","stepID":["0"],"time":"2026-09-09T12:08:04Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker cp src=/tmp/rb/4dcf2751bc86/workspace/. dst=/tmp/rb/4dcf2751bc86/workspace","stage":"Main","step":"actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10","stepID":["0"],"time":"2026-09-09T12:08:04Z"}
+{"dryrun":false,"executionTime":89829209,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ✅  Success - Main actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 [89.829209ms]","stage":"Main","step":"actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10","stepID":["0"],"stepResult":"success","time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"⭐ Run Main Set up uv","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"GoGitActionCache get content astral-sh/setup-uv with sha fac544c07dec837d0ccb6301d7b5580bf5edae39 subpath '' at /tmp/rb/4dcf2751bc86/actions/astral-sh-setup-uv.git","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[/opt/acttoolcache/node/24.19.0/x64/bin/node /var/run/act/actions/astral-sh-setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39/dist/setup/index.cjs] user= workdir=","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Found uv in tool-cache for 0.12.10\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Added /root/.local/bin to the path\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Added /opt/hostedtoolcache/uv/0.12.10/x86_64 to the path\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Set UV_PYTHON_INSTALL_DIR to /root/.local/share/uv/python\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Added /root/.local/share/uv/python to the path\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/run/act/actions/astral-sh-setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39/.github/python.json","command":"add-matcher","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/astral-sh-setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39/.github/python.json","raw":"##[add-matcher]/run/act/actions/astral-sh-setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39/.github/python.json\n","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Set UV_CACHE_DIR to /root/.cache/uv\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Successfully installed uv version 0.12.10\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Searching files using cache dependency glob: /tmp/rb/4dcf2751bc86/workspace/**/*requirements*.txt,/tmp/rb/4dcf2751bc86/workspace/**/*requirements*.in,/tmp/rb/4dcf2751bc86/workspace/**/*constraints*.txt,/tmp/rb/4dcf2751bc86/workspace/**/*constraints*.in,/tmp/rb/4dcf2751bc86/workspace/**/pyproject.toml,/tmp/rb/4dcf2751bc86/workspace/**/uv.lock,/tmp/rb/4dcf2751bc86/workspace/**/*.py.lock\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"/tmp/rb/4dcf2751bc86/workspace/pyproject.toml\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"/tmp/rb/4dcf2751bc86/workspace/uv.lock\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Found 2 files to hash.\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Trying to restore cache from GitHub Actions cache with key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-pruned-ebeb184e620571cd26e8092ccfd5205b87767ecd282a06c984c7483611445c96\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"No GitHub Actions cache found for key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-pruned-ebeb184e620571cd26e8092ccfd5205b87767ecd282a06c984c7483611445c96\n","raw_output":true,"stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"executionTime":877341536,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ✅  Success - Main Set up uv [877.341536ms]","stage":"Main","step":"Set up uv","stepID":["1"],"stepResult":"success","time":"2026-09-09T12:08:05Z"}
+{"arg":"/root/.local/share/uv/python","command":"set-env","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-env:: UV_PYTHON_INSTALL_DIR=/root/.local/share/uv/python","name":"UV_PYTHON_INSTALL_DIR","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/root/.cache/uv","command":"set-env","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-env:: UV_CACHE_DIR=/root/.cache/uv","name":"UV_CACHE_DIR","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-pruned-ebeb184e620571cd26e8092ccfd5205b87767ecd282a06c984c7483611445c96","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: cache-key=setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.12.3-pruned-ebeb184e620571cd26e8092ccfd5205b87767ecd282a06c984c7483611445c96","name":"cache-key","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"false","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: cache-hit=false","name":"cache-hit","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"false","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: python-cache-hit=false","name":"python-cache-hit","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/opt/hostedtoolcache/uv/0.12.10/x86_64/uv","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: uv-path=/opt/hostedtoolcache/uv/0.12.10/x86_64/uv","name":"uv-path","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/opt/hostedtoolcache/uv/0.12.10/x86_64/uvx","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: uvx-path=/opt/hostedtoolcache/uv/0.12.10/x86_64/uvx","name":"uvx-path","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"0.12.10","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: uv-version=0.12.10","name":"uv-version","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"3.12.3","command":"set-output","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: python-version=3.12.3","name":"python-version","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/root/.local/bin","command":"add-path","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::add-path:: /root/.local/bin","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/opt/hostedtoolcache/uv/0.12.10/x86_64","command":"add-path","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::add-path:: /opt/hostedtoolcache/uv/0.12.10/x86_64","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"arg":"/root/.local/share/uv/python","command":"add-path","dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ⚙  ::add-path:: /root/.local/share/uv/python","stage":"Main","step":"Set up uv","stepID":["1"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"⭐ Run Main Install dependencies","stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=","stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:05Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Using CPython 3.12.3 interpreter at: /usr/local/bin/python\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Creating virtual environment at: .venv\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Resolved 162 packages in 16ms\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"   Building ramose @ file:///tmp/rb/4dcf2751bc86/workspace\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading pygments (1.2MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading babel (9.7MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading jedi (4.7MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading pillow (6.6MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading pyshacl (1.2MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading accessible-pygments (1.3MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading pydantic-core (2.0MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading sphinx (3.2MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading debugpy (4.1MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading pydata-sphinx-theme (6.4MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading pyright (5.8MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading sqlalchemy (3.2MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading sphinx-design (2.1MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Downloading ruff (10.7MiB)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:06Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded pyshacl\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:24Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded pygments\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:24Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded accessible-pygments\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:25Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"   Building reuse==6.2.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:25Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded pydantic-core\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:27Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded sphinx-design\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:28Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded sphinx\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:31Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"      Built reuse==6.2.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:31Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded sqlalchemy\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:31Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"      Built ramose @ file:///tmp/rb/4dcf2751bc86/workspace\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:33Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded debugpy\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:33Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded jedi\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:34Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded pyright\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:35Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded pydata-sphinx-theme\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:36Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded pillow\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:36Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded babel\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:38Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" Downloaded ruff\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:38Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Prepared 134 packages in 32.35s\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:38Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:38Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:38Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:38Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Installed 134 packages in 978ms\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + accessible-pygments==0.0.5\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + alabaster==0.7.16\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + annotated-types==0.7.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + asttokens==3.0.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + attrs==26.1.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + babel==2.18.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + beautifulsoup4==4.14.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + blinker==1.9.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + boolean-py==5.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + certifi==2026.2.25\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + charset-normalizer==3.4.6\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + click==8.3.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + comm==0.2.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + coverage==7.13.5\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + debugpy==1.8.20\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + decorator==5.3.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + defusedxml==0.7.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + docutils==0.21.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + executing==2.2.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + fastjsonschema==2.21.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + flask==3.1.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + flask-swagger-ui==5.32.6\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + genbadge==1.1.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + greenlet==3.5.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + html5rdf==1.2.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + idna==3.15\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + imagesize==2.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + importlib-metadata==9.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + iniconfig==2.3.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + ipykernel==7.2.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + ipython==9.13.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + ipython-pygments-lexers==1.1.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + itsdangerous==2.2.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jedi==0.20.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jinja2==3.1.6\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jsonschema==4.26.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jsonschema-path==0.5.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jsonschema-specifications==2025.9.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jupyter-book==1.0.4.post1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jupyter-cache==1.0.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jupyter-client==8.8.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + jupyter-core==5.9.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + latexcodec==3.0.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + lazy-object-proxy==1.12.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + license-expression==30.4.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + linkify-it-py==2.1.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + markdown==3.10.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + markdown-it-py==3.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + markupsafe==3.0.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + matplotlib-inline==0.2.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + mdit-py-plugins==0.6.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + mdurl==0.1.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + myst-nb==1.4.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + myst-parser==3.0.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + nbclient==0.10.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + nbformat==5.10.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + nest-asyncio==1.6.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + nodeenv==1.10.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + openapi-schema-validator==0.9.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + openapi-spec-validator==0.9.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + owlrl==7.1.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + packaging==26.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + parso==0.8.7\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pathable==0.6.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pexpect==4.9.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pillow==12.3.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + platformdirs==4.9.6\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pluggy==1.6.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + prettytable==3.17.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + prompt-toolkit==3.0.52\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + psutil==7.2.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + ptyprocess==0.7.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pure-eval==0.2.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pybtex==0.26.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pybtex-docutils==1.0.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pydantic==2.13.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pydantic-core==2.46.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pydantic-settings==2.14.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pydata-sphinx-theme==0.16.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pygments==2.20.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pyparsing==3.3.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pyright==1.1.410\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pyshacl==0.31.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pytest==9.0.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + python-dateutil==2.9.0.post0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + python-debian==1.1.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + python-dotenv==1.2.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + python-magic==0.4.27\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pyyaml==6.0.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + pyzmq==27.1.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + ramose==2.9.0 (from file:///tmp/rb/4dcf2751bc86/workspace)\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + rdflib==7.6.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + referencing==0.37.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + requests==2.33.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + reuse==6.2.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + rfc3339-validator==0.1.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + rpds-py==0.30.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + ruff==0.15.9\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + setuptools==83.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + six==1.17.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + snowballstemmer==3.0.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + soupsieve==2.8.4\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx==7.4.7\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-book-theme==1.2.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-comments==0.0.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-copybutton==0.5.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-design==0.7.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-external-toc==1.1.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-jupyterbook-latex==1.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-multitoc-numbering==0.1.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-thebe==0.3.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinx-togglebutton==0.4.5\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-applehelp==2.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-bibtex==2.7.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-devhelp==2.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-htmlhelp==2.1.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-jsmath==1.0.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-qthelp==2.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sphinxcontrib-serializinghtml==2.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + sqlalchemy==2.0.49\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + stack-data==0.6.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + tabulate==0.10.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + tomlkit==0.14.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + tornado==6.5.8\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + traitlets==5.15.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + typing-extensions==4.15.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + typing-inspection==0.4.2\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + uc-micro-py==2.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + urllib3==2.7.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + watchdog==6.0.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + wcwidth==0.6.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + werkzeug==3.1.8\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + wheel==0.47.0\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":" + zipp==3.23.1\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["2"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"executionTime":33468411342,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ✅  Success - Main Install dependencies [33.468411342s]","stage":"Main","step":"Install dependencies","stepID":["2"],"stepResult":"success","time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"⭐ Run Main Pyright","stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[bash -e /var/run/act/workflow/3] user= workdir=","stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:39Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"/tmp/rb/4dcf2751bc86/workspace/benchmarks/federation/benchmark.py\n","raw_output":true,"stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  /tmp/rb/4dcf2751bc86/workspace/benchmarks/federation/benchmark.py:27:6 - error: Import \"scipy.stats\" could not be resolved (reportMissingImports)\n","raw_output":true,"stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"1 error, 0 warnings, 0 informations\n","raw_output":true,"stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"WARNING: there is a new pyright version available (v1.1.410 -\u003e v1.1.411).\n","raw_output":true,"stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"Please install the new version or set PYRIGHT_PYTHON_FORCE_VERSION to `latest`\n","raw_output":true,"stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"\n","raw_output":true,"stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"executionTime":7529661920,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ❌  Failure - Main Pyright [7.52966192s]","stage":"Main","step":"Pyright","stepID":["3"],"stepResult":"failure","time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"error","matrix":{},"msg":"exitcode '1': failure","stage":"Main","step":"Pyright","stepID":["3"],"time":"2026-09-09T12:08:46Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"⭐ Run Complete job","step":"Complete job","stepid":["--complete-job"],"time":"2026-09-09T12:08:47Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","level":"info","matrix":{},"msg":"  ✅  Success - Complete job","step":"Complete job","stepResult":"success","stepid":["--complete-job"],"time":"2026-09-09T12:08:47Z"}
+{"dryrun":false,"job":"Pyright/pyright","jobID":"pyright","jobResult":"failure","level":"info","matrix":{},"msg":"🏁  Job failed","time":"2026-09-09T12:08:47Z"}
+Error: Job 'pyright' failed
+
+Result: INSUFFICIENT_EVIDENCE
+Stage: MATCH
+Cause: 
+Evidence level: STEP
+Remote failures: 0
+Local failures: 0
+Matched: 0
+not enough matching step evidence or remote exit code
+Report: /tmp/rb/4dcf2751bc86/result.json
+{
+  "status": "INSUFFICIENT_EVIDENCE",
+  "evidence_level": "STEP",
+  "reason": "not enough matching step evidence or remote exit code",
+  "remote": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Pyright",
+    "command": "uv run pyright",
+    "exit": 1,
+    "normalized_excerpt": [
+      "benchmarks/federation/benchmark.py:27:6 - error: Import \"scipy.stats\" could not be resolved (reportMissingImports)"
+    ],
+    "items": []
+  },
+  "local": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Pyright",
+    "command": "uv run pyright",
+    "exit": 1,
+    "normalized_excerpt": [
+      "/tmp/rb/4dcf2751bc86/workspace/benchmarks/federation/benchmark.py:27:6 - error: Import \"scipy.stats\" could not be resolved (reportMissingImports)"
+    ],
+    "items": []
+  },
+  "matched_fields": {
+    "Identity": false,
+    "Exception": false,
+    "File": false,
+    "Line": false,
+    "Message": false,
+    "Exit": true
+  },
+  "remote_failures": 0,
+  "local_failures": 0,
+  "matched_failures": 0
+}
+CLI elapsed: 65.137s (through final result)

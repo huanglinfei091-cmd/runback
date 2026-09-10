@@ -11,7 +11,7 @@ body:
     id: version
     attributes:
       label: RunBack version
-      placeholder: RunBack v0.1.0-alpha
+      placeholder: RunBack v0.1.1-alpha
     validations:
       required: true
   - type: input

@@ -43,6 +43,14 @@ func TestTimestampIsolation(t *testing.T) {
 	}
 }
 
+func TestRunBackWorkspacePathIsNormalized(t *testing.T) {
+	remote := `benchmarks/federation/benchmark.py:27:6 - error: Import "scipy.stats" could not be resolved (reportMissingImports)`
+	local := `/tmp/rb/4dcf2751bc86/workspace/benchmarks/federation/benchmark.py:27:6 - error: Import "scipy.stats" could not be resolved (reportMissingImports)`
+	if got := Normalize(local); got != remote {
+		t.Fatalf("got %q, want %q", got, remote)
+	}
+}
+
 func TestPassingParameterizedErrorsAreNotFailureEvidence(t *testing.T) {
 	p := Build("tests/test_args.py::test_args[Error: bad argument] PASSED [ 10%]\nE AssertionError: 1 != 2")
 	if len(p.Lines) != 1 || p.Lines[0] != "E AssertionError: 1 != 2" {

@@ -1,0 +1,12 @@
+RunBack Doctor
+
+✓ Git (git version 2.43.0)
+✓ Docker (Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2)
+✓ act (act version 0.2.89)
+✓ Docker daemon (29.1.3)
+✓ GitHub API (authenticated, 5000/5000 remaining)
+✓ Replay workspace (/tmp/rb/<short-id>)
+✓ Docker networking (default bridge)
+
+Ready to reproduce public GitHub Actions failures.
+CLI elapsed: 1.192s (through final result)

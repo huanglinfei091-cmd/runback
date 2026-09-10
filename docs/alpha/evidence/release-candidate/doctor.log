@@ -1,0 +1,20 @@
+RunBack Doctor
+
+✓ Git (git version 2.43.0)
+✓ Docker (Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2)
+✓ act (act version 0.2.89)
+✓ Docker daemon (29.1.3)
+✓ GitHub API (authenticated, 5000/5000 remaining)
+✓ Replay workspace (/tmp/rb/<short-id>)
+! Disk space is low (3.0 GiB free)
+  Problem: Less than 5 GiB is free for replay data.
+  Cause: Larger runner images or dependency downloads may fail.
+  Next: df -h /tmp
+! RunBack is not on PATH
+  Problem: A new shell may not find the runback command.
+  Cause: The running binary's directory is absent from PATH.
+  Next: export PATH="$HOME/.local/bin:$PATH"
+✓ Docker networking (default bridge)
+
+Ready to reproduce public GitHub Actions failures.
+CLI elapsed: 1.229s (through final result)

@@ -1,0 +1,4 @@
+go_test_exit=0
+go_vet_exit=0
+go_build_exit=0
+elapsed_seconds=2

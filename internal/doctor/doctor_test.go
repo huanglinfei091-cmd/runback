@@ -130,3 +130,85 @@ func TestWorkspaceProbeRemovesOnlyAllocatedDirectory(t *testing.T) {
 		t.Fatal("neighboring user data changed", err)
 	}
 }
+
+func TestMissingActExplainsProblemCauseAndNextStep(t *testing.T) {
+	c := checker{
+		lookPath: func(name string) (string, error) {
+			if name == "act" {
+				return "", errors.New("missing")
+			}
+			return "/bin/" + name, nil
+		},
+		run: func(_ context.Context, _ []string, name string, args ...string) (string, error) {
+			if name == "docker" && len(args) > 0 && args[0] == "image" {
+				return "", errors.New("image absent")
+			}
+			return "test-version", nil
+		},
+		access: func(context.Context) (online.AccessStatus, error) {
+			return online.AccessStatus{Mode: "token", Limit: 5000, Remaining: 4999}, nil
+		},
+		workspace: testWorkspace(t),
+	}
+	var out bytes.Buffer
+	if c.check(context.Background(), &out) {
+		t.Fatal("missing act reported ready")
+	}
+	text := out.String()
+	for _, want := range []string{"Problem: act was not found on PATH.", "Cause: RunBack delegates", "Next: Install act"} {
+		if !strings.Contains(text, want) {
+			t.Fatalf("missing %q in:\n%s", want, text)
+		}
+	}
+}
+
+func TestLowDiskSpaceIsActionableBlocker(t *testing.T) {
+	c := checker{
+		lookPath: func(name string) (string, error) { return "/bin/" + name, nil },
+		run: func(_ context.Context, _ []string, name string, args ...string) (string, error) {
+			if name == "docker" && len(args) > 0 && args[0] == "image" {
+				return "", errors.New("image absent")
+			}
+			return "test-version", nil
+		},
+		access: func(context.Context) (online.AccessStatus, error) {
+			return online.AccessStatus{Mode: "token", Limit: 5000, Remaining: 4999}, nil
+		},
+		workspace: testWorkspace(t),
+		diskFree:  func(string) (uint64, error) { return 1 << 30, nil },
+		pathState: func() (bool, string) { return true, "/usr/local/bin" },
+	}
+	var out bytes.Buffer
+	if c.check(context.Background(), &out) {
+		t.Fatal("low disk space reported ready")
+	}
+	text := out.String()
+	if !strings.Contains(text, "✗ Disk space (1.0 GiB free)") || !strings.Contains(text, "Next: df -h /tmp") {
+		t.Fatal(text)
+	}
+}
+
+func TestPathWarningDoesNotFailOtherwiseReadyDoctor(t *testing.T) {
+	c := checker{
+		lookPath: func(name string) (string, error) { return "/bin/" + name, nil },
+		run: func(_ context.Context, _ []string, name string, args ...string) (string, error) {
+			if name == "docker" && len(args) > 0 && args[0] == "image" {
+				return "", errors.New("image absent")
+			}
+			return "test-version", nil
+		},
+		access: func(context.Context) (online.AccessStatus, error) {
+			return online.AccessStatus{Mode: "token", Limit: 5000, Remaining: 4999}, nil
+		},
+		workspace: testWorkspace(t),
+		diskFree:  func(string) (uint64, error) { return 10 << 30, nil },
+		pathState: func() (bool, string) { return false, "/tmp" },
+	}
+	var out bytes.Buffer
+	if !c.check(context.Background(), &out) {
+		t.Fatal(out.String())
+	}
+	if !strings.Contains(out.String(), "! RunBack is not on PATH") || !strings.Contains(out.String(), `export PATH="$HOME/.local/bin:$PATH"`) {
+		t.Fatal(out.String())
+	}
+}

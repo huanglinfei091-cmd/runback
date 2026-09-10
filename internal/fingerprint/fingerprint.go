@@ -11,7 +11,7 @@ import (
 
 var ansi = regexp.MustCompile(`\x1b\[[0-9;]*[A-Za-z]`)
 var timestamp = regexp.MustCompile(`^\d{4}-\d\d-\d\dT[0-9:.]+Z\s*`)
-var location = regexp.MustCompile(`(?:/home/runner/work/[^/]+/[^/]+/|/github/workspace/|/runback/workspace/)`)
+var location = regexp.MustCompile(`(?:/home/runner/work/[^/]+/[^/]+/|/github/workspace/|/runback/workspace/|/tmp/rb/[A-Za-z0-9._-]+/workspace/)`)
 var evidence = regexp.MustCompile(`(?i)(\bFAIL(?:ED)?\b|\b(?:Type|Value|Assertion|Runtime|Import|ModuleNotFound|Syntax|Reference)Error\b|\berror:|\bpanic:|Expected:|Received:|AssertionError|assert .+|--- FAIL:|E\s+\w+Error|\bNo solution found\b|\bbecause\b.*\b(?:requires|depends)\b)`)
 var passedTest = regexp.MustCompile(`\s(?:PASSED|SKIPPED|XFAIL)\s*(?:\[.*\])?$`)
 var generic = regexp.MustCompile(`(?i)(process completed with exit code|exit status \d+|job failed|step failed|failure - main|error: exit with|some checks were not successful|evaluation failed|FAIL code [0-9]|[0-9]+ failed,|[0-9]+ passed,)`)

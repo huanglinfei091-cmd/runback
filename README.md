@@ -40,28 +40,40 @@ this particular failure and refuses to claim success when the evidence does not 
 
 ## Quick start
 
-Download `runback-v0.1.0-alpha-linux-amd64.tar.gz` and `SHA256SUMS` from the
-[v0.1.0-alpha release](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.0-alpha), then:
+Install the current Linux amd64 release without Go or sudo. The installer downloads the
+release archive, verifies its published SHA256, and writes only to `~/.local/bin`:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/huanglinfei091-cmd/runback/main/scripts/install-release.sh | bash
+export PATH="$HOME/.local/bin:$PATH"
+runback doctor
+```
+
+For a system-wide install, download the archive and `SHA256SUMS` from the
+[release page](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha),
+verify it, then install the binary:
 
 ```bash
 sha256sum -c SHA256SUMS
-tar -xzf runback-v0.1.0-alpha-linux-amd64.tar.gz
-mkdir -p "$HOME/.local/bin"
-cp runback-v0.1.0-alpha-linux-amd64/runback "$HOME/.local/bin/runback"
-"$HOME/.local/bin/runback" version
-"$HOME/.local/bin/runback" doctor
+tar -xzf runback-v0.1.1-alpha-linux-amd64.tar.gz
+sudo install -m 0755 runback-v0.1.1-alpha-linux-amd64/runback /usr/local/bin/runback
 ```
 
-Optional system-wide installation:
+## Copyable demo
 
-```bash
-sudo install -m 0755 runback-v0.1.0-alpha-linux-amd64/runback /usr/local/bin/runback
-```
-
-Run a real public failure:
+This is the preregistered Werkzeug Case C used by the RunBack project. It is a known demo,
+not an external-user result:
 
 ```bash
 runback https://github.com/pallets/werkzeug/actions/runs/32448268750
+```
+
+## Reproduce your own CI failure
+
+Copy the URL of a completed failed public GitHub Actions run:
+
+```bash
+runback https://github.com/OWNER/REPOSITORY/actions/runs/RUN_ID
 ```
 
 If RunBack reports `SAME_FAILURE`, it creates a debugging session and shows its workspace:
@@ -93,8 +105,9 @@ act, Git, the firewall, Docker daemon, docker0, or host networking.
 
 ## `runback doctor`
 
-`doctor` checks Git, Docker, the daemon, act, GitHub API access, the short replay workspace
-and Docker networking. It is diagnostic only and does not repair the host.
+`doctor` checks Git, Docker, the daemon, act, GitHub API access, the short replay workspace,
+free disk space, PATH and Docker networking. It is diagnostic only and does not repair the
+host. A failed check reports `Problem`, `Cause` and a concrete `Next` action.
 
 ```text
 RunBack Doctor
@@ -145,10 +158,14 @@ overrides. Normal Direct URL usage does not require them.
 | Flask | Bundle acquisition → resolver → full replay → matcher | `SAME_FAILURE` |
 | Click | Bundle replay → session → dev → step replay → full verify | `SAME_FAILURE`, then `FULL_JOB_PASSED` after the test fix |
 | Werkzeug Case C | Authenticated Direct URL → online evidence → full replay → matcher | `Remote 1 / Local 1 / Matched 1`, `SAME_FAILURE` |
+| Ramose Case D | Authenticated Direct URL → setup-uv/cache → Pyright | first `REPLAY_BLOCKED`, then strict `SAME_FAILURE` after generic parsing |
+| Aiden Firmware Case E | Authenticated Direct URL → setup-go → Go test | first `INSUFFICIENT_EVIDENCE`, then strict `SAME_FAILURE` after generic parsing |
 
 Werkzeug Case C was selected before local replay and was not replaced when intermediate
 runs produced `DIFFERENT_FAILURE`, `REPLAY_BLOCKED` and `INSUFFICIENT_EVIDENCE`. The
 complete chain is retained in [the report](docs/online/DIRECT_URL_REPORT.md).
+Fresh Cases D and E are retained in the [real compatibility record](docs/compatibility/REAL_CASES.md),
+including their first unsuccessful results and the general issues they exposed.
 
 ## Compatibility
 
@@ -188,13 +205,13 @@ and include the RunBack version, OS, Docker and act versions, failed run URL, re
 Stage and Cause. **Do not include tokens, secrets, cookies, private source or credentials.**
 
 To share a public failed run before filing a bug, use the
-[v0.1.0-alpha testing discussion](https://github.com/huanglinfei091-cmd/runback/discussions/1).
+[alpha testing discussion](https://github.com/huanglinfei091-cmd/runback/discussions/1).
 `SAME_FAILURE`, `DIFFERENT_FAILURE`, `INSUFFICIENT_EVIDENCE`, `REPLAY_BLOCKED` and
 `EVIDENCE_UNAVAILABLE` are all useful alpha results.
 
 ## Project status
 
-RunBack is an early alpha with three retained real-case evidence chains. Compatibility is
+RunBack is an early alpha with five retained real-case evidence chains. Compatibility is
 intentionally narrow, and no 100% GitHub Actions compatibility claim is made. See
 [Contributing](CONTRIBUTING.md) before adding a regression case.
 

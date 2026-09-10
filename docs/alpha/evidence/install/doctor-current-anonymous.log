@@ -1,0 +1,27 @@
+RunBack Doctor
+
+✓ Git (git version 2.43.0)
+✓ Docker (Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2)
+✓ act (act version 0.2.89)
+✓ Docker daemon (29.1.3)
+! GitHub token not configured; public repositories use the lower anonymous API limit.
+  Problem: Anonymous GitHub requests have a lower quota.
+  Cause: No RUNBACK_GITHUB_TOKEN or GH_TOKEN is set for this process.
+  Next: RUNBACK_GITHUB_TOKEN="$(gh auth token)" runback doctor
+✗ GitHub API quota exhausted (anonymous; reset 2026-09-10T01:34:58Z)
+  Problem: The GitHub API quota is exhausted.
+  Cause: RunBack cannot acquire immutable run evidence until quota is available.
+  Next: RUNBACK_GITHUB_TOKEN="$(gh auth token)" runback doctor
+✓ Replay workspace (/tmp/rb/<short-id>)
+! Disk space is low (3.4 GiB free)
+  Problem: Less than 5 GiB is free for replay data.
+  Cause: Larger runner images or dependency downloads may fail.
+  Next: df -h /tmp
+! RunBack is not on PATH
+  Problem: A new shell may not find the runback command.
+  Cause: The running binary's directory is absent from PATH.
+  Next: export PATH="$HOME/.local/bin:$PATH"
+✓ Docker networking (default bridge)
+
+RunBack is not ready. Resolve the failed checks above and run doctor again.
+CLI elapsed: 0.813s (through final result)

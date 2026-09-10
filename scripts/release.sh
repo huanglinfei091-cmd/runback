@@ -3,7 +3,7 @@ set -euo pipefail
 
 unset RUNBACK_GITHUB_TOKEN GH_TOKEN GITHUB_TOKEN
 cd "$(dirname "$0")/.."
-version="${1:-v0.1.0-alpha}"
+version="${1:-v0.1.1-alpha}"
 if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-[0-9A-Za-z.-]+$ ]]; then
   echo "release version must look like v0.1.0-alpha" >&2
   exit 2

@@ -1,0 +1,13 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0 16 3243k   16  544k    0     0   233k      0  0:00:13  0:00:02  0:00:11  566k100 3243k  100 3243k    0     0  1201k      0  0:00:02  0:00:02 --:--:-- 2436k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   106  100   106    0     0     61      0  0:00:01  0:00:01 --:--:--    61100   106  100   106    0     0     61      0  0:00:01  0:00:01 --:--:--     0
+Installed RunBack v0.1.0-alpha to /tmp/runback-install-smoke.vv0jml/.local/bin/runback
+Next: export PATH="/tmp/runback-install-smoke.vv0jml/.local/bin:$PATH"
+Then: runback doctor
+RunBack v0.1.0-alpha
+CLI elapsed: 0.000s (through final result)
