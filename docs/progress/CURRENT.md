@@ -175,3 +175,12 @@ bundle、M1/M2 SHA256、M2 `STEP_PASSED_UNVERIFIED` / `FULL_JOB_PASSED`。冻结
 image 或 network override。没有修改 Docker daemon、docker0 或宿主网络。
 
 外部验证仍为 `USER_VALIDATION_PENDING`：没有把本项目自己的兼容测试计为真人用户测试。
+
+`v0.1.2-alpha` 已于 2026-09-10 公开发布。Tag 指向
+`dce0f5d6421920d296ca34de0fbe00f322eba5af`，CI run `34447304256` 通过。公开 archive
+SHA256 为 `d78abad886ebe4bdd0b4338a218d27c1fca3d07ebee2bf5cfcf699e3ba0ecb0e`。发布包内的
+二进制通过 version、authenticated doctor 和冻结 Case C 精确 URL 验证，Case C 得到
+`SAME_FAILURE / TEST / 1/1/1`；公开安装脚本的 clean install、checksum、version 和 doctor
+也全部以退出码 0 完成。
+
+本阶段状态：`PASS`。核心开发与发布已完成；唯一仍未完成的产品验证是陌生真人实际安装和运行，状态继续保持 `USER_VALIDATION_PENDING`，不作为代码完成度的伪造结论。

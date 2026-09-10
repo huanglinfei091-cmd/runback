@@ -1,0 +1,3 @@
+Installed RunBack v0.1.2-alpha to /tmp/runback-public-v012-OS8AO3/.local/bin/runback
+Next: export PATH="/tmp/runback-public-v012-OS8AO3/.local/bin:$PATH"
+Then: runback doctor

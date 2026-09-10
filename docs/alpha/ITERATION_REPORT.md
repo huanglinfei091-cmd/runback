@@ -249,6 +249,26 @@ the released archive without Go or sudo, verified the public checksum, installed
 reported `RunBack v0.1.1-alpha` and completed authenticated `runback doctor` successfully.
 The temporary installation was deleted after verification.
 
+### v0.1.2-alpha TypeScript follow-up
+
+The TypeScript compatibility change was published as a separate public prerelease:
+
+- Release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.2-alpha
+- State: public prerelease, not a draft
+- Tag commit: `dce0f5d6421920d296ca34de0fbe00f322eba5af`
+- Tagged-commit CI: https://github.com/huanglinfei091-cmd/runback/actions/runs/34447304256
+- Archive: `runback-v0.1.2-alpha-linux-amd64.tar.gz`
+- Archive size: 3,329,606 bytes
+- Archive SHA256:
+  `d78abad886ebe4bdd0b4338a218d27c1fca3d07ebee2bf5cfcf699e3ba0ecb0e`
+
+The exact archive binary reported `RunBack v0.1.2-alpha`, passed authenticated doctor and
+replayed frozen Case C from the exact URL with no replay overrides. It returned
+`SAME_FAILURE`, `TEST`, `1/1/1`; total CLI time through session creation was 86 seconds in the
+isolated release smoke. A second clean temporary HOME used the public installer URL after
+publication; download, public checksum validation, atomic install, version and authenticated
+doctor all returned exit code 0. Both temporary homes were deleted after validation.
+
 ## External-user status
 
 The formal outreach audit retained 21 direct invitations, one explicit decline and zero
@@ -276,6 +296,13 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 - `docs/alpha/evidence/regressions/`
 - `docs/alpha/evidence/release-candidate/`
 - `docs/alpha/evidence/public-release/`
+- `docs/alpha/evidence/release-v0.1.2-case-c.log`
+- `docs/alpha/evidence/release-v0.1.2-checksum.log`
+- `docs/alpha/evidence/release-v0.1.2-doctor.log`
+- `docs/alpha/evidence/release-v0.1.2-smoke.meta`
+- `docs/alpha/evidence/public-v0.1.2-install.log`
+- `docs/alpha/evidence/public-v0.1.2-doctor.log`
+- `docs/alpha/evidence/public-v0.1.2-smoke.meta`
 - `docs/compatibility/REAL_CASES.md`
 - `docs/users/EXTERNAL_USER_REPORT.md`
 
