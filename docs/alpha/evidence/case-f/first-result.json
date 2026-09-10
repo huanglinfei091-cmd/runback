@@ -1,0 +1,100 @@
+{
+  "stage": "MATCH",
+  "executor": "act",
+  "mode": "FULL_JOB",
+  "target_succeeded": false,
+  "target_reached": true,
+  "evidence": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "evidence_level": "STEP",
+    "reason": "not enough matching step evidence or remote exit code",
+    "remote": {
+      "failure_count": 0,
+      "level": "STEP",
+      "step": "i18n coverage",
+      "command": "npm run i18n:coverage",
+      "exit": 1,
+      "normalized_excerpt": [],
+      "items": []
+    },
+    "local": {
+      "failure_count": 0,
+      "level": "STEP",
+      "step": "i18n coverage",
+      "command": "npm run i18n:coverage",
+      "exit": 1,
+      "normalized_excerpt": [],
+      "items": []
+    },
+    "matched_fields": {
+      "Identity": false,
+      "Exception": false,
+      "File": false,
+      "Line": false,
+      "Message": false,
+      "Exit": true
+    },
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched_failures": 0
+  },
+  "status": "INSUFFICIENT_EVIDENCE",
+  "started_at": "2026-09-10T01:56:25Z",
+  "duration_seconds": 255.51627982,
+  "exit_code": 1,
+  "comparison": {
+    "status": "unverified",
+    "similarity": 0,
+    "remote": {
+      "hash": "",
+      "lines": []
+    },
+    "local": {
+      "hash": "",
+      "lines": []
+    },
+    "reason": "need at least two distinctive error lines on each side"
+  },
+  "command": [
+    "act",
+    "pull_request",
+    "-C",
+    "/tmp/rb/72980b25947a/workspace",
+    "-W",
+    "/tmp/rb/72980b25947a/replay.yml",
+    "-j",
+    "verify",
+    "-e",
+    "/tmp/rb/72980b25947a/event.json",
+    "-P",
+    "ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest",
+    "--actor",
+    "maldoteth",
+    "--container-architecture",
+    "linux/amd64",
+    "--container-daemon-socket",
+    "-",
+    "--network",
+    "bridge",
+    "--secret-file",
+    "/tmp/rb/72980b25947a/empty.env",
+    "--var-file",
+    "/tmp/rb/72980b25947a/empty.env",
+    "--env-file",
+    "/tmp/rb/72980b25947a/empty.env",
+    "--input-file",
+    "/tmp/rb/72980b25947a/empty.env",
+    "--action-cache-path",
+    "/tmp/rb/72980b25947a/actions",
+    "--pull=false",
+    "--use-new-action-cache",
+    "--container-options",
+    "--label io.runback.case=runback-34426920635-1-102714019996",
+    "--json"
+  ],
+  "image_id": "sha256:62d572b92f9f32d3427b6d220ad1f9dca9c7b6ffad37d295425037dbff78abaf",
+  "container_ids": [
+    "842d5af70ad4e31b5f295377d481d48c4da5d9bb7e2effb6f9b85f9656304a09"
+  ],
+  "workspace_dirty": false
+}

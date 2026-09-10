@@ -1,0 +1,286 @@
+﻿2026-09-10T01:48:21.7046734Z Current runner version: '2.337.0'
+2026-09-10T01:48:21.7066688Z ##[group]Runner Image Provisioner
+2026-09-10T01:48:21.7067568Z Hosted Compute Agent
+2026-09-10T01:48:21.7068107Z Version: 20260828.587
+2026-09-10T01:48:21.7068620Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-10T01:48:21.7069255Z Build Date: 2026-08-28T16:44:25Z
+2026-09-10T01:48:21.7069821Z Worker ID: {54f816fc-a1a0-46a1-a2d2-fd95b6cae42b}
+2026-09-10T01:48:21.7070576Z Azure Region: westus3
+2026-09-10T01:48:21.7071109Z ##[endgroup]
+2026-09-10T01:48:21.7072196Z ##[group]Operating System
+2026-09-10T01:48:21.7072719Z Ubuntu
+2026-09-10T01:48:21.7073147Z 24.04.5
+2026-09-10T01:48:21.7073612Z LTS
+2026-09-10T01:48:21.7074081Z ##[endgroup]
+2026-09-10T01:48:21.7074593Z ##[group]Runner Image
+2026-09-10T01:48:21.7075120Z Image: ubuntu-24.04
+2026-09-10T01:48:21.7075586Z Version: 20260907.300.1
+2026-09-10T01:48:21.7076662Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-10T01:48:21.7077898Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-10T01:48:21.7078681Z ##[endgroup]
+2026-09-10T01:48:21.7081350Z ##[group]GITHUB_TOKEN Permissions
+2026-09-10T01:48:21.7083282Z Actions: write
+2026-09-10T01:48:21.7083762Z ArtifactMetadata: write
+2026-09-10T01:48:21.7084269Z Attestations: write
+2026-09-10T01:48:21.7084752Z Checks: write
+2026-09-10T01:48:21.7085209Z CodeQuality: write
+2026-09-10T01:48:21.7085788Z Contents: write
+2026-09-10T01:48:21.7086255Z CopilotRequests: write
+2026-09-10T01:48:21.7086723Z Deployments: write
+2026-09-10T01:48:21.7087217Z Discussions: write
+2026-09-10T01:48:21.7087676Z Drives: write
+2026-09-10T01:48:21.7088181Z Issues: write
+2026-09-10T01:48:21.7088623Z Metadata: read
+2026-09-10T01:48:21.7089113Z Models: read
+2026-09-10T01:48:21.7089579Z Packages: write
+2026-09-10T01:48:21.7090028Z Pages: write
+2026-09-10T01:48:21.7090654Z PullRequests: write
+2026-09-10T01:48:21.7091184Z RepositoryProjects: write
+2026-09-10T01:48:21.7091702Z SecurityEvents: write
+2026-09-10T01:48:21.7092188Z Statuses: write
+2026-09-10T01:48:21.7092687Z VulnerabilityAlerts: read
+2026-09-10T01:48:21.7093193Z ##[endgroup]
+2026-09-10T01:48:21.7094949Z Secret source: Actions
+2026-09-10T01:48:21.7095660Z Cache mode: write
+2026-09-10T01:48:21.7096296Z Prepare workflow directory
+2026-09-10T01:48:21.7397536Z Prepare all required actions
+2026-09-10T01:48:21.7446713Z Getting action download info
+2026-09-10T01:48:22.0513320Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-10T01:48:22.6702737Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-10T01:48:22.8287163Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-09-10T01:48:23.0441975Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-10T01:48:23.3078995Z Complete job name: Typecheck & Test
+2026-09-10T01:48:23.3875963Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-10T01:48:23.3885458Z ##[group]Run actions/checkout@v4
+2026-09-10T01:48:23.3886824Z with:
+2026-09-10T01:48:23.3887779Z   repository: DeHubToken/dehub-mobile
+2026-09-10T01:48:23.3897749Z   token: ***
+2026-09-10T01:48:23.3899071Z   ssh-strict: true
+2026-09-10T01:48:23.3900493Z   ssh-user: git
+2026-09-10T01:48:23.3901814Z   persist-credentials: true
+2026-09-10T01:48:23.3903419Z   clean: true
+2026-09-10T01:48:23.3904958Z   sparse-checkout-cone-mode: true
+2026-09-10T01:48:23.3906732Z   fetch-depth: 1
+2026-09-10T01:48:23.3908306Z   fetch-tags: false
+2026-09-10T01:48:23.3909598Z   show-progress: true
+2026-09-10T01:48:23.3911260Z   lfs: false
+2026-09-10T01:48:23.3913056Z   submodules: false
+2026-09-10T01:48:23.3914305Z   set-safe-directory: true
+2026-09-10T01:48:23.3915816Z   allow-unsafe-pr-checkout: false
+2026-09-10T01:48:23.3917592Z env:
+2026-09-10T01:48:23.3918710Z   NODE_VERSION: 20
+2026-09-10T01:48:23.3919812Z ##[endgroup]
+2026-09-10T01:48:23.4801657Z Syncing repository: DeHubToken/dehub-mobile
+2026-09-10T01:48:23.4804368Z ##[group]Getting Git version info
+2026-09-10T01:48:23.4805748Z Working directory is '/home/runner/work/dehub-mobile/dehub-mobile'
+2026-09-10T01:48:23.4807863Z [command]/usr/bin/git version
+2026-09-10T01:48:23.5007296Z git version 2.55.0
+2026-09-10T01:48:23.5026020Z ##[endgroup]
+2026-09-10T01:48:23.5038436Z Temporarily overriding HOME='/home/runner/work/_temp/03bbeeff-d34f-45e4-a2b6-823d15629639' before making global git config changes
+2026-09-10T01:48:23.5041873Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-10T01:48:23.5044651Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dehub-mobile/dehub-mobile
+2026-09-10T01:48:23.5106690Z Deleting the contents of '/home/runner/work/dehub-mobile/dehub-mobile'
+2026-09-10T01:48:23.5113824Z ##[group]Initializing the repository
+2026-09-10T01:48:23.5117140Z [command]/usr/bin/git init /home/runner/work/dehub-mobile/dehub-mobile
+2026-09-10T01:48:23.5221998Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-10T01:48:23.5224023Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-10T01:48:23.5226036Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-10T01:48:23.5227542Z hint: call:
+2026-09-10T01:48:23.5228500Z hint:
+2026-09-10T01:48:23.5229652Z hint: 	git config --global init.defaultBranch <name>
+2026-09-10T01:48:23.5231524Z hint:
+2026-09-10T01:48:23.5232785Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-10T01:48:23.5234634Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-10T01:48:23.5236259Z hint:
+2026-09-10T01:48:23.5237197Z hint: 	git branch -m <name>
+2026-09-10T01:48:23.5238210Z hint:
+2026-09-10T01:48:23.5239519Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-10T01:48:23.6128447Z Initialized empty Git repository in /home/runner/work/dehub-mobile/dehub-mobile/.git/
+2026-09-10T01:48:23.6140639Z [command]/usr/bin/git remote add origin https://github.com/DeHubToken/dehub-mobile
+2026-09-10T01:48:23.6284073Z ##[endgroup]
+2026-09-10T01:48:23.6286304Z ##[group]Disabling automatic garbage collection
+2026-09-10T01:48:23.6288450Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-10T01:48:23.6314214Z ##[endgroup]
+2026-09-10T01:48:23.6316581Z ##[group]Setting up auth
+2026-09-10T01:48:23.6321192Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-10T01:48:23.6347980Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-10T01:48:23.7474233Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-10T01:48:23.7503877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-10T01:48:23.7688714Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-10T01:48:23.7715078Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-10T01:48:23.7895273Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-10T01:48:23.7926116Z ##[endgroup]
+2026-09-10T01:48:23.7928023Z ##[group]Fetching the repository
+2026-09-10T01:48:23.7937365Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +46bcf2ffe26f5b0934ccccd7afce70d51fdabb70:refs/remotes/pull/673/merge
+2026-09-10T01:48:27.5764297Z From https://github.com/DeHubToken/dehub-mobile
+2026-09-10T01:48:27.5765823Z  * [new ref]         46bcf2ffe26f5b0934ccccd7afce70d51fdabb70 -> pull/673/merge
+2026-09-10T01:48:27.5769193Z ##[endgroup]
+2026-09-10T01:48:27.5770251Z ##[group]Determining the checkout info
+2026-09-10T01:48:27.5771606Z ##[endgroup]
+2026-09-10T01:48:27.5777038Z [command]/usr/bin/git sparse-checkout disable
+2026-09-10T01:48:27.5820811Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-10T01:48:27.5846964Z ##[group]Checking out the ref
+2026-09-10T01:48:27.5850582Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/673/merge
+2026-09-10T01:48:27.7779585Z Note: switching to 'refs/remotes/pull/673/merge'.
+2026-09-10T01:48:27.7780040Z 
+2026-09-10T01:48:27.7780340Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-10T01:48:27.7781561Z changes and commit them, and you can discard any commits you make in this
+2026-09-10T01:48:27.7782265Z state without impacting any branches by switching back to a branch.
+2026-09-10T01:48:27.7782571Z 
+2026-09-10T01:48:27.7782971Z If you want to create a new branch to retain commits you create, you may
+2026-09-10T01:48:27.7783550Z do so (now or later) by using -c with the switch command. Example:
+2026-09-10T01:48:27.7783874Z 
+2026-09-10T01:48:27.7784081Z   git switch -c <new-branch-name>
+2026-09-10T01:48:27.7784420Z 
+2026-09-10T01:48:27.7784611Z Or undo this operation with:
+2026-09-10T01:48:27.7784941Z 
+2026-09-10T01:48:27.7785108Z   git switch -
+2026-09-10T01:48:27.7785363Z 
+2026-09-10T01:48:27.7785742Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-10T01:48:27.7786082Z 
+2026-09-10T01:48:27.7786516Z HEAD is now at 46bcf2f Merge 37d4cd252070a52b105dd8f767c8f6761452dbc9 into 3a60eff98a195eedeaa926332be0637943990248
+2026-09-10T01:48:27.7791640Z ##[endgroup]
+2026-09-10T01:48:27.7828678Z [command]/usr/bin/git log -1 --format=%H
+2026-09-10T01:48:27.7850959Z 46bcf2ffe26f5b0934ccccd7afce70d51fdabb70
+2026-09-10T01:48:27.8102359Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-10T01:48:27.8104302Z ##[group]Run actions/setup-node@v4
+2026-09-10T01:48:27.8104770Z with:
+2026-09-10T01:48:27.8105160Z   node-version: 20
+2026-09-10T01:48:27.8105486Z   cache: npm
+2026-09-10T01:48:27.8105896Z   always-auth: false
+2026-09-10T01:48:27.8106256Z   check-latest: false
+2026-09-10T01:48:27.8109204Z   token: ***
+2026-09-10T01:48:27.8109550Z env:
+2026-09-10T01:48:27.8109881Z   NODE_VERSION: 20
+2026-09-10T01:48:27.8110314Z ##[endgroup]
+2026-09-10T01:48:27.9438176Z Attempting to download 20...
+2026-09-10T01:48:27.9536495Z (node:2037) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-10T01:48:29.3398999Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-10T01:48:29.3433665Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-09-10T01:48:29.8844273Z Extracting ...
+2026-09-10T01:48:29.8953469Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/81820082-805b-49a0-b5a4-19284f0b04b4 -f /home/runner/work/_temp/64806d90-85bf-46bf-81c2-ad502c0491f7
+2026-09-10T01:48:30.9012473Z Adding to the cache ...
+2026-09-10T01:48:32.8180298Z ##[group]Environment details
+2026-09-10T01:48:33.0209768Z node: v20.20.2
+2026-09-10T01:48:33.0210297Z npm: 10.8.2
+2026-09-10T01:48:33.0210827Z yarn: 1.22.22
+2026-09-10T01:48:33.0211482Z ##[endgroup]
+2026-09-10T01:48:33.0226908Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+2026-09-10T01:48:33.1142376Z /home/runner/.npm
+2026-09-10T01:48:33.3393663Z Cache hit for: node-cache-Linux-x64-npm-461f202d8caf45dd1101152a4c07363784c3b88d5590b0300c41c3e9df21aada
+2026-09-10T01:48:33.3487813Z (node:2037) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-10T01:48:34.5805958Z Received 37748736 of 227866995 (16.6%), 36.0 MBs/sec
+2026-09-10T01:48:35.5815184Z Received 201326592 of 227866995 (88.4%), 95.9 MBs/sec
+2026-09-10T01:48:35.7612171Z Received 227866995 of 227866995 (100.0%), 99.6 MBs/sec
+2026-09-10T01:48:35.7613154Z Cache Size: ~217 MB (227866995 B)
+2026-09-10T01:48:35.7737379Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0c97f286-538f-42f5-bbbf-57dfe9784743/cache.tzst -P -C /home/runner/work/dehub-mobile/dehub-mobile --use-compress-program unzstd
+2026-09-10T01:48:36.3647096Z Cache restored successfully
+2026-09-10T01:48:36.3728632Z Cache restored from key: node-cache-Linux-x64-npm-461f202d8caf45dd1101152a4c07363784c3b88d5590b0300c41c3e9df21aada
+2026-09-10T01:48:36.4450895Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-10T01:48:36.4452025Z ##[group]Run actions/cache@v4
+2026-09-10T01:48:36.4452316Z with:
+2026-09-10T01:48:36.4452594Z   path: node_modules
+2026-09-10T01:48:36.4453040Z   key: node-modules-Linux-20-d78c857f49d28e019b91171b006bc341991457013a691f6cbc490c99ccff46ed
+2026-09-10T01:48:36.4453561Z   enableCrossOsArchive: false
+2026-09-10T01:48:36.4453861Z   fail-on-cache-miss: false
+2026-09-10T01:48:36.4454137Z   lookup-only: false
+2026-09-10T01:48:36.4454419Z   save-always: false
+2026-09-10T01:48:36.4454731Z env:
+2026-09-10T01:48:36.4454978Z   NODE_VERSION: 20
+2026-09-10T01:48:36.4455231Z ##[endgroup]
+2026-09-10T01:48:36.5382612Z (node:2103) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-10T01:48:36.5384269Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-10T01:48:36.7392819Z Cache hit for: node-modules-Linux-20-d78c857f49d28e019b91171b006bc341991457013a691f6cbc490c99ccff46ed
+2026-09-10T01:48:36.7479429Z (node:2103) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-10T01:48:37.9756514Z Received 33554432 of 261233826 (12.8%), 32.0 MBs/sec
+2026-09-10T01:48:38.9757873Z Received 142606336 of 261233826 (54.6%), 68.0 MBs/sec
+2026-09-10T01:48:39.8147375Z Received 261233826 of 261233826 (100.0%), 87.7 MBs/sec
+2026-09-10T01:48:39.8149984Z Cache Size: ~249 MB (261233826 B)
+2026-09-10T01:48:39.8241453Z [command]/usr/bin/tar -xf /home/runner/work/_temp/45c19e80-c109-4fe4-b61a-bedd0948a174/cache.tzst -P -C /home/runner/work/dehub-mobile/dehub-mobile --use-compress-program unzstd
+2026-09-10T01:48:47.6818662Z Cache restored successfully
+2026-09-10T01:48:47.9396404Z Cache restored from key: node-modules-Linux-20-d78c857f49d28e019b91171b006bc341991457013a691f6cbc490c99ccff46ed
+2026-09-10T01:48:47.9541439Z ##[group]Run npm run i18n:coverage
+2026-09-10T01:48:47.9542009Z [36;1mnpm run i18n:coverage[0m
+2026-09-10T01:48:47.9567544Z shell: /usr/bin/bash -e {0}
+2026-09-10T01:48:47.9567894Z env:
+2026-09-10T01:48:47.9568184Z   NODE_VERSION: 20
+2026-09-10T01:48:47.9568511Z ##[endgroup]
+2026-09-10T01:48:48.0617405Z 
+2026-09-10T01:48:48.0617904Z > dehub-mobile@1.0.0 i18n:coverage
+2026-09-10T01:48:48.0618665Z > node scripts/i18n-coverage.js
+2026-09-10T01:48:48.0618877Z 
+2026-09-10T01:48:48.4275094Z en.json: 2681 keys across 109 locales
+2026-09-10T01:48:48.4277785Z complete locales: 5/109
+2026-09-10T01:48:48.4278872Z lowest coverage:
+2026-09-10T01:48:48.4279365Z   dcc    92.7%  197 missing
+2026-09-10T01:48:48.4279913Z   rkt    92.7%  197 missing
+2026-09-10T01:48:48.4280330Z   sr     93.7%  168 missing
+2026-09-10T01:48:48.4281623Z   pcm    94.7%  141 missing
+2026-09-10T01:48:48.4282094Z   wes    94.9%  138 missing
+2026-09-10T01:48:48.4282618Z   ku       95%  134 missing
+2026-09-10T01:48:48.4283160Z   ctg    95.2%  129 missing
+2026-09-10T01:48:48.4283627Z   sdr    95.4%  124 missing
+2026-09-10T01:48:48.4284053Z   skr      96%  108 missing
+2026-09-10T01:48:48.4284487Z   syl    96.1%  105 missing
+2026-09-10T01:48:48.4286880Z 
+2026-09-10T01:48:48.4288465Z 204 key(s) are defined in no locale file and render their fallback everywhere (45 cleared since the baseline)
+2026-09-10T01:48:48.4289036Z 
+2026-09-10T01:48:48.4289449Z 1 new t() key(s) have no entry in en.json, so the English text is the call's fallback:
+2026-09-10T01:48:48.4290631Z   settings.display  components/Settings/AppearancePanel.tsx
+2026-09-10T01:48:48.4291069Z 
+2026-09-10T01:48:48.4291591Z Add them to i18n/locales/en.json and translate them. A fallback string reads
+2026-09-10T01:48:48.4292620Z as English to all 110 other languages, and nothing else in this script can see it.
+2026-09-10T01:48:48.4377597Z ##[error]Process completed with exit code 1.
+2026-09-10T01:48:48.4457593Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-10T01:48:48.4458816Z ##[group]Run actions/upload-artifact@v4
+2026-09-10T01:48:48.4459183Z with:
+2026-09-10T01:48:48.4459501Z   name: coverage-report
+2026-09-10T01:48:48.4459896Z   path: coverage/
+2026-09-10T01:48:48.4460289Z   retention-days: 14
+2026-09-10T01:48:48.4460979Z   if-no-files-found: warn
+2026-09-10T01:48:48.4461313Z   compression-level: 6
+2026-09-10T01:48:48.4461712Z   overwrite: false
+2026-09-10T01:48:48.4462033Z   include-hidden-files: false
+2026-09-10T01:48:48.4462372Z env:
+2026-09-10T01:48:48.4462690Z   NODE_VERSION: 20
+2026-09-10T01:48:48.4462980Z ##[endgroup]
+2026-09-10T01:48:48.6101812Z (node:2142) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-10T01:48:48.6102872Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-10T01:48:48.6135932Z ##[warning]No files were found with the provided path: coverage/. No artifacts will be uploaded.
+2026-09-10T01:48:48.6239984Z ##[group]Run if [ -f coverage/coverage-summary.json ]; then
+2026-09-10T01:48:48.6240914Z [36;1mif [ -f coverage/coverage-summary.json ]; then[0m
+2026-09-10T01:48:48.6241396Z [36;1m  echo "### Test Coverage" >> $GITHUB_STEP_SUMMARY[0m
+2026-09-10T01:48:48.6241893Z [36;1m  echo '```' >> $GITHUB_STEP_SUMMARY[0m
+2026-09-10T01:48:48.6242252Z [36;1m  node -e "[0m
+2026-09-10T01:48:48.6242724Z [36;1m    const c = require('./coverage/coverage-summary.json').total;[0m
+2026-09-10T01:48:48.6243219Z [36;1m    const fmt = (m) => m.pct + '%';[0m
+2026-09-10T01:48:48.6243634Z [36;1m    console.log('Statements:', fmt(c.statements));[0m
+2026-09-10T01:48:48.6244135Z [36;1m    console.log('Branches:  ', fmt(c.branches));[0m
+2026-09-10T01:48:48.6244576Z [36;1m    console.log('Functions: ', fmt(c.functions));[0m
+2026-09-10T01:48:48.6245066Z [36;1m    console.log('Lines:     ', fmt(c.lines));[0m
+2026-09-10T01:48:48.6245482Z [36;1m  " >> $GITHUB_STEP_SUMMARY[0m
+2026-09-10T01:48:48.6245990Z [36;1m  echo '```' >> $GITHUB_STEP_SUMMARY[0m
+2026-09-10T01:48:48.6246346Z [36;1melse[0m
+2026-09-10T01:48:48.6246782Z [36;1m  echo "No coverage summary produced." >> $GITHUB_STEP_SUMMARY[0m
+2026-09-10T01:48:48.6247272Z [36;1mfi[0m
+2026-09-10T01:48:48.6270980Z shell: /usr/bin/bash -e {0}
+2026-09-10T01:48:48.6271352Z env:
+2026-09-10T01:48:48.6271784Z   NODE_VERSION: 20
+2026-09-10T01:48:48.6272223Z ##[endgroup]
+2026-09-10T01:48:48.6801599Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-10T01:48:48.6802637Z Post job cleanup.
+2026-09-10T01:48:48.7546948Z [command]/usr/bin/git version
+2026-09-10T01:48:48.7579957Z git version 2.55.0
+2026-09-10T01:48:48.7610232Z Temporarily overriding HOME='/home/runner/work/_temp/3bae06ff-00bb-491f-8bdb-fb6fef978f20' before making global git config changes
+2026-09-10T01:48:48.7611829Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-10T01:48:48.7614907Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dehub-mobile/dehub-mobile
+2026-09-10T01:48:48.7646766Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-10T01:48:48.7675431Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-10T01:48:48.7855262Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-10T01:48:48.7876657Z http.https://github.com/.extraheader
+2026-09-10T01:48:48.7886214Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-10T01:48:48.7930330Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-10T01:48:48.8106845Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-10T01:48:48.8134375Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-10T01:48:48.8402555Z Cleaning up orphan processes
+2026-09-10T01:48:48.8622291Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@v4, actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

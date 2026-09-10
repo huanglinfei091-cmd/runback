@@ -1,0 +1,232 @@
+﻿2026-09-10T02:48:22.7362547Z Current runner version: '2.337.0'
+2026-09-10T02:48:22.7386883Z ##[group]Runner Image Provisioner
+2026-09-10T02:48:22.7387722Z Hosted Compute Agent
+2026-09-10T02:48:22.7388405Z Version: 20260828.587
+2026-09-10T02:48:22.7389086Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-10T02:48:22.7390157Z Build Date: 2026-08-28T16:44:25Z
+2026-09-10T02:48:22.7390923Z Worker ID: {cc1844ce-ee09-4bf7-b276-3e89316ad4c5}
+2026-09-10T02:48:22.7391632Z Azure Region: westcentralus
+2026-09-10T02:48:22.7392303Z ##[endgroup]
+2026-09-10T02:48:22.7393785Z ##[group]Operating System
+2026-09-10T02:48:22.7394480Z Ubuntu
+2026-09-10T02:48:22.7395012Z 24.04.5
+2026-09-10T02:48:22.7395578Z LTS
+2026-09-10T02:48:22.7396149Z ##[endgroup]
+2026-09-10T02:48:22.7396737Z ##[group]Runner Image
+2026-09-10T02:48:22.7397395Z Image: ubuntu-24.04
+2026-09-10T02:48:22.7397981Z Version: 20260907.300.1
+2026-09-10T02:48:22.7399461Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-10T02:48:22.7401102Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-10T02:48:22.7402130Z ##[endgroup]
+2026-09-10T02:48:22.7403298Z ##[group]GITHUB_TOKEN Permissions
+2026-09-10T02:48:22.7405229Z Contents: read
+2026-09-10T02:48:22.7405893Z Metadata: read
+2026-09-10T02:48:22.7406458Z Packages: read
+2026-09-10T02:48:22.7407071Z ##[endgroup]
+2026-09-10T02:48:22.7409108Z Secret source: Actions
+2026-09-10T02:48:22.7410414Z Cache mode: write
+2026-09-10T02:48:22.7411144Z Prepare workflow directory
+2026-09-10T02:48:22.7857017Z Prepare all required actions
+2026-09-10T02:48:22.7904625Z Getting action download info
+2026-09-10T02:48:23.0895804Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-09-10T02:48:23.2088977Z Download action repository 'actions/setup-node@v6' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+2026-09-10T02:48:23.4183952Z Complete job name: build
+2026-09-10T02:48:23.4938397Z ##[group]Run actions/checkout@v6
+2026-09-10T02:48:23.4939549Z with:
+2026-09-10T02:48:23.4940012Z   repository: ClickHouse/click-ui
+2026-09-10T02:48:23.4943896Z   token: ***
+2026-09-10T02:48:23.4944339Z   ssh-strict: true
+2026-09-10T02:48:23.4944772Z   ssh-user: git
+2026-09-10T02:48:23.4945219Z   persist-credentials: true
+2026-09-10T02:48:23.4945708Z   clean: true
+2026-09-10T02:48:23.4946154Z   sparse-checkout-cone-mode: true
+2026-09-10T02:48:23.4946674Z   fetch-depth: 1
+2026-09-10T02:48:23.4947098Z   fetch-tags: false
+2026-09-10T02:48:23.4947530Z   show-progress: true
+2026-09-10T02:48:23.4947971Z   lfs: false
+2026-09-10T02:48:23.4948376Z   submodules: false
+2026-09-10T02:48:23.4948820Z   set-safe-directory: true
+2026-09-10T02:48:23.4949470Z   allow-unsafe-pr-checkout: false
+2026-09-10T02:48:23.4950256Z env:
+2026-09-10T02:48:23.4950668Z   HUSKY: 0
+2026-09-10T02:48:23.4951063Z ##[endgroup]
+2026-09-10T02:48:23.5923317Z Syncing repository: ClickHouse/click-ui
+2026-09-10T02:48:23.5925269Z ##[group]Getting Git version info
+2026-09-10T02:48:23.5926065Z Working directory is '/home/runner/work/click-ui/click-ui'
+2026-09-10T02:48:23.5927160Z [command]/usr/bin/git version
+2026-09-10T02:48:23.6055339Z git version 2.55.0
+2026-09-10T02:48:23.6077925Z ##[endgroup]
+2026-09-10T02:48:23.6091718Z Temporarily overriding HOME='/home/runner/work/_temp/e68ffd7e-8657-475e-ac4f-63df52e46597' before making global git config changes
+2026-09-10T02:48:23.6093673Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-10T02:48:23.6096497Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/click-ui/click-ui
+2026-09-10T02:48:23.6148079Z Deleting the contents of '/home/runner/work/click-ui/click-ui'
+2026-09-10T02:48:23.6152822Z ##[group]Determining repository object format
+2026-09-10T02:48:23.6154910Z ##[endgroup]
+2026-09-10T02:48:23.6155858Z ##[group]Initializing the repository
+2026-09-10T02:48:23.6158965Z [command]/usr/bin/git init /home/runner/work/click-ui/click-ui
+2026-09-10T02:48:23.6287862Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-10T02:48:23.6289710Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-10T02:48:23.6290995Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-10T02:48:23.6292273Z hint: call:
+2026-09-10T02:48:23.6292873Z hint:
+2026-09-10T02:48:23.6293837Z hint: 	git config --global init.defaultBranch <name>
+2026-09-10T02:48:23.6295069Z hint:
+2026-09-10T02:48:23.6296248Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-10T02:48:23.6298112Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-10T02:48:23.6299925Z hint:
+2026-09-10T02:48:23.6300789Z hint: 	git branch -m <name>
+2026-09-10T02:48:23.6301770Z hint:
+2026-09-10T02:48:23.6302973Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-10T02:48:23.6305035Z Initialized empty Git repository in /home/runner/work/click-ui/click-ui/.git/
+2026-09-10T02:48:23.6307978Z [command]/usr/bin/git remote add origin https://github.com/ClickHouse/click-ui
+2026-09-10T02:48:23.6353529Z ##[endgroup]
+2026-09-10T02:48:23.6354941Z ##[group]Disabling automatic garbage collection
+2026-09-10T02:48:23.6357538Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-10T02:48:23.6386473Z ##[endgroup]
+2026-09-10T02:48:23.6388128Z ##[group]Setting up auth
+2026-09-10T02:48:23.6389156Z Removing SSH command configuration
+2026-09-10T02:48:23.6394525Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-10T02:48:23.6425603Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-10T02:48:23.6787231Z Removing HTTP extra header
+2026-09-10T02:48:23.6792844Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-10T02:48:23.6824106Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-10T02:48:23.7030718Z Removing includeIf entries pointing to credentials config files
+2026-09-10T02:48:23.7036845Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-10T02:48:23.7074449Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-10T02:48:23.7300133Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-10T02:48:23.7335641Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/click-ui/click-ui/.git.path /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:48:23.7366167Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/click-ui/click-ui/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:48:23.7400262Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:48:23.7435158Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:48:23.7460902Z ##[endgroup]
+2026-09-10T02:48:23.7461640Z ##[group]Fetching the repository
+2026-09-10T02:48:23.7468456Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ea30193e179c39dcd31bad1b3ad7ba7cf3db0d9c:refs/remotes/pull/1190/merge
+2026-09-10T02:48:25.3475366Z From https://github.com/ClickHouse/click-ui
+2026-09-10T02:48:25.3477340Z  * [new ref]         ea30193e179c39dcd31bad1b3ad7ba7cf3db0d9c -> pull/1190/merge
+2026-09-10T02:48:25.3482173Z ##[endgroup]
+2026-09-10T02:48:25.3483787Z ##[group]Determining the checkout info
+2026-09-10T02:48:25.3489668Z ##[endgroup]
+2026-09-10T02:48:25.3497836Z [command]/usr/bin/git sparse-checkout disable
+2026-09-10T02:48:25.3545256Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-10T02:48:25.3577809Z ##[group]Checking out the ref
+2026-09-10T02:48:25.3581254Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1190/merge
+2026-09-10T02:48:25.5195184Z Note: switching to 'refs/remotes/pull/1190/merge'.
+2026-09-10T02:48:25.5196153Z 
+2026-09-10T02:48:25.5196799Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-10T02:48:25.5198219Z changes and commit them, and you can discard any commits you make in this
+2026-09-10T02:48:25.5199946Z state without impacting any branches by switching back to a branch.
+2026-09-10T02:48:25.5200792Z 
+2026-09-10T02:48:25.5201415Z If you want to create a new branch to retain commits you create, you may
+2026-09-10T02:48:25.5202709Z do so (now or later) by using -c with the switch command. Example:
+2026-09-10T02:48:25.5203570Z 
+2026-09-10T02:48:25.5203935Z   git switch -c <new-branch-name>
+2026-09-10T02:48:25.5204526Z 
+2026-09-10T02:48:25.5204888Z Or undo this operation with:
+2026-09-10T02:48:25.5205419Z 
+2026-09-10T02:48:25.5205723Z   git switch -
+2026-09-10T02:48:25.5206157Z 
+2026-09-10T02:48:25.5206854Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-10T02:48:25.5207896Z 
+2026-09-10T02:48:25.5209083Z HEAD is now at ea30193 Merge dff6571abee07d79d9bc1e85117d6ae2d3e79c49 into 3106116e9a2d1aeb953060bacf06e3695b2f36a6
+2026-09-10T02:48:25.5213630Z ##[endgroup]
+2026-09-10T02:48:25.5255181Z [command]/usr/bin/git log -1 --format=%H
+2026-09-10T02:48:25.5280028Z ea30193e179c39dcd31bad1b3ad7ba7cf3db0d9c
+2026-09-10T02:48:25.5740486Z ##[group]Run actions/setup-node@v6
+2026-09-10T02:48:25.5741766Z with:
+2026-09-10T02:48:25.5742678Z   node-version: 24.x
+2026-09-10T02:48:25.5743682Z   check-latest: false
+2026-09-10T02:48:25.5754482Z   token: ***
+2026-09-10T02:48:25.5755480Z   package-manager-cache: true
+2026-09-10T02:48:25.5756589Z env:
+2026-09-10T02:48:25.5757438Z   HUSKY: 0
+2026-09-10T02:48:25.5758294Z ##[endgroup]
+2026-09-10T02:48:25.7188061Z Found in cache @ /opt/hostedtoolcache/node/24.20.0/x64
+2026-09-10T02:48:25.7191810Z ##[group]Environment details
+2026-09-10T02:48:27.6537950Z node: v24.20.0
+2026-09-10T02:48:27.6538556Z npm: 11.19.0
+2026-09-10T02:48:27.6539037Z yarn: 1.22.22
+2026-09-10T02:48:27.6540695Z ##[endgroup]
+2026-09-10T02:48:27.6694800Z ##[group]Run corepack enable
+2026-09-10T02:48:27.6695204Z [36;1mcorepack enable[0m
+2026-09-10T02:48:27.6770783Z shell: /usr/bin/bash -e {0}
+2026-09-10T02:48:27.6771115Z env:
+2026-09-10T02:48:27.6771359Z   HUSKY: 0
+2026-09-10T02:48:27.6771615Z ##[endgroup]
+2026-09-10T02:48:27.7814733Z ##[group]Run yarn install --immutable
+2026-09-10T02:48:27.7815145Z [36;1myarn install --immutable[0m
+2026-09-10T02:48:27.7852932Z shell: /usr/bin/bash -e {0}
+2026-09-10T02:48:27.7853235Z env:
+2026-09-10T02:48:27.7853478Z   HUSKY: 0
+2026-09-10T02:48:27.7853745Z ##[endgroup]
+2026-09-10T02:48:27.8445452Z ! Corepack is about to download https://repo.yarnpkg.com/4.5.3/packages/yarnpkg-cli/bin/yarn.js
+2026-09-10T02:48:28.6004835Z [93m➤[39m YN0000: Yarn detected that the current workflow is executed from a public pull request. For safety the hardened mode has been enabled.
+2026-09-10T02:48:28.6007985Z [93m➤[39m YN0000: It will prevent malicious lockfile manipulations, in exchange for a slower install time. You can opt-out if necessary; check our documentation for more details.
+2026-09-10T02:48:28.6009233Z 
+2026-09-10T02:48:28.6010006Z [94m➤[39m YN0000: · Yarn 4.5.3
+2026-09-10T02:48:28.6171432Z [94m➤[39m [90mYN0000[39m: ┌ Resolution step
+2026-09-10T02:48:28.6172565Z ##[group]Resolution step
+2026-09-10T02:48:37.1663461Z ##[endgroup]
+2026-09-10T02:48:37.1668143Z [94m➤[39m [90mYN0000[39m: └ Completed in 8s 548ms
+2026-09-10T02:48:37.1678125Z [94m➤[39m [90mYN0000[39m: ┌ Post-resolution validation
+2026-09-10T02:48:37.1679075Z ##[group]Post-resolution validation
+2026-09-10T02:48:37.1680966Z [93m➤[39m YN0086: │ Some peer dependencies are incorrectly met by dependencies; run [38;5;111myarn explain peer-requirements[39m for details.
+2026-09-10T02:48:37.2092765Z ##[endgroup]
+2026-09-10T02:48:37.2094157Z [94m➤[39m [90mYN0000[39m: └ Completed
+2026-09-10T02:48:37.2095116Z [94m➤[39m [90mYN0000[39m: ┌ Fetch step
+2026-09-10T02:48:37.2096099Z ##[group]Fetch step
+2026-09-10T02:48:43.6521332Z [94m➤[39m YN0013: │ [38;5;220m1124[39m packages were added to the project ([38;5;160m+ 432.13 MiB[39m).
+2026-09-10T02:48:43.6522661Z ##[endgroup]
+2026-09-10T02:48:43.6523427Z [94m➤[39m [90mYN0000[39m: └ Completed in 6s 442ms
+2026-09-10T02:48:43.6978696Z [94m➤[39m [90mYN0000[39m: ┌ Link step
+2026-09-10T02:48:43.6979820Z ##[group]Link step
+2026-09-10T02:48:50.4118878Z [94m➤[39m YN0007: │ [38;5;173mesbuild[39m[38;5;111m@[39m[38;5;111mnpm:0.21.5[39m must be built because it never has been before or the last one failed
+2026-09-10T02:48:50.4127802Z [94m➤[39m YN0007: │ [38;5;166m@parcel/[39m[38;5;173mwatcher[39m[38;5;111m@[39m[38;5;111mnpm:2.5.4[39m must be built because it never has been before or the last one failed
+2026-09-10T02:48:50.4130860Z [94m➤[39m YN0007: │ [38;5;173mesbuild[39m[38;5;111m@[39m[38;5;111mnpm:0.27.2[39m must be built because it never has been before or the last one failed
+2026-09-10T02:48:50.4133739Z [94m➤[39m YN0007: │ [38;5;173munrs-resolver[39m[38;5;111m@[39m[38;5;111mnpm:1.11.1[39m must be built because it never has been before or the last one failed
+2026-09-10T02:48:50.8648323Z ##[endgroup]
+2026-09-10T02:48:50.8650128Z [94m➤[39m [90mYN0000[39m: └ Completed in 7s 167ms
+2026-09-10T02:48:50.9499036Z [93m➤[39m YN0000: · Done with warnings in 22s 349ms
+2026-09-10T02:48:51.1660812Z ##[group]Run yarn build
+2026-09-10T02:48:51.1661125Z [36;1myarn build[0m
+2026-09-10T02:48:51.1698700Z shell: /usr/bin/bash -e {0}
+2026-09-10T02:48:51.1698962Z env:
+2026-09-10T02:48:51.1699148Z   HUSKY: 0
+2026-09-10T02:48:51.1699621Z ##[endgroup]
+2026-09-10T02:49:02.4773098Z ##[error]src/components/DatePicker/Common.tsx(1010,22): error TS2551: Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } & { key: string; })[]; }'. Did you mean 'weekdays'?
+2026-09-10T02:49:02.4784258Z ##[error]src/components/DatePicker/Common.tsx(1010,38): error TS7031: Binding element 'key' implicitly has an 'any' type.
+2026-09-10T02:49:02.4786991Z ##[error]src/components/DatePicker/Common.tsx(1010,50): error TS7031: Binding element 'date' implicitly has an 'any' type.
+2026-09-10T02:49:02.5554884Z Error: found typescript issues
+2026-09-10T02:49:02.5714639Z ##[error]Process completed with exit code 1.
+2026-09-10T02:49:02.5863421Z Post job cleanup.
+2026-09-10T02:49:02.6686646Z [command]/usr/bin/git version
+2026-09-10T02:49:02.6722662Z git version 2.55.0
+2026-09-10T02:49:02.6763298Z Temporarily overriding HOME='/home/runner/work/_temp/8180d55e-152b-48e3-ba48-16ce27031224' before making global git config changes
+2026-09-10T02:49:02.6764367Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-10T02:49:02.6768724Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/click-ui/click-ui
+2026-09-10T02:49:02.6798715Z Removing SSH command configuration
+2026-09-10T02:49:02.6805048Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-10T02:49:02.6842352Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-10T02:49:02.7064257Z Removing HTTP extra header
+2026-09-10T02:49:02.7070148Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-10T02:49:02.7106028Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-10T02:49:02.7320634Z Removing includeIf entries pointing to credentials config files
+2026-09-10T02:49:02.7327060Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-10T02:49:02.7352371Z includeif.gitdir:/home/runner/work/click-ui/click-ui/.git.path
+2026-09-10T02:49:02.7353169Z includeif.gitdir:/home/runner/work/click-ui/click-ui/.git/worktrees/*.path
+2026-09-10T02:49:02.7353679Z includeif.gitdir:/github/workspace/.git.path
+2026-09-10T02:49:02.7354118Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-10T02:49:02.7361851Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/click-ui/click-ui/.git.path
+2026-09-10T02:49:02.7383142Z /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7395347Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/click-ui/click-ui/.git.path /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7427534Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/click-ui/click-ui/.git/worktrees/*.path
+2026-09-10T02:49:02.7448567Z /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7457855Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/click-ui/click-ui/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7490868Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-09-10T02:49:02.7510545Z /github/runner_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7518710Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7547797Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-10T02:49:02.7567995Z /github/runner_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7576176Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config
+2026-09-10T02:49:02.7613022Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-10T02:49:02.7824915Z Removing credentials config '/home/runner/work/_temp/git-credentials-e248d021-f22b-4663-9700-c57f5f8b4b37.config'
+2026-09-10T02:49:02.7973596Z Cleaning up orphan processes

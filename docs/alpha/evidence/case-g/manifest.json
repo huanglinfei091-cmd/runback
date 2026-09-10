@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "repository": "ClickHouse/click-ui",
+  "run_id": 34430830779,
+  "run_attempt": 1,
+  "job_id": 102725796825,
+  "head_sha": "dff6571abee07d79d9bc1e85117d6ae2d3e79c49",
+  "workflow_path": ".github/workflows/build-health-checkup.yml",
+  "workflow_sha256": "f0ff12f77461a91718faae4427f839cdd599ef141dd11b7835d68d594c9af1ac",
+  "jobs_sha256": "359feb51b3b4da75c6cd8dd0bf6c3c78213f6ce90425ed1c518b82a8a7c0c872",
+  "run_sha256": "01eea3637775f0843aba410396941654ba828bb63523b78b97677f975c1bde6a",
+  "files_sha256": "585e21d7d3d33c7e1c92db0a5b70a62541a57313a4a83b48270ac83d0da38055",
+  "job_log_sha256": "5fb1bdf69d0be02600f513274af2ebc591197143bedc36a58e67eb518151d156",
+  "job_log_size": 19448,
+  "fetched_at": "2026-09-10T02:50:37Z"
+}

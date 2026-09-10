@@ -5,7 +5,7 @@ set -euo pipefail
 unset RUNBACK_GITHUB_TOKEN GH_TOKEN GITHUB_TOKEN
 
 repository="huanglinfei091-cmd/runback"
-version="${RUNBACK_INSTALL_VERSION:-v0.1.1-alpha}"
+version="${RUNBACK_INSTALL_VERSION:-v0.1.2-alpha}"
 install_dir="${RUNBACK_INSTALL_DIR:-$HOME/.local/bin}"
 
 if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-[0-9A-Za-z][0-9A-Za-z.-]*$ ]]; then

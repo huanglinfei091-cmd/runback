@@ -1,0 +1,226 @@
+{
+  "auth_mode": "token",
+  "cache": "HIT",
+  "cache_path": "/root/.runback/cache/github/ClickHouse/click-ui/34430830779/attempt-1",
+  "result": {
+    "stage": "MATCH",
+    "executor": "act",
+    "mode": "FULL_JOB",
+    "target_succeeded": false,
+    "target_reached": true,
+    "evidence": {
+      "status": "SAME_FAILURE",
+      "evidence_level": "STRUCTURED",
+      "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+      "remote": {
+        "failure_count": 3,
+        "level": "STRUCTURED",
+        "step": "Build",
+        "command": "yarn build",
+        "exit": 1,
+        "normalized_excerpt": [
+          "Error: found typescript issues"
+        ],
+        "items": [
+          {
+            "kind": "typescript",
+            "identity": "src/components/DatePicker/Common.tsx:1010:22:TS2551",
+            "exception": "TS2551",
+            "file": "src/components/DatePicker/Common.tsx",
+            "line": 1010,
+            "message": "Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } \u0026 { key: string; })[]; }'. Did you mean 'weekdays'?"
+          },
+          {
+            "kind": "typescript",
+            "identity": "src/components/DatePicker/Common.tsx:1010:38:TS7031",
+            "exception": "TS7031",
+            "file": "src/components/DatePicker/Common.tsx",
+            "line": 1010,
+            "message": "Binding element 'key' implicitly has an 'any' type."
+          },
+          {
+            "kind": "typescript",
+            "identity": "src/components/DatePicker/Common.tsx:1010:50:TS7031",
+            "exception": "TS7031",
+            "file": "src/components/DatePicker/Common.tsx",
+            "line": 1010,
+            "message": "Binding element 'date' implicitly has an 'any' type."
+          }
+        ]
+      },
+      "local": {
+        "failure_count": 3,
+        "level": "STRUCTURED",
+        "step": "Build",
+        "command": "yarn build",
+        "exit": 1,
+        "normalized_excerpt": [
+          "Error: found typescript issues"
+        ],
+        "items": [
+          {
+            "kind": "typescript",
+            "identity": "src/components/DatePicker/Common.tsx:1010:22:TS2551",
+            "exception": "TS2551",
+            "file": "src/components/DatePicker/Common.tsx",
+            "line": 1010,
+            "message": "Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } \u0026 { key: string; })[]; }'. Did you mean 'weekdays'?"
+          },
+          {
+            "kind": "typescript",
+            "identity": "src/components/DatePicker/Common.tsx:1010:38:TS7031",
+            "exception": "TS7031",
+            "file": "src/components/DatePicker/Common.tsx",
+            "line": 1010,
+            "message": "Binding element 'key' implicitly has an 'any' type."
+          },
+          {
+            "kind": "typescript",
+            "identity": "src/components/DatePicker/Common.tsx:1010:50:TS7031",
+            "exception": "TS7031",
+            "file": "src/components/DatePicker/Common.tsx",
+            "line": 1010,
+            "message": "Binding element 'date' implicitly has an 'any' type."
+          }
+        ]
+      },
+      "matched_fields": {
+        "Identity": true,
+        "Exception": true,
+        "File": true,
+        "Line": true,
+        "Message": true,
+        "Exit": true
+      },
+      "remote_failures": 3,
+      "local_failures": 3,
+      "matched_failures": 3
+    },
+    "status": "SAME_FAILURE",
+    "started_at": "2026-09-10T02:54:42Z",
+    "duration_seconds": 113.00554857,
+    "exit_code": 1,
+    "comparison": {
+      "status": "unverified",
+      "similarity": 0,
+      "remote": {
+        "hash": "cad6957f6b4e80b1ecd102ca930100d4e0e80619d42e985c335ba616a0ed7867",
+        "lines": [
+          "Error: found typescript issues"
+        ]
+      },
+      "local": {
+        "hash": "cad6957f6b4e80b1ecd102ca930100d4e0e80619d42e985c335ba616a0ed7867",
+        "lines": [
+          "Error: found typescript issues"
+        ]
+      },
+      "reason": "need at least two distinctive error lines on each side"
+    },
+    "command": [
+      "act",
+      "pull_request",
+      "-C",
+      "/tmp/rb/65a0f498e3ab/workspace",
+      "-W",
+      "/tmp/rb/65a0f498e3ab/replay.yml",
+      "-j",
+      "build",
+      "-e",
+      "/tmp/rb/65a0f498e3ab/event.json",
+      "-P",
+      "ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest",
+      "--actor",
+      "gjones",
+      "--container-architecture",
+      "linux/amd64",
+      "--container-daemon-socket",
+      "-",
+      "--network",
+      "bridge",
+      "--secret-file",
+      "/tmp/rb/65a0f498e3ab/empty.env",
+      "--var-file",
+      "/tmp/rb/65a0f498e3ab/empty.env",
+      "--env-file",
+      "/tmp/rb/65a0f498e3ab/empty.env",
+      "--input-file",
+      "/tmp/rb/65a0f498e3ab/empty.env",
+      "--action-cache-path",
+      "/tmp/rb/65a0f498e3ab/actions",
+      "--pull=false",
+      "--use-new-action-cache",
+      "--container-options",
+      "--label io.runback.case=runback-34430830779-1-102725796825",
+      "--json"
+    ],
+    "image_id": "sha256:62d572b92f9f32d3427b6d220ad1f9dca9c7b6ffad37d295425037dbff78abaf",
+    "container_ids": [
+      "328587ab4e82e0475de805557c4f1ed4c8baf17fb9521bd558dbc781c060b7c9"
+    ],
+    "workspace_dirty": false
+  },
+  "semantic": {
+    "commit_sha": "ea30193e179c39dcd31bad1b3ad7ba7cf3db0d9c",
+    "event": "pull_request",
+    "failed_step": {
+      "command": "yarn build",
+      "environment": {
+        "HUSKY": 0
+      },
+      "name": "Build",
+      "shell": "bash",
+      "working_directory": "."
+    },
+    "failure_evidence": {
+      "failure_count": 3,
+      "level": "STRUCTURED",
+      "step": "Build",
+      "command": "yarn build",
+      "exit": 1,
+      "normalized_excerpt": [
+        "Error: found typescript issues"
+      ],
+      "items": [
+        {
+          "kind": "typescript",
+          "identity": "src/components/DatePicker/Common.tsx:1010:22:TS2551",
+          "exception": "TS2551",
+          "file": "src/components/DatePicker/Common.tsx",
+          "line": 1010,
+          "message": "Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } \u0026 { key: string; })[]; }'. Did you mean 'weekdays'?"
+        },
+        {
+          "kind": "typescript",
+          "identity": "src/components/DatePicker/Common.tsx:1010:38:TS7031",
+          "exception": "TS7031",
+          "file": "src/components/DatePicker/Common.tsx",
+          "line": 1010,
+          "message": "Binding element 'key' implicitly has an 'any' type."
+        },
+        {
+          "kind": "typescript",
+          "identity": "src/components/DatePicker/Common.tsx:1010:50:TS7031",
+          "exception": "TS7031",
+          "file": "src/components/DatePicker/Common.tsx",
+          "line": 1010,
+          "message": "Binding element 'date' implicitly has an 'any' type."
+        }
+      ]
+    },
+    "job_id": 102725796825,
+    "job_name": "build",
+    "matrix": {},
+    "repository": "ClickHouse/click-ui",
+    "run_attempt": 1,
+    "run_id": 34430830779,
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "node-version": "24.20.0"
+    },
+    "workflow_job_id": "build",
+    "workflow_path": ".github/workflows/build-health-checkup.yml"
+  },
+  "semantic_hash": "1b258b84eea5c17404160c98081a7cc17f30a2b68c5d6b4198fe8db4c4322cfe",
+  "source": "ONLINE"
+}

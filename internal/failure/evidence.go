@@ -42,6 +42,10 @@ type Match struct {
 }
 
 var mypy = regexp.MustCompile(`^(.+?\.pyi?):(\d+):(?:\d+:)?\s*error:\s*(.+?)(?:\s+\[([a-zA-Z0-9_-]+)\])?$`)
+var typescript = regexp.MustCompile(`^(.+?\.(?:[cm]?tsx?|[cm]?jsx?))\(([1-9]\d*),([1-9]\d*)\): error (TS\d+): (.+)$`)
+var typescriptError = regexp.MustCompile(`\berror TS\d+:`)
+var logTimestamp = regexp.MustCompile(`^\d{4}-\d\d-\d\dT[0-9:.]+Z ?`)
+var logANSI = regexp.MustCompile(`\x1b\[[0-9;]*[A-Za-z]`)
 var pyright = regexp.MustCompile(`^(.+?\.pyi?):(\d+):(\d+)\s+-\s+error:\s+(.+?)(?:\s+\(([A-Za-z][A-Za-z0-9_-]+)\))?$`)
 var diagnosticCode = regexp.MustCompile(`^\[([a-zA-Z0-9_-]+)\]$`)
 var frame = regexp.MustCompile(`^(.+?\.py):(\d+): in ([A-Za-z0-9_]+)$`)
@@ -81,8 +85,28 @@ func Parse(log, step, command string, exit *int) Evidence {
 	}
 	var goFailures []goFailure
 	activeGo := -1
+	activeTS := -1
 	for _, line := range lines {
+		raw := logTimestamp.ReplaceAllString(logANSI.ReplaceAllString(line, ""), "")
 		line = Normalize(line)
+		if m := typescript.FindStringSubmatch(line); m != nil {
+			n, _ := strconv.Atoi(m[2])
+			diagnostics = append(diagnostics, Item{Kind: "typescript", File: m[1], Line: n,
+				Exception: m[4], Message: m[5], Identity: fmt.Sprintf("%s:%s:%s:%s", m[1], m[2], m[3], m[4])})
+			activeTS = len(diagnostics) - 1
+			continue
+		}
+		if typescriptError.MatchString(line) {
+			// Count unsupported formats too, so a partial parse cannot become SAME_FAILURE.
+			diagnostics = append(diagnostics, Item{Kind: "typescript", Message: line})
+			activeTS = -1
+			continue
+		}
+		if activeTS >= 0 && line != "" && (strings.HasPrefix(raw, "  ") || strings.HasPrefix(raw, "\t")) {
+			diagnostics[activeTS].Message += "\n" + line
+			continue
+		}
+		activeTS = -1
 		if m := pyright.FindStringSubmatch(line); m != nil {
 			n, _ := strconv.Atoi(m[2])
 			diagnostic := "pyright"
@@ -140,7 +164,9 @@ func Parse(log, step, command string, exit *int) Evidence {
 			if d.Kind == "mypy" {
 				d.Exception = "mypy[" + d.Exception + "]"
 			}
-			d.Identity = fmt.Sprintf("%s:%d:%s", d.File, d.Line, d.Exception)
+			if d.Identity == "" {
+				d.Identity = fmt.Sprintf("%s:%d:%s", d.File, d.Line, d.Exception)
+			}
 			e.Items = append(e.Items, d)
 		}
 	}

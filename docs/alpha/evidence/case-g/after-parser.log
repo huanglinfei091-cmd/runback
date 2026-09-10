@@ -1,0 +1,199 @@
+Evidence: ONLINE
+Cache: HIT
+Auth mode: token
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network: bridge
+Network Source: GENERIC_DEFAULT
+Workflow      .github/workflows/build-health-checkup.yml
+Commit        ea30193e179c39dcd31bad1b3ad7ba7cf3db0d9c
+Job           build [build]
+Matrix        map[]
+Runner        ubuntu-latest
+Failed step   Build
+Command       yarn build
+Lock          /tmp/rb/65a0f498e3ab/runback.lock
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+OK       git: /usr/bin/git
+OK       docker: /usr/bin/docker
+OK       act: /usr/local/bin/act
+OK       Docker linux / 29.1.3
+HOST     linux/amd64
+AUTH     GitHub acquisition: RUNBACK_GITHUB_TOKEN > GH_TOKEN > anonymous; execution is isolated
+{"level":"info","msg":"Using docker host 'unix:///var/run/docker.sock', and daemon socket '-'","time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Set up job","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"🚀  Start image=ghcr.io/catthehacker/ubuntu:act-latest","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=false","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ✅  Success - Set up job","step":"Set up job","stepResult":"success","stepid":["--setup-job"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"GoGitActionCache fetch https://github.com/actions/setup-node with ref v6 at /tmp/rb/65a0f498e3ab/actions/actions-setup-node.git","stage":"Pre","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:04Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"GoGitActionCache fetch https://github.com/actions/setup-node with ref v6 at /tmp/rb/65a0f498e3ab/actions/actions-setup-node.git resolved to 249970729cb0ef3589644e2896645e5dc5ba9c38","stage":"Pre","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:06Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"GoGitActionCache get content actions/setup-node with sha 249970729cb0ef3589644e2896645e5dc5ba9c38 subpath 'action.yml' at /tmp/rb/65a0f498e3ab/actions/actions-setup-node.git","stage":"Pre","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:06Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Main actions/checkout@v6","stage":"Main","step":"actions/checkout@v6","stepID":["0"],"time":"2026-09-10T02:55:06Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker cp src=/tmp/rb/65a0f498e3ab/workspace/. dst=/tmp/rb/65a0f498e3ab/workspace","stage":"Main","step":"actions/checkout@v6","stepID":["0"],"time":"2026-09-10T02:55:06Z"}
+{"dryrun":false,"executionTime":358952630,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ✅  Success - Main actions/checkout@v6 [358.95263ms]","stage":"Main","step":"actions/checkout@v6","stepID":["0"],"stepResult":"success","time":"2026-09-10T02:55:07Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Main actions/setup-node@v6","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:07Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"GoGitActionCache get content actions/setup-node with sha 249970729cb0ef3589644e2896645e5dc5ba9c38 subpath '' at /tmp/rb/65a0f498e3ab/actions/actions-setup-node.git","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:07Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[/opt/acttoolcache/node/24.19.0/x64/bin/node /var/run/act/actions/actions-setup-node@v6/dist/setup/index.js] user= workdir=","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:07Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"Found in cache @ /opt/hostedtoolcache/node/24.20.0/x64\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:07Z"}
+{"arg":"Environment details","command":"group","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::group::Environment details\n","raw":"::group::Environment details\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:07Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"node: v24.20.0\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"npm: 11.19.0\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"yarn: 4.5.3\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"","command":"endgroup","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::endgroup::\n","raw":"::endgroup::\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"/run/act/actions/actions-setup-node@v6/.github/tsc.json","command":"add-matcher","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/actions-setup-node@v6/.github/tsc.json","raw":"##[add-matcher]/run/act/actions/actions-setup-node@v6/.github/tsc.json\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"/run/act/actions/actions-setup-node@v6/.github/eslint-stylish.json","command":"add-matcher","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/actions-setup-node@v6/.github/eslint-stylish.json","raw":"##[add-matcher]/run/act/actions/actions-setup-node@v6/.github/eslint-stylish.json\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"/run/act/actions/actions-setup-node@v6/.github/eslint-compact.json","command":"add-matcher","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/actions-setup-node@v6/.github/eslint-compact.json","raw":"##[add-matcher]/run/act/actions/actions-setup-node@v6/.github/eslint-compact.json\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"executionTime":1968228363,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ✅  Success - Main actions/setup-node@v6 [1.968228363s]","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"stepResult":"success","time":"2026-09-10T02:55:09Z"}
+{"arg":"v24.20.0","command":"set-output","dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: node-version=v24.20.0","name":"node-version","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"/opt/hostedtoolcache/node/24.20.0/x64/bin","command":"add-path","dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ⚙  ::add-path:: /opt/hostedtoolcache/node/24.20.0/x64/bin","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Main Enable Corepack","stage":"Main","step":"Enable Corepack","stepID":["2"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=","stage":"Main","step":"Enable Corepack","stepID":["2"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"executionTime":152350486,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ✅  Success - Main Enable Corepack [152.350486ms]","stage":"Main","step":"Enable Corepack","stepID":["2"],"stepResult":"success","time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Main Install dependencies","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[bash -e /var/run/act/workflow/3] user= workdir=","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m YN0000: · Yarn 4.5.3\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"Resolution step","command":"group","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::group::Resolution step\n","raw":"::group::Resolution step\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"","command":"endgroup","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::endgroup::\n","raw":"::endgroup::\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: └ Completed in 0s 243ms\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Post-resolution validation\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"Post-resolution validation","command":"group","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::group::Post-resolution validation\n","raw":"::group::Post-resolution validation\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[93m➤\u001b[39m YN0086: │ Some peer dependencies are incorrectly met by dependencies; run \u001b[38;5;111myarn explain peer-requirements\u001b[39m for details.\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"","command":"endgroup","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::endgroup::\n","raw":"::endgroup::\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: └ Completed\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Fetch step\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"arg":"Fetch step","command":"group","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::group::Fetch step\n","raw":"::group::Fetch step\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:55:09Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m YN0013: │ \u001b[38;5;220m1124\u001b[39m packages were added to the project (\u001b[38;5;160m+ 432.13 MiB\u001b[39m).\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:14Z"}
+{"arg":"","command":"endgroup","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::endgroup::\n","raw":"::endgroup::\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:14Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: └ Completed in 1m 5s\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:14Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Link step\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:14Z"}
+{"arg":"Link step","command":"group","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::group::Link step\n","raw":"::group::Link step\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:14Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m YN0007: │ \u001b[38;5;173mesbuild\u001b[39m\u001b[38;5;111m@\u001b[39m\u001b[38;5;111mnpm:0.21.5\u001b[39m must be built because it never has been before or the last one failed\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m YN0007: │ \u001b[38;5;166m@parcel/\u001b[39m\u001b[38;5;173mwatcher\u001b[39m\u001b[38;5;111m@\u001b[39m\u001b[38;5;111mnpm:2.5.4\u001b[39m must be built because it never has been before or the last one failed\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m YN0007: │ \u001b[38;5;173mesbuild\u001b[39m\u001b[38;5;111m@\u001b[39m\u001b[38;5;111mnpm:0.27.2\u001b[39m must be built because it never has been before or the last one failed\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m YN0007: │ \u001b[38;5;173munrs-resolver\u001b[39m\u001b[38;5;111m@\u001b[39m\u001b[38;5;111mnpm:1.11.1\u001b[39m must be built because it never has been before or the last one failed\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"arg":"","command":"endgroup","dryrun":false,"job":"Build health checkup/build","jobID":"build","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::endgroup::\n","raw":"::endgroup::\n","stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: └ Completed in 8s 374ms\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"\u001b[93m➤\u001b[39m YN0000: · Done with warnings in 1m 14s\n","raw_output":true,"stage":"Main","step":"Install dependencies","stepID":["3"],"time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"executionTime":73665545125,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ✅  Success - Main Install dependencies [1m13.665545125s]","stage":"Main","step":"Install dependencies","stepID":["3"],"stepResult":"success","time":"2026-09-10T02:56:22Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Main Build","stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:23Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[bash -e /var/run/act/workflow/4] user= workdir=","stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:23Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"src/components/DatePicker/Common.tsx(1010,22): error TS2551: Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } \u0026 { key: string; })[]; }'. Did you mean 'weekdays'?\n","raw_output":true,"stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:34Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"src/components/DatePicker/Common.tsx(1010,38): error TS7031: Binding element 'key' implicitly has an 'any' type.\n","raw_output":true,"stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:34Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"src/components/DatePicker/Common.tsx(1010,50): error TS7031: Binding element 'date' implicitly has an 'any' type.\n","raw_output":true,"stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:34Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"Error: found typescript issues\n","raw_output":true,"stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:34Z"}
+{"dryrun":false,"executionTime":11940533041,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ❌  Failure - Main Build [11.940533041s]","stage":"Main","step":"Build","stepID":["4"],"stepResult":"failure","time":"2026-09-10T02:56:34Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"error","matrix":{},"msg":"exitcode '1': failure","stage":"Main","step":"Build","stepID":["4"],"time":"2026-09-10T02:56:34Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"⭐ Run Complete job","step":"Complete job","stepid":["--complete-job"],"time":"2026-09-10T02:56:35Z"}
+Error: Job 'build' failed
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","level":"info","matrix":{},"msg":"  ✅  Success - Complete job","step":"Complete job","stepResult":"success","stepid":["--complete-job"],"time":"2026-09-10T02:56:35Z"}
+{"dryrun":false,"job":"Build health checkup/build","jobID":"build","jobResult":"failure","level":"info","matrix":{},"msg":"🏁  Job failed","time":"2026-09-10T02:56:35Z"}
+
+Result: SAME_FAILURE
+Stage: MATCH
+Cause: 
+Evidence level: STRUCTURED
+Remote failures: 3
+Local failures: 3
+Matched: 3
+all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree
+Report: /tmp/rb/65a0f498e3ab/result.json
+{
+  "status": "SAME_FAILURE",
+  "evidence_level": "STRUCTURED",
+  "reason": "all structured failure identities, exception/diagnostic types, source locations, messages and exit codes agree",
+  "remote": {
+    "failure_count": 3,
+    "level": "STRUCTURED",
+    "step": "Build",
+    "command": "yarn build",
+    "exit": 1,
+    "normalized_excerpt": [
+      "Error: found typescript issues"
+    ],
+    "items": [
+      {
+        "kind": "typescript",
+        "identity": "src/components/DatePicker/Common.tsx:1010:22:TS2551",
+        "exception": "TS2551",
+        "file": "src/components/DatePicker/Common.tsx",
+        "line": 1010,
+        "message": "Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } \u0026 { key: string; })[]; }'. Did you mean 'weekdays'?"
+      },
+      {
+        "kind": "typescript",
+        "identity": "src/components/DatePicker/Common.tsx:1010:38:TS7031",
+        "exception": "TS7031",
+        "file": "src/components/DatePicker/Common.tsx",
+        "line": 1010,
+        "message": "Binding element 'key' implicitly has an 'any' type."
+      },
+      {
+        "kind": "typescript",
+        "identity": "src/components/DatePicker/Common.tsx:1010:50:TS7031",
+        "exception": "TS7031",
+        "file": "src/components/DatePicker/Common.tsx",
+        "line": 1010,
+        "message": "Binding element 'date' implicitly has an 'any' type."
+      }
+    ]
+  },
+  "local": {
+    "failure_count": 3,
+    "level": "STRUCTURED",
+    "step": "Build",
+    "command": "yarn build",
+    "exit": 1,
+    "normalized_excerpt": [
+      "Error: found typescript issues"
+    ],
+    "items": [
+      {
+        "kind": "typescript",
+        "identity": "src/components/DatePicker/Common.tsx:1010:22:TS2551",
+        "exception": "TS2551",
+        "file": "src/components/DatePicker/Common.tsx",
+        "line": 1010,
+        "message": "Property 'weekDays' does not exist on type '{ weekdays: ({ value: Date; } \u0026 { key: string; })[]; }'. Did you mean 'weekdays'?"
+      },
+      {
+        "kind": "typescript",
+        "identity": "src/components/DatePicker/Common.tsx:1010:38:TS7031",
+        "exception": "TS7031",
+        "file": "src/components/DatePicker/Common.tsx",
+        "line": 1010,
+        "message": "Binding element 'key' implicitly has an 'any' type."
+      },
+      {
+        "kind": "typescript",
+        "identity": "src/components/DatePicker/Common.tsx:1010:50:TS7031",
+        "exception": "TS7031",
+        "file": "src/components/DatePicker/Common.tsx",
+        "line": 1010,
+        "message": "Binding element 'date' implicitly has an 'any' type."
+      }
+    ]
+  },
+  "matched_fields": {
+    "Identity": true,
+    "Exception": true,
+    "File": true,
+    "Line": true,
+    "Message": true,
+    "Exit": true
+  },
+  "remote_failures": 3,
+  "local_failures": 3,
+  "matched_failures": 3
+}
+✓ SAME_FAILURE reproduced
+Session created: 34430830779-102725796825-1789008995135984198
+Workspace: /root/.runback/sessions/34430830779-102725796825-1789008995135984198/worktree
+Next:
+  runback dev
+No container remains running. Session files remain on disk.
+DEBUG_UNSUPPORTED: earlier setup step 2 cannot be carried into the narrow Python/uv debug environment
+CLI elapsed: 117.844s (through final result)

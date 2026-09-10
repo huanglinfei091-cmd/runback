@@ -89,9 +89,55 @@ Message: `published messages = []agent.Message(nil), want one streaming reasonin
 Measured CLI time was 164.047 seconds. Case E's earlier presence in an outreach list was not
 treated as external testing; no person reported running RunBack on it.
 
+## Fresh JavaScript/TypeScript Cases F and G
+
+Case F was registered before local execution from
+`DeHubToken/dehub-mobile` run `34426920635`, attempt 1, job `Typecheck & Test`. The exact URL
+completed authenticated acquisition, Node 20 setup, npm dependency installation and the target
+`npm run i18n:coverage` step. Remote and local logs visibly agreed on the missing
+`settings.display` translation key, but that output came from a custom repository script and
+provided no supported structured identity. RunBack retained `INSUFFICIENT_EVIDENCE`, `STEP`,
+`0/0/0` after 260.163 seconds. No repository-specific parser was added and the case was not
+replaced.
+
+Case G was separately preregistered and committed before acquisition:
+
+- Repository: `ClickHouse/click-ui`
+- URL: https://github.com/ClickHouse/click-ui/actions/runs/34430830779
+- Attempt/job: `1` / `build` (`102725796825`)
+- Runner: `ubuntu-latest`
+- Failed command: `yarn build`
+- Characteristics: checkout, setup-node 24.x, Corepack, immutable Yarn 4 install and a standard
+  TypeScript library build; no services, job container, local action or required secret
+
+The first exact URL invocation reproduced three standard TypeScript compiler diagnostics but
+returned `INSUFFICIENT_EVIDENCE`, `STEP`, `0/0/0` after 129.154 seconds because no `tsc`
+parser existed. A setup-node tool-download request independently reached an anonymous API rate
+limit, then setup-node's normal direct Node.js download fallback completed; the target step was
+reached and no acquisition token entered execution.
+
+The general TypeScript parser requires an exact source file, line, column, `TS` diagnostic
+code, complete message and exit code. Unsupported partial `error TS...` formats are counted as
+unparsed failures, so partial parsing cannot become a success. Replaying the unchanged URL then
+produced:
+
+```text
+Result: SAME_FAILURE
+Evidence level: STRUCTURED
+Remote failures: 3
+Local failures:  3
+Matched:         3
+```
+
+All three identities were in
+`src/components/DatePicker/Common.tsx:1010` (`TS2551`, `TS7031`, `TS7031`). Final TTFR was
+117.844 seconds. A verified session was created; the debug entry remained
+`DEBUG_UNSUPPORTED` because Node development environments are outside the current narrow M2
+debug scope.
+
 ## Source changes
 
-- `internal/failure/evidence.go`: standard Pyright and Go test evidence extraction
+- `internal/failure/evidence.go`: standard Pyright, Go test and TypeScript compiler evidence extraction
 - `internal/fingerprint/fingerprint.go`: RunBack short-workspace prefix normalization
 - `internal/doctor/doctor.go`: actionable first-run diagnostics
 - `internal/doctor/disk_linux.go` and `disk_other.go`: portable free-space probe
@@ -105,10 +151,11 @@ No repository-name branch was added. No Matcher threshold or success condition c
 
 - `internal/failure/pyright_test.go`
 - `internal/failure/gotest_test.go`
+- `internal/failure/typescript_test.go`
 - New doctor and workspace-normalization cases in the existing package tests
 
-Mutation tests prove that changed Pyright or Go messages cannot produce `SAME_FAILURE`. An
-unparsed Go failure remains insufficient.
+Mutation tests prove that changed Pyright, Go or TypeScript source identity and messages cannot
+produce `SAME_FAILURE`. Unparsed Go and partial TypeScript failure sets remain insufficient.
 
 ## First-run and install behavior
 
@@ -158,6 +205,13 @@ The release candidate passed:
 - M2 step replay: `STEP_PASSED_UNVERIFIED`
 - M2 full verify: `FULL_JOB_PASSED`
 - Frozen Case C, exact URL and no replay overrides: `SAME_FAILURE`, TEST, `1/1/1`
+
+After the TypeScript change, the `v0.1.2-alpha` candidate repeated all gates. `gofmt`,
+`go test ./...`, `go vet ./...` and `go build ./cmd/runback` passed on the Linux target;
+Flask/Click bundle checks and M1/M2 hashes passed; M2 again returned
+`STEP_PASSED_UNVERIFIED` then `FULL_JOB_PASSED`. Frozen Case C again used only its exact URL
+and returned `SAME_FAILURE`, `TEST`, `1/1/1` in 78.177 seconds. Evidence is retained in
+`docs/alpha/evidence/gates-v0.1.2/` and `docs/alpha/evidence/regressions-v0.1.2/`.
 
 Case C used cached online evidence, the generic default bridge path and no CLI image, network,
 bundle, lock or work-directory override. No Docker daemon, docker0, host address, route,
@@ -209,8 +263,14 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 
 - `docs/alpha/CASE_D.json`
 - `docs/alpha/CASE_E.json`
+- `docs/alpha/CASE_F.json`
+- `docs/alpha/CASE_G.json`
 - `docs/alpha/evidence/case-d/`
 - `docs/alpha/evidence/case-e/`
+- `docs/alpha/evidence/case-f/`
+- `docs/alpha/evidence/case-g/`
+- `docs/alpha/evidence/gates-v0.1.2/`
+- `docs/alpha/evidence/regressions-v0.1.2/`
 - `docs/alpha/evidence/install/`
 - `docs/alpha/evidence/gates/`
 - `docs/alpha/evidence/regressions/`
@@ -221,8 +281,10 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 
 ## Known limitations
 
-The retained cases cover Python mypy, pytest and Pyright plus one Go test job. They do not yet
-provide a real JavaScript/TypeScript replay case. Private repositories, GitHub Enterprise,
+The retained cases cover Python mypy, pytest and Pyright, one Go test job, a custom JavaScript
+failure that remained insufficient, and a standard TypeScript compiler failure that reached
+strict `SAME_FAILURE`. This does not establish general JavaScript/TypeScript compatibility.
+Private repositories, GitHub Enterprise,
 Windows, macOS, self-hosted runners, services, job containers, repository-local actions,
 reusable job workflows, dynamic matrices, secret-heavy paths and artifact-heavy workflows
 remain outside the current Alpha scope.

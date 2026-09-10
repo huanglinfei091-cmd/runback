@@ -1,0 +1,108 @@
+{
+  "stage": "MATCH",
+  "executor": "act",
+  "mode": "FULL_JOB",
+  "target_succeeded": false,
+  "target_reached": true,
+  "evidence": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "evidence_level": "STEP",
+    "reason": "not enough matching step evidence or remote exit code",
+    "remote": {
+      "failure_count": 0,
+      "level": "STEP",
+      "step": "Build",
+      "command": "yarn build",
+      "exit": 1,
+      "normalized_excerpt": [
+        "Error: found typescript issues"
+      ],
+      "items": []
+    },
+    "local": {
+      "failure_count": 0,
+      "level": "STEP",
+      "step": "Build",
+      "command": "yarn build",
+      "exit": 1,
+      "normalized_excerpt": [
+        "Error: found typescript issues"
+      ],
+      "items": []
+    },
+    "matched_fields": {
+      "Identity": false,
+      "Exception": false,
+      "File": false,
+      "Line": false,
+      "Message": false,
+      "Exit": true
+    },
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched_failures": 0
+  },
+  "status": "INSUFFICIENT_EVIDENCE",
+  "started_at": "2026-09-10T02:50:37Z",
+  "duration_seconds": 124.58485397,
+  "exit_code": 1,
+  "comparison": {
+    "status": "unverified",
+    "similarity": 0,
+    "remote": {
+      "hash": "cad6957f6b4e80b1ecd102ca930100d4e0e80619d42e985c335ba616a0ed7867",
+      "lines": [
+        "Error: found typescript issues"
+      ]
+    },
+    "local": {
+      "hash": "cad6957f6b4e80b1ecd102ca930100d4e0e80619d42e985c335ba616a0ed7867",
+      "lines": [
+        "Error: found typescript issues"
+      ]
+    },
+    "reason": "need at least two distinctive error lines on each side"
+  },
+  "command": [
+    "act",
+    "pull_request",
+    "-C",
+    "/tmp/rb/724854e36a73/workspace",
+    "-W",
+    "/tmp/rb/724854e36a73/replay.yml",
+    "-j",
+    "build",
+    "-e",
+    "/tmp/rb/724854e36a73/event.json",
+    "-P",
+    "ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest",
+    "--actor",
+    "gjones",
+    "--container-architecture",
+    "linux/amd64",
+    "--container-daemon-socket",
+    "-",
+    "--network",
+    "bridge",
+    "--secret-file",
+    "/tmp/rb/724854e36a73/empty.env",
+    "--var-file",
+    "/tmp/rb/724854e36a73/empty.env",
+    "--env-file",
+    "/tmp/rb/724854e36a73/empty.env",
+    "--input-file",
+    "/tmp/rb/724854e36a73/empty.env",
+    "--action-cache-path",
+    "/tmp/rb/724854e36a73/actions",
+    "--pull=false",
+    "--use-new-action-cache",
+    "--container-options",
+    "--label io.runback.case=runback-34430830779-1-102725796825",
+    "--json"
+  ],
+  "image_id": "sha256:62d572b92f9f32d3427b6d220ad1f9dca9c7b6ffad37d295425037dbff78abaf",
+  "container_ids": [
+    "b6f747bd6b7e326d08f9b112e38b272b7997a032b628403ca5cf440b7f115bfd"
+  ],
+  "workspace_dirty": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "repository": "DeHubToken/dehub-mobile",
+  "run_id": 34426920635,
+  "run_attempt": 1,
+  "job_id": 102714019996,
+  "head_sha": "37d4cd252070a52b105dd8f767c8f6761452dbc9",
+  "workflow_path": ".github/workflows/ci.yml",
+  "workflow_sha256": "5f605b43fd6e5934b8749a62db64b84f391180b4de5fa907820657ae46b87e65",
+  "jobs_sha256": "d471138f6008383377fabcce9c5fce192b1467a87cad81ea0aaa2802c2780d85",
+  "run_sha256": "05b13a52eb96603275e97b29779341f3f490cbefc2507b66e210027e557dc1d1",
+  "files_sha256": "0ce007c8710401d40ffd12b52d67237573aa96b26f09845a66fe966c20c08e6d",
+  "job_log_sha256": "801a2f440d3d7d8f67b8337dc9f1b087e5d38907f81e1e65943e57e2ccfa21b0",
+  "job_log_size": 23026,
+  "fetched_at": "2026-09-10T01:56:24Z"
+}

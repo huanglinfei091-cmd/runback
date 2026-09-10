@@ -2,7 +2,7 @@
   "schema_version": 1,
   "case": "F",
   "purpose": "FRESH_JAVASCRIPT_TYPESCRIPT_COMPATIBILITY",
-  "status": "PREREGISTERED",
+  "status": "EXECUTED",
   "selected_at": "2026-09-10T01:50:40Z",
   "selection_basis": "GitHub run metadata, attempt-specific jobs and workflow content at the run head SHA only; RunBack had not acquired or replayed this run before registration",
   "repository": "DeHubToken/dehub-mobile",
@@ -41,5 +41,19 @@
     "matrix": false
   },
   "selection_reason": "Fresh TypeScript coverage with a standard Node setup, common GitHub-maintained cache and artifact actions, a direct npm run failure, and no excluded runner, service, local-action, reusable-workflow or secret dependency.",
-  "replacement_policy": "The first RunBack result will be retained regardless of verdict. Case F will not be replaced to obtain a success."
+  "replacement_policy": "The first RunBack result will be retained regardless of verdict. Case F will not be replaced to obtain a success.",
+  "results": {
+    "first_verdict": "INSUFFICIENT_EVIDENCE",
+    "final_verdict": "INSUFFICIENT_EVIDENCE",
+    "stage": "MATCH",
+    "evidence_level": "STEP",
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched_failures": 0,
+    "ttfr_seconds": 260.163,
+    "started_at": "2026-09-10T01:56:20Z",
+    "ended_at": "2026-09-10T02:00:40Z",
+    "reason": "The same custom i18n script diagnostic was visible remotely and locally, but no supported structured failure identity was available. No repository-specific parser was added.",
+    "evidence": "docs/alpha/evidence/case-f/first-run.log"
+  }
 }

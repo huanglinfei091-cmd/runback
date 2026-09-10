@@ -155,3 +155,23 @@ archive SHA256 为
 
 完整报告：`docs/alpha/ITERATION_REPORT.md`；兼容记录：
 `docs/compatibility/REAL_CASES.md`。本阶段状态为 PASS，外部用户验证单独保持 pending。
+
+## 2026-09-10 — JavaScript / TypeScript 真实兼容扩展
+
+Fresh Case F `DeHubToken/dehub-mobile` 在任何 RunBack 调用前预注册。精确 URL 完成在线取证、
+Node 20、npm 安装并到达 `npm run i18n:coverage`；远程和本地都显示同一个缺失翻译键，但这是
+仓库自定义格式，没有足够结构化身份，因此真实结果保持 `INSUFFICIENT_EVIDENCE`、`STEP`、
+remote/local/matched `0/0/0`，TTFR 260.163s。没有加入仓库专用解析，也没有替换案例。
+
+Fresh Case G `ClickHouse/click-ui` 同样先预注册并提交，再执行精确 Direct URL。首次运行真实复现
+三条 `tsc` 错误，但解析器尚不识别，结果为 `INSUFFICIENT_EVIDENCE 0/0/0`，TTFR 129.154s。
+新增通用严格 TypeScript compiler parser 后，相同 URL 得到 `SAME_FAILURE`、`STRUCTURED`，
+remote/local/matched `3/3/3`，文件、行列、TS code、完整消息和 exit code 全部一致，TTFR
+117.844s。Node debug 继续准确返回 `DEBUG_UNSUPPORTED`，未扩张 M2 范围。
+
+本轮回归已通过：格式、`go test ./...`、`go vet ./...`、`go build ./cmd/runback`、Flask/Click
+bundle、M1/M2 SHA256、M2 `STEP_PASSED_UNVERIFIED` / `FULL_JOB_PASSED`。冻结 Case C 再次仅用
+精确 URL 得到 `SAME_FAILURE`、`TEST`、`1/1/1`，耗时 78.177s；无 bundle、lock、work-dir、
+image 或 network override。没有修改 Docker daemon、docker0 或宿主网络。
+
+外部验证仍为 `USER_VALIDATION_PENDING`：没有把本项目自己的兼容测试计为真人用户测试。

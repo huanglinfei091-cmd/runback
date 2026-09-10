@@ -3,7 +3,7 @@
 Last updated: 2026-09-10
 
 This file records retained executions of real public GitHub Actions failures. It is not a
-compatibility percentage: five selected cases cannot establish a population success rate.
+compatibility percentage: seven selected cases cannot establish a population success rate.
 `SAME_FAILURE` appears only when the existing Matcher accepts complete structured evidence.
 
 | Case | Repository | Runtime and workflow | First retained verdict | Final retained verdict | Generic issue and change | Measured TTFR |
@@ -13,6 +13,8 @@ compatibility percentage: five selected cases cannot establish a population succ
 | Direct URL C | `pallets/werkzeug` | Python 3.9, setup-uv, pytest | `DIFFERENT_FAILURE` | `SAME_FAILURE`, 1/1/1 | Short workspace allocator and a general pytest `DID NOT RAISE` parser; intermediate action-fetch and insufficient-evidence results retained | 41.564 s to cold online result; 48.131 s through session creation |
 | Fresh D | `opencitations/ramose` | Python, setup-uv cache, `uv sync`, Pyright | `REPLAY_BLOCKED / PREPARE / NETWORK_DEPENDENCY` | `SAME_FAILURE`, 1/1/1, `STRUCTURED` | Added standard Pyright diagnostics and normalized RunBack-owned short workspace prefixes; no Matcher threshold change | 52.114 s first; 56.252 s final |
 | Fresh E | `AidenAI-IO/aiden-firmware` | Go 1.26.7, setup-go, `go test ./...` | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `SAME_FAILURE`, 1/1/1, `TEST` | Added Go test name/source/message parsing; unrelated error-looking test logs remain outside the structured identity | 153.287 s first; 164.047 s final |
+| Fresh F | `DeHubToken/dehub-mobile` | Node 20, npm cache, custom i18n check | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `INSUFFICIENT_EVIDENCE`, 0/0/0, `STEP` | The custom script produced the same visible diagnostic, but no repository-specific parser was added | 260.163 s |
+| Fresh G | `ClickHouse/click-ui` | Node 24, Yarn 4, TypeScript library build | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `SAME_FAILURE`, 3/3/3, `STRUCTURED` | Added strict standard `tsc` diagnostics with file, line, column, TS code and complete message | 129.154 s first; 117.844 s final |
 
 ## Fresh Case D
 
@@ -66,10 +68,65 @@ Evidence:
 - `docs/alpha/evidence/case-e/first-run.log`
 - `docs/alpha/evidence/case-e/retry-1.log`
 
+## Fresh Case F
+
+- URL: https://github.com/DeHubToken/dehub-mobile/actions/runs/34426920635
+- Attempt/job: `1`, `Typecheck & Test` (`102714019996`)
+- Failed step: `i18n coverage`; command: `npm run i18n:coverage`
+- Head SHA: `37d4cd252070a52b105dd8f767c8f6761452dbc9`
+- Runtime: Node.js 20 with setup-node and npm caching
+
+Case F was registered before any RunBack invocation. Online acquisition, checkout, dependency
+installation and the intended step all ran. The remote and local logs both reported the same
+missing `settings.display` translation key in
+`components/Settings/AppearancePanel.tsx`. Because this output belongs to a repository-specific
+script and has no supported structured identity, RunBack retained
+`INSUFFICIENT_EVIDENCE`, `STEP`, `0/0/0`. The case was not replaced and no special parser was
+added to make it pass.
+
+Evidence:
+
+- `docs/alpha/CASE_F.json`
+- `docs/alpha/evidence/case-f/first-run.log`
+- `docs/alpha/evidence/case-f/first-result.json`
+- `docs/alpha/evidence/case-f/job.raw.log`
+
+## Fresh Case G
+
+- URL: https://github.com/ClickHouse/click-ui/actions/runs/34430830779
+- Attempt/job: `1`, `build` (`102725796825`)
+- Failed step: `Build`; command: `yarn build`
+- Head SHA: `dff6571abee07d79d9bc1e85117d6ae2d3e79c49`
+- Runtime: Node.js 24.x, Corepack and Yarn 4.5.3
+
+Case G was registered and committed before RunBack acquired the run. Its first exact URL
+invocation reached the TypeScript build and reproduced all three compiler diagnostics, but
+without a `tsc` parser RunBack returned `INSUFFICIENT_EVIDENCE`, `STEP`, `0/0/0` after
+129.154 seconds. During setup-node, an unauthenticated tool-download API request hit its own
+rate limit; setup-node's ordinary Node.js download fallback succeeded, so this did not block
+the target step and acquisition credentials were not passed into execution.
+
+The generic parser requires the same source file, line, column, TypeScript error code, full
+message and exit code. It counts incomplete `error TS...` formats as unparsed failures so a
+partially parsed set cannot produce `SAME_FAILURE`. The unchanged URL then produced three
+remote failures, three local failures and three exact matches in 117.844 seconds. A session was
+created, while its debug entry correctly remained unsupported because Node debug environments
+are outside the current narrow debug scope.
+
+Evidence:
+
+- `docs/alpha/CASE_G.json`
+- `docs/alpha/evidence/case-g/first-run.log`
+- `docs/alpha/evidence/case-g/first-result.json`
+- `docs/alpha/evidence/case-g/after-parser.log`
+- `docs/alpha/evidence/case-g/after-parser-result.json`
+- `docs/alpha/evidence/case-g/job.raw.log`
+
 ## Boundaries
 
-These cases cover Python mypy/pytest/Pyright and one Go test job on Ubuntu. They do not prove
-general JavaScript/TypeScript behavior, private repositories, GitHub Enterprise, Windows,
+These cases cover Python mypy/pytest/Pyright, one Go test job, one custom JavaScript failure
+that remained insufficient, and one standard TypeScript compiler failure on Ubuntu. They do
+not prove general JavaScript/TypeScript behavior, private repositories, GitHub Enterprise, Windows,
 macOS, self-hosted runners, services, job containers, local actions, reusable workflows or
 secret-dependent paths. A statically reviewed TypeScript matrix candidate was rejected before
 registration because its jobs used a repository-local reusable workflow, which remains outside

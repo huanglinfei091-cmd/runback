@@ -1,0 +1,17 @@
+Evidence: BUNDLE
+Cache: 
+Auth mode: 
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network: bridge
+Network Source: GENERIC_DEFAULT
+Workflow      .github/workflows/tests.yaml
+Commit        fec2631289e6ad731241b6e54ac44a916722858e
+Job           typing [typing]
+Matrix        map[]
+Runner        ubuntu-latest
+Failed step   Run uv run --locked --no-default-groups --group dev tox run -e typing
+Command       uv run --locked --no-default-groups --group dev tox run -e typing
+Lock          /tmp/rb/8a186e65fc4f/runback.lock
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+CLI elapsed: 0.010s (through final result)

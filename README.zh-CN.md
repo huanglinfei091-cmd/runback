@@ -48,13 +48,13 @@ runback doctor
 ```
 
 如需安装到系统目录，可从
-[Release 页面](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha)
+[Release 页面](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.2-alpha)
 下载 archive 与 `SHA256SUMS`，校验后安装：
 
 ```bash
 sha256sum -c SHA256SUMS
-tar -xzf runback-v0.1.1-alpha-linux-amd64.tar.gz
-sudo install -m 0755 runback-v0.1.1-alpha-linux-amd64/runback /usr/local/bin/runback
+tar -xzf runback-v0.1.2-alpha-linux-amd64.tar.gz
+sudo install -m 0755 runback-v0.1.2-alpha-linux-amd64/runback /usr/local/bin/runback
 ```
 
 ## 可复制 Demo
@@ -123,11 +123,13 @@ RunBack 不会自动读取现有的 GitHub CLI 登录。
 | Werkzeug Case C | 认证 Direct URL → online evidence → full replay → matcher | `Remote 1 / Local 1 / Matched 1`，`SAME_FAILURE` |
 | Ramose Case D | 认证 Direct URL → setup-uv/cache → Pyright | 首次 `REPLAY_BLOCKED`，通用解析修复后严格 `SAME_FAILURE` |
 | Aiden Firmware Case E | 认证 Direct URL → setup-go → Go test | 首次 `INSUFFICIENT_EVIDENCE`，通用解析修复后严格 `SAME_FAILURE` |
+| DeHub Mobile Case F | 认证 Direct URL → setup-node/cache → 自定义 i18n 检查 | 真实保留 `INSUFFICIENT_EVIDENCE`，没有添加仓库专用解析 |
+| ClickHouse UI Case G | 认证 Direct URL → Node 24/Yarn → TypeScript build | 首次 `INSUFFICIENT_EVIDENCE`，增加通用 `tsc` 解析后严格 `SAME_FAILURE`，`3/3/3` |
 
 Werkzeug Case C 在本地重放前已经登记。中间出现的 `DIFFERENT_FAILURE`、
 `REPLAY_BLOCKED` 和 `INSUFFICIENT_EVIDENCE` 都被保留，详情见
 [Direct URL 报告](docs/online/DIRECT_URL_REPORT.md)。
-Fresh Case D/E 的首次失败、通用问题和最终结果保存在
+Fresh Case D 到 G 的首次失败、通用问题和最终结果保存在
 [真实兼容记录](docs/compatibility/REAL_CASES.md)。
 
 ## 兼容范围和结果
@@ -165,7 +167,7 @@ Secrets。运行陌生 workflow 前，应先查看其代码。
 
 ## 项目状态
 
-RunBack 当前是 early alpha，已有五条保留的真实案例证据链，但兼容范围仍然有限。
+RunBack 当前是 early alpha，已有七条保留的真实案例证据链，但兼容范围仍然有限。
 
 如果你有一个 public GitHub Actions failed run，可以在
 [Alpha 测试讨论](https://github.com/huanglinfei091-cmd/runback/discussions/1)中提交 URL 和
