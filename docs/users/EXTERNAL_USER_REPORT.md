@@ -150,3 +150,18 @@ as a tester.
 
 The truthful day-one result is therefore 21 direct invitations, 1 explicit decline and 0
 verified testers. The sprint is complete, while external user validation remains pending.
+
+## 2026-09-10 Alpha feedback iteration
+
+Development continued after the day-one window without waiting for an external user. Fresh
+Cases D and E were project-run compatibility experiments and are not counted as user tests.
+No new direct outreach was sent during this iteration, and no external install, invocation,
+verdict, TTFR, help request, `dev`, `replay --step` or `verify` evidence was supplied.
+
+RunBack `v0.1.1-alpha` is now the current public prerelease:
+
+- https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha
+
+The public installer and release smoke passed, but project-owned validation is not external
+user validation. Verified tester count remains 0 and status remains
+`USER_VALIDATION_PENDING`.

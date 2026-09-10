@@ -2,7 +2,7 @@
 
 Date: 2026-09-10
 
-Status: `IMPLEMENTATION_VALIDATED` / `PUBLICATION_PENDING`
+Status: `PASS`
 
 External validation: `USER_VALIDATION_PENDING`
 
@@ -178,6 +178,23 @@ validated before publication:
 The temporary HOME and its session were removed after the smoke. Evidence is retained in
 `docs/alpha/evidence/release-candidate/`.
 
+## Public release
+
+The validated candidate was published as:
+
+- Release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha
+- State: public prerelease, not a draft
+- Tag commit: `fede635598ecdf2b8fe85fd1d57c64f14c7317df`
+- Tagged-commit CI: https://github.com/huanglinfei091-cmd/runback/actions/runs/34426281644
+- Archive: `runback-v0.1.1-alpha-linux-amd64.tar.gz`
+- Archive SHA256:
+  `15708d693c94bd26168dfd2798b41cd401f54ecb120e13fdf3c344e896b223bc`
+
+The public one-command installer was then run in another clean temporary HOME. It downloaded
+the released archive without Go or sudo, verified the public checksum, installed atomically,
+reported `RunBack v0.1.1-alpha` and completed authenticated `runback doctor` successfully.
+The temporary installation was deleted after verification.
+
 ## External-user status
 
 The formal outreach audit retained 21 direct invitations, one explicit decline and zero
@@ -198,6 +215,7 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 - `docs/alpha/evidence/gates/`
 - `docs/alpha/evidence/regressions/`
 - `docs/alpha/evidence/release-candidate/`
+- `docs/alpha/evidence/public-release/`
 - `docs/compatibility/REAL_CASES.md`
 - `docs/users/EXTERNAL_USER_REPORT.md`
 
@@ -209,4 +227,5 @@ Windows, macOS, self-hosted runners, services, job containers, repository-local 
 reusable job workflows, dynamic matrices, secret-heavy paths and artifact-heavy workflows
 remain outside the current Alpha scope.
 
-PUBLICATION_PENDING
+The Alpha Feedback Iteration is complete and the implementation is released. External-user
+validation remains a separate pending outcome and was not converted into a release claim.

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "tag": "v0.1.1-alpha",
+  "tag_commit": "fede635598ecdf2b8fe85fd1d57c64f14c7317df",
+  "release_url": "https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha",
+  "published_at": "2026-09-10T01:39:30Z",
+  "draft": false,
+  "prerelease": true,
+  "archive": "runback-v0.1.1-alpha-linux-amd64.tar.gz",
+  "archive_size": 3327974,
+  "archive_sha256": "15708d693c94bd26168dfd2798b41cd401f54ecb120e13fdf3c344e896b223bc",
+  "checksum_asset_sha256": "78aadf44e9aedae774aebbe4a80b4ecb11ac4b552c082134850527b8db89abe4",
+  "ci_run": 34426281644,
+  "ci_url": "https://github.com/huanglinfei091-cmd/runback/actions/runs/34426281644",
+  "ci_conclusion": "success",
+  "public_install_exit": 0,
+  "public_doctor_exit": 0
+}

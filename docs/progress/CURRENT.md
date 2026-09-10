@@ -115,3 +115,43 @@ verdict、TTFR、求助、`dev`、`replay --step` 或 `verify` 证据。21 条�
 archive 3 downloads、checksum 2 downloads，Discussion 0 comments，Issue/Star/Fork/Subscriber
 均为 0。这些只作为曝光信号，可能包含所有者或自动化活动，不计作真人测试。Day-one sprint 状态为
 `DAY_ONE_COMPLETE`，外部验证继续为 `USER_VALIDATION_PENDING`；窗口结束后不再发送邀请。
+
+## 2026-09-10 — Alpha Feedback Iteration 完成
+
+外部真人验证不再作为开发 blocker，状态仍为 `USER_VALIDATION_PENDING`：累计 21 次精准邀请、
+1 次明确拒绝、0 个已证实安装、0 个已证实 RunBack invocation。未把 view、clone、download、
+reaction 或沉默计作测试，本阶段未继续发送新的直接邀请。
+
+Fresh Case D `opencitations/ramose` 在本地运行前预注册。首次真实结果为
+`REPLAY_BLOCKED / PREPARE / NETWORK_DEPENDENCY`；进入目标 Pyright step 的首次完整 replay
+因缺少结构化解析保持 `INSUFFICIENT_EVIDENCE 0/0/0`。增加通用 Pyright diagnostic 解析和
+RunBack-owned 短 workspace 前缀规范化后，相同 URL 得到 `SAME_FAILURE`，`STRUCTURED`，
+remote/local/matched `1/1/1`，最终 TTFR 56.252s。
+
+Fresh Case E `AidenAI-IO/aiden-firmware` 也在本地 replay 前预注册。首次运行进入真实
+`go test ./...`，但因无 Go test structured parser 返回 `INSUFFICIENT_EVIDENCE 0/0/0`。
+新增严格要求 test name、`_test.go` 文件、行号、完整 message 和 exit code 的通用解析后，
+相同 URL 得到 `SAME_FAILURE`，`TEST`，remote/local/matched `1/1/1`，最终 TTFR 164.047s。
+未修改 Matcher 阈值，也未加入 repository-specific 分支。
+
+`runback doctor` 现在为 Git、Docker、daemon、act、GitHub API/额度、workspace、磁盘空间、
+PATH 和 Docker network 提供 `Problem / Cause / Next`，仍然只诊断，不修复宿主环境。
+新增的 Release installer 无需 Go 和 sudo，会下载 versioned archive、校验公开 SHA256，并
+原子安装到 `~/.local/bin`。README 中英文第一屏、Demo 与用户自己的 failure、安装入口和
+五条真实兼容记录已更新。
+
+最终本机与公开验证均通过：`go test ./...`、`go vet ./...`、`go build ./cmd/runback`；
+Flask/Click bundle、M1/M2 SHA256、M2 step/verify 均未回归；锁定 Case C 使用 exact URL、
+无 bundle/lock/work-dir/image/network override 得到 `SAME_FAILURE`，remote/local/matched
+`1/1/1`。发布候选在隔离 HOME 中再次通过 Case C，耗时 68.019s，使用
+`GENERIC_DEFAULT` bridge。没有修改 Docker daemon、docker0、宿主 IP、路由、防火墙或服务。
+
+`v0.1.1-alpha` 已发布为公开 prerelease：
+`https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.1-alpha`。Tag 指向
+`fede635598ecdf2b8fe85fd1d57c64f14c7317df`，该提交 CI run 34426281644 PASS。公开
+archive SHA256 为
+`15708d693c94bd26168dfd2798b41cd401f54ecb120e13fdf3c344e896b223bc`。从公开 URL
+进行的 clean install、checksum、version 和 authenticated doctor smoke 均 PASS。
+
+完整报告：`docs/alpha/ITERATION_REPORT.md`；兼容记录：
+`docs/compatibility/REAL_CASES.md`。本阶段状态为 PASS，外部用户验证单独保持 pending。
