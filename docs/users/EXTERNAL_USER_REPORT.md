@@ -1,16 +1,16 @@
 # External User Validation Report
 
-Date: 2026-09-10
+Last updated: 2026-09-11
 
 Status: `DAY_ONE_COMPLETE` / `USER_VALIDATION_PENDING`
 
 ## Public alpha surface
 
 - Repository: https://github.com/huanglinfei091-cmd/runback
-- Current release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.2-alpha
+- Current release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.3-alpha
 - Release state: public prerelease, not a draft
-- Linux amd64 archive: `runback-v0.1.2-alpha-linux-amd64.tar.gz`
-- Archive SHA256: `d78abad886ebe4bdd0b4338a218d27c1fca3d07ebee2bf5cfcf699e3ba0ecb0e`
+- Linux amd64 archive: `runback-v0.1.3-alpha-linux-amd64.tar.gz`
+- Archive SHA256: `78a1aeef0a821941b28738b66143522238e83ecb0668a625cb6b74b3276a2b73`
 
 ## Day-one funnel
 
@@ -199,3 +199,42 @@ was preserved and no duplicate Discussion was created:
 The update was read back through the GitHub API. Its title and body match the current release,
 and it had 0 comments at verification time. Updating a project-owned Discussion is product
 documentation, not external validation, so the verified tester count remains 0.
+
+## 2026-09-11 Vitest release and targeted follow-up
+
+`v0.1.3-alpha` was published as a public prerelease after Fresh Case H and the generic Vitest
+parser passed the Linux release gates. The tag points to
+`5ea6d37aed573801389efe37e49631f965dc03ff`; CI run
+https://github.com/huanglinfei091-cmd/runback/actions/runs/34560359911 completed successfully.
+The 3,333,996-byte public archive has SHA256
+`78a1aeef0a821941b28738b66143522238e83ecb0668a625cb6b74b3276a2b73`.
+
+A clean temporary Linux HOME used the public one-command installer after publication. It
+downloaded the released archive, validated the public checksum, installed atomically, reported
+`RunBack v0.1.3-alpha`, and completed authenticated `runback doctor` with a ready verdict. The
+temporary install was removed. This remains project-owned release evidence and is not counted
+as a tester.
+
+The existing Alpha Discussion #1 was updated in place at 2026-09-11 04:00:09 UTC; no duplicate
+Discussion was created. It now points to v0.1.3, includes the one-command installer, the Direct
+URL command, supported verdicts and the Vitest `4/4/4` evidence. It had zero comments when read
+back:
+
+- https://github.com/huanglinfei091-cmd/runback/discussions/1
+
+Fresh Case H's pull request had already merged and its replacement CI passed, so no outreach
+was posted there. A separate current failure was statically checked before contact:
+
+- Pull request: https://github.com/hayes/pothos/pull/1692
+- State at contact: open draft, human author, no previous RunBack comment
+- Failed run/job: https://github.com/hayes/pothos/actions/runs/34560373095,
+  `Node.js CI / build (24)`, attempt 1
+- Concrete failure: standard `TS2345` diagnostic in `src/field-builder.ts`; completed Ubuntu job
+- Outreach: https://github.com/hayes/pothos/pull/1692#issuecomment-5629276856
+- Posted at: 2026-09-11 04:04:32 UTC
+
+The single tailored message asks for an actual invocation, verdict, `Stage`/`Cause`, rough time
+and installation friction. It accepts unsuccessful outcomes, requests no Star, and asks the
+recipient not to share credentials. Cumulative targeted direct outreach is now 23. At the time
+of posting there was no reply or external invocation, so verified tester count remains 0 and
+status remains `USER_VALIDATION_PENDING`.

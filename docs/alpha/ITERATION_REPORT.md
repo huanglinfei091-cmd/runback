@@ -1,6 +1,6 @@
 # Alpha Feedback Iteration Report
 
-Date: 2026-09-10
+Last updated: 2026-09-11
 
 Status: `PASS`
 
@@ -311,13 +311,34 @@ isolated release smoke. A second clean temporary HOME used the public installer 
 publication; download, public checksum validation, atomic install, version and authenticated
 doctor all returned exit code 0. Both temporary homes were deleted after validation.
 
+### v0.1.3-alpha Vitest follow-up
+
+The generic Vitest evidence change was published as a separate public prerelease:
+
+- Release: https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.3-alpha
+- State: public prerelease, not a draft
+- Tag commit: `5ea6d37aed573801389efe37e49631f965dc03ff`
+- Tagged-commit CI: https://github.com/huanglinfei091-cmd/runback/actions/runs/34560359911
+- Archive: `runback-v0.1.3-alpha-linux-amd64.tar.gz`
+- Archive size: 3,333,996 bytes
+- Archive SHA256:
+  `78a1aeef0a821941b28738b66143522238e83ecb0668a625cb6b74b3276a2b73`
+
+The release script ran `go test ./...`, `go vet ./...` and produced the Linux amd64 binary.
+The archive checksum passed and its binary reported `RunBack v0.1.3-alpha`. After publication,
+the public one-command installer was run in a new temporary HOME; download, public checksum
+validation, atomic install, version and authenticated doctor all succeeded. Doctor reported
+the host ready, with only the already actionable low-disk and temporary PATH warnings. The
+temporary installation was removed after validation.
+
 ## External-user status
 
-The formal outreach audit retained 21 direct invitations, one explicit decline and zero
+The formal day-one outreach audit retained 21 direct invitations. Two later targeted follow-ups
+raised the cumulative total to 23, with one explicit decline and zero
 verified testers. No download, view, clone, reaction or silence was counted as a test. No
 external install, invocation, verdict, TTFR, help request, `dev`, `replay --step` or `verify`
-evidence has been reported. No feedback was simulated, and no new direct outreach was sent in
-this iteration.
+evidence has been reported. No feedback was simulated. The current v0.1.3 follow-up and its
+selection evidence are recorded in `docs/users/EXTERNAL_USER_REPORT.md`.
 
 Status remains `USER_VALIDATION_PENDING` while development continues.
 
@@ -347,6 +368,10 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 - `docs/alpha/evidence/public-v0.1.2-install.log`
 - `docs/alpha/evidence/public-v0.1.2-doctor.log`
 - `docs/alpha/evidence/public-v0.1.2-smoke.meta`
+- `docs/alpha/evidence/release-v0.1.3-build.log`
+- `docs/alpha/evidence/release-v0.1.3-public.json`
+- `docs/alpha/evidence/public-v0.1.3-smoke.log`
+- `docs/release/V0.1.3_ALPHA_NOTES.md`
 - `docs/compatibility/REAL_CASES.md`
 - `docs/users/EXTERNAL_USER_REPORT.md`
 

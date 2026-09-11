@@ -196,3 +196,28 @@ run 仍为 completed/failure、没有历史 RunBack 评论或拒绝记录，已�
 安装、`runback doctor`、直接 URL 命令、支持边界和真实 verdict 提交方式：
 `https://github.com/huanglinfei091-cmd/runback/discussions/1`。GitHub API 回读确认标题和正文已经更新，
 验证时评论数为 0；该项目自有文档更新不计作外部 tester，状态仍为 `USER_VALIDATION_PENDING`。
+
+## 2026-09-11 — v0.1.3-alpha Vitest 兼容与公开发布
+
+Fresh Case H `janosh/svelte-widgets` 在任何 RunBack acquisition/replay 前已经预注册并提交。
+精确 URL 与 `unit` job 的首次运行真实复现了 4 个 Vitest failure，但解析器无法建立结构化身份，
+所以结果保持 `INSUFFICIENT_EVIDENCE / STEP / 0/0/0`，TTFR 184.196s。增加通用严格 Vitest
+解析后，第一次重试在目标 step 前遇到 npm optional native binding 安装波动，真实保留为
+`REPLAY_BLOCKED / EXECUTE / UNKNOWN`。同一 URL 再次运行得到 `SAME_FAILURE / TEST / 4/4/4`，
+TTFR 244.421s，并创建 verified session。没有降低 Matcher 标准，也没有增加仓库专用分支；
+Node debug 继续准确返回 `DEBUG_UNSUPPORTED`。
+
+`v0.1.3-alpha` 已于 2026-09-11 03:57:25 UTC 公开发布：
+`https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.3-alpha`。Tag 指向
+`5ea6d37aed573801389efe37e49631f965dc03ff`，主分支 CI run `34560359911` 通过。Linux amd64
+archive 大小为 3,333,996 bytes，SHA256 为
+`78a1aeef0a821941b28738b66143522238e83ecb0668a625cb6b74b3276a2b73`。公开安装脚本在全新临时
+HOME 中完成下载、公开 checksum 校验、原子安装、version 和 authenticated doctor，最终 Ready；
+临时 HOME 已清理。发行构建再次通过 `go test ./...`、`go vet ./...` 和 Linux amd64 build。
+
+原 Alpha Discussion #1 已在 04:00:09 UTC 原位更新到 v0.1.3，没有创建重复入口。Case H 的 PR
+已经合并且替代 CI 通过，因此没有在已解决 PR 下联系。另选一个当时仍开放、由真人提交并具有
+当前 Ubuntu `TS2345` failure 的 `hayes/pothos#1692`，于 04:04:32 UTC 发送一条精准试用邀请：
+`https://github.com/hayes/pothos/pull/1692#issuecomment-5629276856`。消息不求 Star，明确接受失败
+结果并要求不要发布凭据。累计精准联系为 23；发布时仍为 0 个已证实外部 invocation，状态继续
+保持 `USER_VALIDATION_PENDING`，没有把项目自己的 Case H 或 Release 下载计为真人用户。

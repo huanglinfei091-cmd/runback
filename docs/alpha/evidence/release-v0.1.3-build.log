@@ -1,0 +1,14 @@
+ok  	github.com/huanglinfei091-cmd/runback/cmd/runback	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/acquire	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/doctor	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/failure	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/fingerprint	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/github	(cached)
+?   	github.com/huanglinfei091-cmd/runback/internal/lockfile	[no test files]
+ok  	github.com/huanglinfei091-cmd/runback/internal/online	(cached)
+?   	github.com/huanglinfei091-cmd/runback/internal/replay	[no test files]
+ok  	github.com/huanglinfei091-cmd/runback/internal/resolver	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/runner	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/session	(cached)
+ok  	github.com/huanglinfei091-cmd/runback/internal/workflow	(cached)
+Built dist/runback-v0.1.3-alpha-linux-amd64.tar.gz and dist/SHA256SUMS

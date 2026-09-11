@@ -1,8 +1,8 @@
-# RunBack v0.1.0-alpha — try it on a failed GitHub Actions run
+# RunBack v0.1.3-alpha — try it on a failed GitHub Actions run
 
 RunBack takes the URL of a completed, failed public GitHub Actions run, reconstructs its
-workflow/job/matrix/runner context, replays it locally with `act`, and compares the remote and
-local failure evidence.
+historical workflow, job, matrix, runner and failed-step context, replays it locally with
+`act`, and compares the remote and local failure evidence.
 
 ```bash
 runback https://github.com/owner/repo/actions/runs/123456789
@@ -16,19 +16,16 @@ failed run URL → local replay → SAME_FAILURE → edit → replay --step → 
 
 ## Try the alpha
 
-Download the Linux amd64 binary and `SHA256SUMS` from the
-[v0.1.0-alpha release](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.0-alpha),
-then run:
+Linux amd64 users can install the current release without Go or sudo:
 
 ```bash
-sha256sum -c SHA256SUMS
-tar -xzf runback-v0.1.0-alpha-linux-amd64.tar.gz
-mkdir -p "$HOME/.local/bin"
-cp runback-v0.1.0-alpha-linux-amd64/runback "$HOME/.local/bin/runback"
-
-runback doctor
-runback https://github.com/OWNER/REPO/actions/runs/RUN_ID
+curl -fsSL https://raw.githubusercontent.com/huanglinfei091-cmd/runback/main/scripts/install-release.sh | bash
+~/.local/bin/runback doctor
+~/.local/bin/runback https://github.com/OWNER/REPO/actions/runs/RUN_ID
 ```
+
+Release and checksums:
+https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.3-alpha
 
 The current alpha targets public GitHub.com repositories, completed failed runs, Ubuntu jobs,
 and ordinary JavaScript/TypeScript, Python and Go workflows. Private repositories, services,
@@ -45,13 +42,15 @@ Reply with a public failed run URL and the observed RunBack result:
 - `REPLAY_BLOCKED`
 - `EVIDENCE_UNAVAILABLE`
 
-For blocked cases, include `Stage` and `Cause`. Installation friction and failed reproduction
+For blocked cases, include `Stage` and `Cause`. Installation friction and unsuccessful reproduction
 are useful evidence. Please do **not** post tokens, secrets, cookies, private source, complete
 private logs or credentials.
 
-The current evidence includes Flask, Click and one pre-registered Werkzeug Direct URL case.
-For Werkzeug, RunBack reported remote 1 / local 1 / matched 1 and `SAME_FAILURE`. This is an
-early alpha with deliberately narrow compatibility, not a claim of complete GitHub Actions
-support.
+The retained real cases cover Python mypy/pytest/Pyright, Go test, TypeScript compiler and
+Vitest failures. The preregistered Vitest Case H initially remained
+`INSUFFICIENT_EVIDENCE`; after a generic strict parser was added, the unchanged run produced
+remote/local/matched `4/4/4` and `SAME_FAILURE`. These are project-owned evidence chains, not
+external-user validation or a claim of complete GitHub Actions support:
+https://github.com/huanglinfei091-cmd/runback/blob/main/docs/compatibility/REAL_CASES.md
 
 Repository: https://github.com/huanglinfei091-cmd/runback
