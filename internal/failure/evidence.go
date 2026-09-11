@@ -3,11 +3,12 @@ package failure
 
 import (
 	"fmt"
-	"github.com/huanglinfei091-cmd/runback/internal/fingerprint"
 	"regexp"
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/huanglinfei091-cmd/runback/internal/fingerprint"
 )
 
 type Item struct {
@@ -55,6 +56,10 @@ var goTestDiagnostic = regexp.MustCompile(`^(.+?_test\.go):(\d+):\s+(.+)$`)
 var remoteExit = regexp.MustCompile(`Process completed with exit code (\d+)`)
 var uuid = regexp.MustCompile(`\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b`)
 var temp = regexp.MustCompile(`(?:/tmp|/home/runner/work/_temp)/[^ /:]+`)
+var vitestHeader = regexp.MustCompile(`^FAIL\s+(.+?\.(?:[cm]?[jt]sx?))\s+>\s+(.+)$`)
+var vitestLikeHeader = regexp.MustCompile(`^FAIL\s+(.+?)\s+>\s+(.+)$`)
+var vitestException = regexp.MustCompile(`^((?:[A-Za-z_$][A-Za-z0-9_.$]*)?(?:Error|Exception)):\s*(.+)$`)
+var vitestFrame = regexp.MustCompile(`^❯\s+(?:.+\s+)?(\S+\.(?:[cm]?[jt]sx?)):(\d+):(\d+)$`)
 
 func Normalize(s string) string {
 	s = fingerprint.Normalize(s)
@@ -62,6 +67,107 @@ func Normalize(s string) string {
 	s = temp.ReplaceAllString(s, "<temp>")
 	return strings.TrimSpace(s)
 }
+
+type vitestFailure struct {
+	item   Item
+	name   string
+	column int
+	marker string
+}
+
+func cleanVitestPath(s string) string {
+	s = strings.ReplaceAll(s, `\`, "/")
+	return strings.TrimPrefix(s, "./")
+}
+
+// parseVitest requires a complete FAIL block. Summary totals and annotation
+// echoes are deliberately insufficient because they cannot establish identity.
+func parseVitest(log string) ([]Item, []string, int) {
+	var failures []vitestFailure
+	var active []int
+	for _, rawLine := range strings.Split(log, "\n") {
+		line := Normalize(logTimestamp.ReplaceAllString(logANSI.ReplaceAllString(rawLine, ""), ""))
+		if m := vitestHeader.FindStringSubmatch(line); m != nil {
+			file := cleanVitestPath(m[1])
+			name := strings.TrimSpace(m[2])
+			// Vitest may print several parameterized FAIL headers followed by one
+			// shared error body. Group only consecutive headers for the same file
+			// before any body evidence has been observed.
+			if len(active) > 0 {
+				first := failures[active[0]]
+				if first.item.File != file || first.item.Exception != "" || first.item.Line != 0 {
+					active = nil
+				}
+			}
+			failures = append(failures, vitestFailure{
+				item:   Item{Kind: "vitest", File: file},
+				name:   name,
+				marker: "vitest: " + file + " > " + name,
+			})
+			active = append(active, len(failures)-1)
+			continue
+		}
+		if m := vitestLikeHeader.FindStringSubmatch(line); m != nil {
+			file := cleanVitestPath(m[1])
+			name := strings.TrimSpace(m[2])
+			failures = append(failures, vitestFailure{name: name, marker: "vitest: " + file + " > " + name})
+			active = nil
+			continue
+		}
+		if len(active) == 0 {
+			continue
+		}
+		if strings.HasPrefix(line, "⎯") || strings.HasPrefix(line, "Test Files") || strings.HasPrefix(line, "Tests ") || strings.Contains(line, "Unhandled Error") {
+			active = nil
+			continue
+		}
+		if m := vitestException.FindStringSubmatch(line); m != nil && failures[active[0]].item.Exception == "" {
+			for _, index := range active {
+				failures[index].item.Exception = m[1]
+				failures[index].item.Message = Normalize(m[2])
+			}
+			continue
+		}
+		if (strings.HasPrefix(line, "Expected:") || strings.HasPrefix(line, "Received:")) && failures[active[0]].item.Exception != "" {
+			for _, index := range active {
+				failures[index].item.Message += "\n" + line
+			}
+			continue
+		}
+		if m := vitestFrame.FindStringSubmatch(line); m != nil {
+			file := cleanVitestPath(m[1])
+			for _, index := range active {
+				failure := &failures[index]
+				if file == failure.item.File && failure.item.Line == 0 {
+					failure.item.Line, _ = strconv.Atoi(m[2])
+					failure.column, _ = strconv.Atoi(m[3])
+				}
+			}
+		}
+	}
+
+	identities := map[string]int{}
+	for i := range failures {
+		f := &failures[i]
+		if f.item.File == "" || f.name == "" || f.item.Line == 0 || f.column == 0 || f.item.Exception == "" || f.item.Message == "" {
+			continue
+		}
+		f.item.Identity = fmt.Sprintf("vitest:%s:%d:%d:%s", f.item.File, f.item.Line, f.column, f.name)
+		identities[f.item.Identity]++
+	}
+
+	items := []Item{}
+	unparsed := []string{}
+	for _, f := range failures {
+		if f.item.Identity == "" || identities[f.item.Identity] != 1 {
+			unparsed = append(unparsed, f.marker)
+			continue
+		}
+		items = append(items, f.item)
+	}
+	return items, unparsed, len(failures)
+}
+
 func Parse(log, step, command string, exit *int) Evidence {
 	e := Evidence{Level: "STEP", Step: step, Command: command, Exit: exit, Items: []Item{}, Excerpt: fingerprint.Build(log).Lines}
 	if exit == nil {
@@ -158,7 +264,8 @@ func Parse(log, step, command string, exit *int) Evidence {
 			}
 		}
 	}
-	e.FailureCount = len(diagnostics) + len(nodes) + len(goFailures)
+	vitestItems, vitestUnparsed, vitestCount := parseVitest(log)
+	e.FailureCount = len(diagnostics) + len(nodes) + len(goFailures) + vitestCount
 	for _, d := range diagnostics {
 		if d.Exception != "" {
 			if d.Kind == "mypy" {
@@ -206,9 +313,11 @@ func Parse(log, step, command string, exit *int) Evidence {
 		}
 		e.Items = append(e.Items, g.Item)
 	}
-	if len(e.Items) > 0 && len(e.Items) == len(diagnostics)+len(nodes)+len(goFailures) {
+	e.Items = append(e.Items, vitestItems...)
+	e.UnparsedFailures = append(e.UnparsedFailures, vitestUnparsed...)
+	if len(e.Items) > 0 && len(e.Items) == e.FailureCount {
 		e.Level = "TEST"
-		if len(nodes) == 0 && len(goFailures) == 0 {
+		if len(nodes) == 0 && len(goFailures) == 0 && vitestCount == 0 {
 			e.Level = "STRUCTURED"
 		}
 	}

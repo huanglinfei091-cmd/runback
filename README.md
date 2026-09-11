@@ -50,13 +50,13 @@ runback doctor
 ```
 
 For a system-wide install, download the archive and `SHA256SUMS` from the
-[release page](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.2-alpha),
+[release page](https://github.com/huanglinfei091-cmd/runback/releases/tag/v0.1.3-alpha),
 verify it, then install the binary:
 
 ```bash
 sha256sum -c SHA256SUMS
-tar -xzf runback-v0.1.2-alpha-linux-amd64.tar.gz
-sudo install -m 0755 runback-v0.1.2-alpha-linux-amd64/runback /usr/local/bin/runback
+tar -xzf runback-v0.1.3-alpha-linux-amd64.tar.gz
+sudo install -m 0755 runback-v0.1.3-alpha-linux-amd64/runback /usr/local/bin/runback
 ```
 
 ## Copyable demo
@@ -162,11 +162,12 @@ overrides. Normal Direct URL usage does not require them.
 | Aiden Firmware Case E | Authenticated Direct URL → setup-go → Go test | first `INSUFFICIENT_EVIDENCE`, then strict `SAME_FAILURE` after generic parsing |
 | DeHub Mobile Case F | Authenticated Direct URL → setup-node/cache → custom i18n check | truthfully remained `INSUFFICIENT_EVIDENCE`; no repository-specific parser added |
 | ClickHouse UI Case G | Authenticated Direct URL → Node 24/Yarn → TypeScript build | first `INSUFFICIENT_EVIDENCE`, then strict `SAME_FAILURE`, `3/3/3` after generic `tsc` parsing |
+| Svelte Widgets Case H | Authenticated Direct URL → Node 24/npm → Vitest | first `INSUFFICIENT_EVIDENCE`, one retained setup retry `REPLAY_BLOCKED`, then strict `SAME_FAILURE`, `4/4/4` after generic Vitest parsing |
 
 Werkzeug Case C was selected before local replay and was not replaced when intermediate
 runs produced `DIFFERENT_FAILURE`, `REPLAY_BLOCKED` and `INSUFFICIENT_EVIDENCE`. The
 complete chain is retained in [the report](docs/online/DIRECT_URL_REPORT.md).
-Fresh Cases D through G are retained in the [real compatibility record](docs/compatibility/REAL_CASES.md),
+Fresh Cases D through H are retained in the [real compatibility record](docs/compatibility/REAL_CASES.md),
 including their first unsuccessful results and the general issues they exposed.
 
 ## Compatibility
@@ -213,7 +214,7 @@ To share a public failed run before filing a bug, use the
 
 ## Project status
 
-RunBack is an early alpha with seven retained real-case evidence chains. Compatibility is
+RunBack is an early alpha with eight retained real-case evidence chains. Compatibility is
 intentionally narrow, and no 100% GitHub Actions compatibility claim is made. See
 [Contributing](CONTRIBUTING.md) before adding a regression case.
 

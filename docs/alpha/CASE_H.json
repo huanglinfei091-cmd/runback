@@ -2,7 +2,7 @@
   "schema_version": 1,
   "case": "H",
   "purpose": "FRESH_VITEST_COMPATIBILITY",
-  "status": "PREREGISTERED",
+  "status": "SAME_FAILURE",
   "selected_at": "2026-09-10T07:39:19Z",
   "repository": "janosh/svelte-widgets",
   "url": "https://github.com/janosh/svelte-widgets/actions/runs/34449963179",
@@ -25,5 +25,37 @@
   "known_selection_risk": "The repository has no package-manager lockfile, so npm install can drift; the immutable run identity and first RunBack result remain retained regardless",
   "excluded_job": "The separate e2e job uses Playwright and is outside this focused Vitest case",
   "planned_invocation": "runback https://github.com/janosh/svelte-widgets/actions/runs/34449963179 --job unit",
-  "replacement_policy": "Retain the first result and this identity regardless of outcome"
+  "replacement_policy": "Retain the first result and this identity regardless of outcome",
+  "first_result": {
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "stage": "MATCH",
+    "evidence_level": "STEP",
+    "remote_failures": 0,
+    "local_failures": 0,
+    "matched": 0,
+    "cache": "MISS",
+    "ttfr_seconds": 184.196
+  },
+  "post_parser_attempt_1": {
+    "verdict": "REPLAY_BLOCKED",
+    "stage": "EXECUTE",
+    "cause": "UNKNOWN",
+    "remote_failures": 4,
+    "local_failures": 0,
+    "matched": 0,
+    "ttfr_seconds": 103.168,
+    "detail": "npm optional native binding install failure before the target step"
+  },
+  "final_result": {
+    "verdict": "SAME_FAILURE",
+    "stage": "MATCH",
+    "evidence_level": "TEST",
+    "remote_failures": 4,
+    "local_failures": 4,
+    "matched": 4,
+    "cache": "HIT",
+    "ttfr_seconds": 244.421,
+    "session_created": true
+  },
+  "token_exact_matches_in_evidence": 0
 }

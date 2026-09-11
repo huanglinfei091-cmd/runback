@@ -135,9 +135,44 @@ All three identities were in
 `DEBUG_UNSUPPORTED` because Node development environments are outside the current narrow M2
 debug scope.
 
+## Fresh Vitest Case H
+
+Case H was preregistered and committed before acquisition:
+
+- Repository: `janosh/svelte-widgets`
+- URL: https://github.com/janosh/svelte-widgets/actions/runs/34449963179
+- Attempt/job: `1` / `unit` (`102783221808`)
+- Runner: `ubuntu-latest`
+- Failed command: `npm run test:coverage`
+- Characteristics: checkout, setup-node 24, npm and Vitest 5; no services, job container,
+  local action or required secret
+
+The first exact URL invocation reproduced four visible Vitest failures but returned
+`INSUFFICIENT_EVIDENCE`, `STEP`, `0/0/0` after 184.196 seconds because no Vitest parser
+existed. After the parser change, one retry stopped during dependency installation on a
+transient npm optional native binding error. That attempt is retained as
+`REPLAY_BLOCKED / EXECUTE / UNKNOWN`, not presented as a successful reproduction.
+
+The generic Vitest parser requires a complete failure block with the same source file, line,
+column, hierarchical test name, exception, complete message and exit code. Incomplete,
+unsupported and duplicate identities are counted as unparsed failures. The unchanged URL and
+job then produced:
+
+```text
+Result: SAME_FAILURE
+Evidence level: TEST
+Remote failures: 4
+Local failures:  4
+Matched:         4
+```
+
+Final TTFR was 244.421 seconds from a cache hit. A verified session was created; Node debug
+remained `DEBUG_UNSUPPORTED`. A scan of all retained Case H evidence found zero exact matches
+for the acquisition token.
+
 ## Source changes
 
-- `internal/failure/evidence.go`: standard Pyright, Go test and TypeScript compiler evidence extraction
+- `internal/failure/evidence.go`: standard Pyright, Go test, TypeScript compiler and Vitest evidence extraction
 - `internal/fingerprint/fingerprint.go`: RunBack short-workspace prefix normalization
 - `internal/doctor/doctor.go`: actionable first-run diagnostics
 - `internal/doctor/disk_linux.go` and `disk_other.go`: portable free-space probe
@@ -152,10 +187,12 @@ No repository-name branch was added. No Matcher threshold or success condition c
 - `internal/failure/pyright_test.go`
 - `internal/failure/gotest_test.go`
 - `internal/failure/typescript_test.go`
+- `internal/failure/vitest_test.go`
 - New doctor and workspace-normalization cases in the existing package tests
 
-Mutation tests prove that changed Pyright, Go or TypeScript source identity and messages cannot
-produce `SAME_FAILURE`. Unparsed Go and partial TypeScript failure sets remain insufficient.
+Mutation tests prove that changed Pyright, Go, TypeScript or Vitest source identity and messages
+cannot produce `SAME_FAILURE`. Unparsed Go, partial TypeScript and incomplete or duplicate
+Vitest failure sets remain insufficient.
 
 ## First-run and install behavior
 
@@ -216,6 +253,11 @@ and returned `SAME_FAILURE`, `TEST`, `1/1/1` in 78.177 seconds. Evidence is reta
 Case C used cached online evidence, the generic default bridge path and no CLI image, network,
 bundle, lock or work-directory override. No Docker daemon, docker0, host address, route,
 firewall or service setting was changed.
+
+After the Vitest change, `gofmt`, `go test ./...`, `go vet ./...` and
+`go build ./cmd/runback` passed on the Linux target. The Case H run itself used only its URL
+and explicit job selection, with no bundle, lock, work-directory, image or network override.
+No frozen acquisition, replay or Matcher semantics changed.
 
 ## Release-candidate smoke
 
@@ -285,10 +327,12 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 - `docs/alpha/CASE_E.json`
 - `docs/alpha/CASE_F.json`
 - `docs/alpha/CASE_G.json`
+- `docs/alpha/CASE_H.json`
 - `docs/alpha/evidence/case-d/`
 - `docs/alpha/evidence/case-e/`
 - `docs/alpha/evidence/case-f/`
 - `docs/alpha/evidence/case-g/`
+- `docs/alpha/evidence/case-h/`
 - `docs/alpha/evidence/gates-v0.1.2/`
 - `docs/alpha/evidence/regressions-v0.1.2/`
 - `docs/alpha/evidence/install/`
@@ -309,8 +353,9 @@ Status remains `USER_VALIDATION_PENDING` while development continues.
 ## Known limitations
 
 The retained cases cover Python mypy, pytest and Pyright, one Go test job, a custom JavaScript
-failure that remained insufficient, and a standard TypeScript compiler failure that reached
-strict `SAME_FAILURE`. This does not establish general JavaScript/TypeScript compatibility.
+failure that remained insufficient, a standard TypeScript compiler failure and a Vitest unit
+test failure that reached strict `SAME_FAILURE`. This does not establish general
+JavaScript/TypeScript compatibility.
 Private repositories, GitHub Enterprise,
 Windows, macOS, self-hosted runners, services, job containers, repository-local actions,
 reusable job workflows, dynamic matrices, secret-heavy paths and artifact-heavy workflows

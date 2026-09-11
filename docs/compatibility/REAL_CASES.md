@@ -1,9 +1,9 @@
 # Real Compatibility Cases
 
-Last updated: 2026-09-10
+Last updated: 2026-09-11
 
 This file records retained executions of real public GitHub Actions failures. It is not a
-compatibility percentage: seven selected cases cannot establish a population success rate.
+compatibility percentage: eight selected cases cannot establish a population success rate.
 `SAME_FAILURE` appears only when the existing Matcher accepts complete structured evidence.
 
 | Case | Repository | Runtime and workflow | First retained verdict | Final retained verdict | Generic issue and change | Measured TTFR |
@@ -15,6 +15,7 @@ compatibility percentage: seven selected cases cannot establish a population suc
 | Fresh E | `AidenAI-IO/aiden-firmware` | Go 1.26.7, setup-go, `go test ./...` | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `SAME_FAILURE`, 1/1/1, `TEST` | Added Go test name/source/message parsing; unrelated error-looking test logs remain outside the structured identity | 153.287 s first; 164.047 s final |
 | Fresh F | `DeHubToken/dehub-mobile` | Node 20, npm cache, custom i18n check | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `INSUFFICIENT_EVIDENCE`, 0/0/0, `STEP` | The custom script produced the same visible diagnostic, but no repository-specific parser was added | 260.163 s |
 | Fresh G | `ClickHouse/click-ui` | Node 24, Yarn 4, TypeScript library build | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `SAME_FAILURE`, 3/3/3, `STRUCTURED` | Added strict standard `tsc` diagnostics with file, line, column, TS code and complete message | 129.154 s first; 117.844 s final |
+| Fresh H | `janosh/svelte-widgets` | Node 24, npm, Vitest 5 unit tests | `INSUFFICIENT_EVIDENCE`, 0/0/0 | `SAME_FAILURE`, 4/4/4, `TEST` | Added strict Vitest failure blocks with file, line, column, hierarchical test name, exception and complete message | 184.196 s first; 244.421 s final |
 
 ## Fresh Case D
 
@@ -122,11 +123,46 @@ Evidence:
 - `docs/alpha/evidence/case-g/after-parser-result.json`
 - `docs/alpha/evidence/case-g/job.raw.log`
 
+## Fresh Case H
+
+- URL: https://github.com/janosh/svelte-widgets/actions/runs/34449963179
+- Attempt/job: `1`, `unit` (`102783221808`)
+- Failed step: `Unit tests with coverage`; command: `npm run test:coverage`
+- API head SHA: `1015306b0a99ce5772fd483cfc50384ec471b0dd`
+- Historical checkout SHA used by the replay: `3893a49b4c2c6e7c471997b4befaf01136045573`
+- Runtime: Node.js 24, npm and Vitest 5.0.0
+
+Case H was registered and committed before RunBack acquired or replayed it. The first exact
+URL invocation completed authenticated acquisition and reproduced four visible Vitest
+failures, but no Vitest parser existed. RunBack therefore returned
+`INSUFFICIENT_EVIDENCE`, `STEP`, `0/0/0` after 184.196 seconds. The first retry after the
+parser change stopped during dependency installation on a transient npm optional native
+binding error; that attempt remains `REPLAY_BLOCKED / EXECUTE / UNKNOWN` and was not
+relabelled as a match.
+
+The generic parser accepts only complete Vitest failure blocks. It requires the same source
+file, line, column, full hierarchical test name, exception, message and exit code. It counts
+incomplete or duplicate identities as unparsed failures, so a partial set cannot produce
+`SAME_FAILURE`. The unchanged URL and job then produced four remote failures, four local
+failures and four exact matches after 244.421 seconds. A verified session was created, while
+the Node debug entry correctly remained outside the current debug scope.
+
+Evidence:
+
+- `docs/alpha/CASE_H.json`
+- `docs/alpha/evidence/case-h/first-run.log`
+- `docs/alpha/evidence/case-h/first-run.meta`
+- `docs/alpha/evidence/case-h/after-parser.log`
+- `docs/alpha/evidence/case-h/after-parser.meta`
+- `docs/alpha/evidence/case-h/after-parser-retry.log`
+- `docs/alpha/evidence/case-h/after-parser-retry.meta`
+- `docs/alpha/evidence/case-h/job.raw.log`
+
 ## Boundaries
 
 These cases cover Python mypy/pytest/Pyright, one Go test job, one custom JavaScript failure
-that remained insufficient, and one standard TypeScript compiler failure on Ubuntu. They do
-not prove general JavaScript/TypeScript behavior, private repositories, GitHub Enterprise, Windows,
+that remained insufficient, one standard TypeScript compiler failure and one Vitest unit-test
+failure on Ubuntu. They do not prove general JavaScript/TypeScript behavior, private repositories, GitHub Enterprise, Windows,
 macOS, self-hosted runners, services, job containers, local actions, reusable workflows or
 secret-dependent paths. A statically reviewed TypeScript matrix candidate was rejected before
 registration because its jobs used a repository-local reusable workflow, which remains outside

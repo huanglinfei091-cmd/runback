@@ -1,0 +1,213 @@
+Evidence: ONLINE
+Cache: HIT
+Auth mode: token
+Image: ghcr.io/catthehacker/ubuntu:act-latest (GENERIC_DEFAULT)
+Network: bridge
+Network Source: GENERIC_DEFAULT
+Workflow      .github/workflows/ci.yml
+Commit        3893a49b4c2c6e7c471997b4befaf01136045573
+Job           unit [unit]
+Matrix        map[]
+Runner        ubuntu-latest
+Failed step   Unit tests with coverage
+Command       npm run test:coverage
+Lock          /tmp/rb/305a9b326b3c/runback.lock
+NOTE          event payload is reconstructed; original secrets, caches, artifacts, runner VM and floating action/tool versions are not recoverable
+NOTE          act uses a container approximation; the original job conditions and remaining steps are preserved
+OK       git: /usr/bin/git
+OK       docker: /usr/bin/docker
+OK       act: /usr/local/bin/act
+OK       Docker linux / 29.1.3
+HOST     linux/amd64
+AUTH     GitHub acquisition: RUNBACK_GITHUB_TOKEN > GH_TOKEN > anonymous; execution is isolated
+{"level":"info","msg":"Using docker host 'unix:///var/run/docker.sock', and daemon socket '-'","time":"2026-09-10T12:00:19Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"⭐ Run Set up job","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T12:00:19Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"🚀  Start image=ghcr.io/catthehacker/ubuntu:act-latest","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T12:00:19Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=false","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T12:00:19Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T12:00:22Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=[\"tail\" \"-f\" \"/dev/null\"] cmd=[] network=\"bridge\"","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T12:00:22Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=","step":"Set up job","stepid":["--setup-job"],"time":"2026-09-10T12:00:22Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ✅  Success - Set up job","step":"Set up job","stepResult":"success","stepid":["--setup-job"],"time":"2026-09-10T12:00:23Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"GoGitActionCache fetch https://github.com/actions/setup-node with ref v6 at /tmp/rb/305a9b326b3c/actions/actions-setup-node.git","stage":"Pre","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:23Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"GoGitActionCache fetch https://github.com/actions/setup-node with ref v6 at /tmp/rb/305a9b326b3c/actions/actions-setup-node.git resolved to 249970729cb0ef3589644e2896645e5dc5ba9c38","stage":"Pre","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"GoGitActionCache get content actions/setup-node with sha 249970729cb0ef3589644e2896645e5dc5ba9c38 subpath 'action.yml' at /tmp/rb/305a9b326b3c/actions/actions-setup-node.git","stage":"Pre","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"⭐ Run Main actions/checkout@v6","stage":"Main","step":"actions/checkout@v6","stepID":["0"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker cp src=/tmp/rb/305a9b326b3c/workspace/. dst=/tmp/rb/305a9b326b3c/workspace","stage":"Main","step":"actions/checkout@v6","stepID":["0"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"executionTime":257420580,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ✅  Success - Main actions/checkout@v6 [257.42058ms]","stage":"Main","step":"actions/checkout@v6","stepID":["0"],"stepResult":"success","time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"⭐ Run Main actions/setup-node@v6","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"GoGitActionCache get content actions/setup-node with sha 249970729cb0ef3589644e2896645e5dc5ba9c38 subpath '' at /tmp/rb/305a9b326b3c/actions/actions-setup-node.git","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[/opt/acttoolcache/node/24.19.0/x64/bin/node /var/run/act/actions/actions-setup-node@v6/dist/setup/index.js] user= workdir=","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:26Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"Found in cache @ /opt/hostedtoolcache/node/24.20.0/x64\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:27Z"}
+{"arg":"Environment details","command":"group","dryrun":false,"job":"CI/unit","jobID":"unit","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::group::Environment details\n","raw":"::group::Environment details\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:27Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"node: v24.20.0\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"npm: 11.19.0\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"yarn: 1.22.22\n","raw_output":true,"stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"arg":"","command":"endgroup","dryrun":false,"job":"CI/unit","jobID":"unit","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓  ::endgroup::\n","raw":"::endgroup::\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"arg":"/run/act/actions/actions-setup-node@v6/.github/tsc.json","command":"add-matcher","dryrun":false,"job":"CI/unit","jobID":"unit","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/actions-setup-node@v6/.github/tsc.json","raw":"##[add-matcher]/run/act/actions/actions-setup-node@v6/.github/tsc.json\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"arg":"/run/act/actions/actions-setup-node@v6/.github/eslint-stylish.json","command":"add-matcher","dryrun":false,"job":"CI/unit","jobID":"unit","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/actions-setup-node@v6/.github/eslint-stylish.json","raw":"##[add-matcher]/run/act/actions/actions-setup-node@v6/.github/eslint-stylish.json\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"arg":"/run/act/actions/actions-setup-node@v6/.github/eslint-compact.json","command":"add-matcher","dryrun":false,"job":"CI/unit","jobID":"unit","kvPairs":{},"level":"info","matrix":{},"msg":"  ❓ add-matcher /run/act/actions/actions-setup-node@v6/.github/eslint-compact.json","raw":"##[add-matcher]/run/act/actions/actions-setup-node@v6/.github/eslint-compact.json\n","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"dryrun":false,"executionTime":4590065391,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ✅  Success - Main actions/setup-node@v6 [4.590065391s]","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"stepResult":"success","time":"2026-09-10T12:00:31Z"}
+{"arg":"v24.20.0","command":"set-output","dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ⚙  ::set-output:: node-version=v24.20.0","name":"node-version","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"arg":"/opt/hostedtoolcache/node/24.20.0/x64/bin","command":"add-path","dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ⚙  ::add-path:: /opt/hostedtoolcache/node/24.20.0/x64/bin","stage":"Main","step":"actions/setup-node@v6","stepID":["1"],"time":"2026-09-10T12:00:31Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"⭐ Run Main npm install --legacy-peer-deps","stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:00:31Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=","stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:00:31Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:55Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\u003e svelte-widgets@1.8.0 prepare\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:55Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\u003e vp config --no-agent \u0026\u0026 npm run package\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:55Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:55Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:597\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\t\t\tconst error = /* @__PURE__ */ new Error(\"Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.\");\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\t\t\t                              ^\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"Error: Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:597:34\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:9:49\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    ... 4 lines matching cause stack trace ...\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  cause: Error: Cannot find module '@rolldown/binding-wasm32-wasi'\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  Require stack:\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  - /tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:494:18\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      ... 8 lines matching cause stack trace ...\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    cause: Error: Cannot find module './rolldown-binding.wasi.cjs'\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    Require stack:\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    - /tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:494:18\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        ... 8 lines matching cause stack trace ...\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      cause: Error: Cannot find module '@rolldown/binding-linux-x64-gnu'\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      Require stack:\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      - /tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"          at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:494:18\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"          ... 8 lines matching cause stack trace ...\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"          at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        cause: Error: Cannot find module '../rolldown-binding.linux-x64-gnu.node'\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        Require stack:\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        - /tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:494:18\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at Array.reduce (\u003canonymous\u003e)\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at createLoadErrorChain (file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:487:17)\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:598:18\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/binding-DH95uVkp.mjs:9:49\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at file:///tmp/rb/305a9b326b3c/workspace/node_modules/rolldown/dist/shared/parse-BtiCBYra.mjs:3:46\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at async node:internal/modules/esm/loader:647:26\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"            at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"          cause: null\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"        }\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"      }\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"    }\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  }\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"}\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"Node.js v24.20.0\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"npm error code 1\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"npm error path /tmp/rb/305a9b326b3c/workspace\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"npm error command failed\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"npm error command sh -c vp config --no-agent \u0026\u0026 npm run package\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"npm error A complete log of this run can be found in: /root/.npm/_logs/2026-09-10T12_00_31_600Z-debug-0.log\n","raw_output":true,"stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"executionTime":85123426539,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ❌  Failure - Main npm install --legacy-peer-deps [1m25.123426539s]","stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"stepResult":"failure","time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"error","matrix":{},"msg":"exitcode '1': failure","stage":"Main","step":"npm install --legacy-peer-deps","stepID":["2"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"⭐ Run Complete job","step":"Complete job","stepid":["--complete-job"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","level":"info","matrix":{},"msg":"  ✅  Success - Complete job","step":"Complete job","stepResult":"success","stepid":["--complete-job"],"time":"2026-09-10T12:01:56Z"}
+{"dryrun":false,"job":"CI/unit","jobID":"unit","jobResult":"failure","level":"info","matrix":{},"msg":"🏁  Job failed","time":"2026-09-10T12:01:56Z"}
+Error: Job 'unit' failed
+
+Result: REPLAY_BLOCKED
+Stage: EXECUTE
+Cause: UNKNOWN
+Evidence level: STEP
+Remote failures: 4
+Local failures: 0
+Matched: 0
+act did not fail in the original target step
+Report: /tmp/rb/305a9b326b3c/result.json
+{
+  "status": "REPLAY_BLOCKED",
+  "evidence_level": "STEP",
+  "reason": "act did not fail in the original target step",
+  "remote": {
+    "failure_count": 4,
+    "level": "TEST",
+    "step": "Unit tests with coverage",
+    "command": "npm run test:coverage",
+    "exit": 1,
+    "normalized_excerpt": [
+      "AssertionError: No element found for selector: aside.toc li.active",
+      "AssertionError: expected 'https://github.com/janosh/svelte-widg…' to be 'https://github.com/janosh/svelte-widg…' // Object.is equality",
+      "DOMException: Failed to execute 'querySelector' on 'HTMLDocument': '#123' is not a valid selector.",
+      "DOMException: Failed to execute 'querySelectorAll' on 'Element': '#sec:1' is not a valid selector.",
+      "Expected: \"https://github.com/janosh/svelte-widgets/blob/-/readme.md\"",
+      "FAIL  tests/vitest/layout.test.ts \u003e footer edit link for route / points at /",
+      "FAIL  tests/vitest/toc.svelte.test.ts \u003e Toc \u003e static metadata keeps matching item indexes for id=123",
+      "FAIL  tests/vitest/toc.svelte.test.ts \u003e Toc \u003e static metadata keeps matching item indexes for id=part.one",
+      "FAIL  tests/vitest/toc.svelte.test.ts \u003e Toc \u003e static metadata keeps matching item indexes for id=sec:1",
+      "OptionList: load_options error: Error: Unavailable",
+      "Received: \"https://github.com/janosh/svelte-widgets/blob/-/src/routes/+page.svelte\"",
+      "Test Files  2 failed | 114 passed (116)",
+      "Tests  4 failed | 3611 passed | 1 skipped (3616)",
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯",
+      "✓ explicit async assertions preserve interaction results (fail=false) 2751ms",
+      "✓ explicit async assertions preserve interaction results (fail=true) 1918ms",
+      "❯ tests/vitest/layout.test.ts (5 tests | 1 failed) 682ms",
+      "❯ tests/vitest/toc.svelte.test.ts (114 tests | 3 failed) 1420ms"
+    ],
+    "items": [
+      {
+        "kind": "vitest",
+        "identity": "vitest:tests/vitest/layout.test.ts:44:41:footer edit link for route / points at /",
+        "exception": "AssertionError",
+        "file": "tests/vitest/layout.test.ts",
+        "line": 44,
+        "message": "expected 'https://github.com/janosh/svelte-widg…' to be 'https://github.com/janosh/svelte-widg…' // Object.is equality\nExpected: \"https://github.com/janosh/svelte-widgets/blob/-/readme.md\"\nReceived: \"https://github.com/janosh/svelte-widgets/blob/-/src/routes/+page.svelte\""
+      },
+      {
+        "kind": "vitest",
+        "identity": "vitest:tests/vitest/toc.svelte.test.ts:352:14:Toc \u003e static metadata keeps matching item indexes for id=123",
+        "exception": "AssertionError",
+        "file": "tests/vitest/toc.svelte.test.ts",
+        "line": 352,
+        "message": "No element found for selector: aside.toc li.active"
+      },
+      {
+        "kind": "vitest",
+        "identity": "vitest:tests/vitest/toc.svelte.test.ts:352:14:Toc \u003e static metadata keeps matching item indexes for id=part.one",
+        "exception": "AssertionError",
+        "file": "tests/vitest/toc.svelte.test.ts",
+        "line": 352,
+        "message": "No element found for selector: aside.toc li.active"
+      },
+      {
+        "kind": "vitest",
+        "identity": "vitest:tests/vitest/toc.svelte.test.ts:352:14:Toc \u003e static metadata keeps matching item indexes for id=sec:1",
+        "exception": "AssertionError",
+        "file": "tests/vitest/toc.svelte.test.ts",
+        "line": 352,
+        "message": "No element found for selector: aside.toc li.active"
+      }
+    ]
+  },
+  "local": {
+    "failure_count": 0,
+    "level": "STEP",
+    "step": "Unit tests with coverage",
+    "command": "npm run test:coverage",
+    "exit": 1,
+    "normalized_excerpt": [],
+    "items": []
+  },
+  "matched_fields": {
+    "Identity": false,
+    "Exception": false,
+    "File": false,
+    "Line": false,
+    "Message": false,
+    "Exit": false
+  },
+  "remote_failures": 4,
+  "local_failures": 0,
+  "matched_failures": 0
+}
+CLI elapsed: 103.042s (through final result)
